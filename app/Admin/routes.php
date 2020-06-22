@@ -14,4 +14,9 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
 
+    //swope
+    $router->resource('swipe', 'SwipeController');
+    //分类管理
+    $router->resource('cate', 'CategoryController');
+
 });
