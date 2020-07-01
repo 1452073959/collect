@@ -14,4 +14,21 @@ class Category extends Model
     {
         return null;
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+        // 监听模型创建事件，在写入数据库之前触发
+        static::creating(function ($model) {
+            // 如果模型的 no 字段为空
+            if (!$model->parent_id) {
+                // 调用 findAvailableNo 生成订单流水号
+                $model->parent_id = 0;
+                // 如果生成失败，则终止创建订单
+
+            }
+        });
+    }
+
+
 }

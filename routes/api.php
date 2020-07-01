@@ -26,5 +26,8 @@ $api->version('v1', [
     Route::middleware('jwt.auth')->group(function ($api) {
 
     });
+    //分类的接口
+    $api->get('cate', 'ProductController@cate');
+    $api->get('productcate', 'ProductController@productcate');
 
 });

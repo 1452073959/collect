@@ -19,7 +19,7 @@ class CategoryController extends AdminController
     {
         return Grid::make(new Category(), function (Grid $grid) {
             $grid->id->sortable();
-            $grid->title->tree();
+            $grid->text->tree();
 //            $grid->parent_id;
 //            $grid->is_directory;
 //            $grid->level;
@@ -45,7 +45,7 @@ class CategoryController extends AdminController
     {
         return Show::make($id, new Category(), function (Show $show) {
             $show->id;
-            $show->name;
+            $show->text;
             $show->parent_id;
             $show->is_directory;
             $show->level;
@@ -64,14 +64,15 @@ class CategoryController extends AdminController
     {
         return Form::make(new Category(), function (Form $form) {
             $form->display('id');
-            $form->text('title');
-            $form->text('parent_id');
-            $form->text('is_directory');
-            $form->text('level');
-            $form->text('path');
-        
-            $form->display('created_at');
-            $form->display('updated_at');
+//            $form->text('cid');
+            $form->text('text');
+            $form->select('parent_id','所属分类')->options('http://collect.test/api/cate')->default('0');
+            $form->disableResetButton();
+            $form->disableViewCheck();
+            $form->disableEditingCheck();
+            $form->disableCreatingCheck();
         });
     }
+
+
 }

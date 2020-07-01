@@ -18,5 +18,6 @@ Route::group([
     $router->resource('swipe', 'SwipeController');
     //分类管理
     $router->resource('cate', 'CategoryController');
-
+    //商品管理
+    $router->resource('product', 'ProductController');
 });

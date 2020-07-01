@@ -4,7 +4,7 @@ return [
         'Category' => 'Category',
     ],
     'fields' => [
-        'name' => 'name',
+        'text' => '类别名称',
         'parent_id' => 'parent_id',
         'is_directory' => 'is_directory',
         'level' => 'level',
