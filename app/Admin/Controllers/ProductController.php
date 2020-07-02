@@ -86,7 +86,7 @@ class ProductController extends AdminController
                 // return implode(',', $paths);
                 // 也可以转化为json
                 return json_encode($paths);
-            });;
+            })->uniqueName();
 //            $form->text('sold_count');
             $form->text('price');
             $form->text('stock');

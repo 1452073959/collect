@@ -47,16 +47,21 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
-
+//收藏
     public function favoriteProducts()
     {
         return $this->belongsToMany(Product::class, 'user_product')
             ->withTimestamps()
             ->orderBy('user_product.created_at', 'desc');
     }
-
+//购物车
     public function cartItems()
     {
         return $this->hasMany(CartItem::class);
+    }
+    //地址
+    public function addresses()
+    {
+        return $this->hasMany(UserAddress::class);
     }
 }

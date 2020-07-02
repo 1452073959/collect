@@ -20,4 +20,10 @@ Route::group([
     $router->resource('cate', 'CategoryController');
     //商品管理
     $router->resource('product', 'ProductController');
+    //订单管理
+    $router->resource('order', 'OrderController');
+    //帮助中心
+    $router->resource('help', 'HelpController');
+    //关于我们
+    $router->resource('about', 'AboutController');
 });
