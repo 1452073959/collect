@@ -11,8 +11,8 @@ class NotificationsController extends Controller
     {
         // 获取登录用户的所有通知
         $user = auth('api')->user();
-        $user=User::find(1);
-        $notifications = $user->notifications()->paginate(10);
+        $user=User::find(2);
+        $notifications = $user->notifications()->orderBy('created_at', 'desc')->paginate(10);
         $user->markAsRead();
         return $this->success($notifications);
     }
