@@ -26,4 +26,6 @@ Route::group([
     $router->resource('help', 'HelpController');
     //关于我们
     $router->resource('about', 'AboutController');
+    //系统推送
+    $router->resource('push', 'PushController');
 });

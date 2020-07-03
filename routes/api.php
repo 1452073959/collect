@@ -73,4 +73,6 @@ $api->version('v1', [
     Route::post('updateuser','Api\UserController@updateuser');
     //浏览历史
     Route::get('history','Api\ProductController@history');
+    //系统推送
+    Route::get('push','Api\NotificationsController@index');
 });

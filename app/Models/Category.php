@@ -22,10 +22,7 @@ class Category extends Model
         static::creating(function ($model) {
             // 如果模型的 no 字段为空
             if (!$model->parent_id) {
-                // 调用 findAvailableNo 生成订单流水号
                 $model->parent_id = 0;
-                // 如果生成失败，则终止创建订单
-
             }
         });
     }

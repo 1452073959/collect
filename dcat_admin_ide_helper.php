@@ -73,6 +73,11 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection payload
      * @property Grid\Column|Collection exception
      * @property Grid\Column|Collection failed_at
+     * @property Grid\Column|Collection type
+     * @property Grid\Column|Collection notifiable_type
+     * @property Grid\Column|Collection notifiable_id
+     * @property Grid\Column|Collection data
+     * @property Grid\Column|Collection read_at
      * @property Grid\Column|Collection email
      * @property Grid\Column|Collection token
      * @property Grid\Column|Collection province
@@ -86,6 +91,7 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection birthday
      * @property Grid\Column|Collection defaultaddress_id
      * @property Grid\Column|Collection weapp_openid
+     * @property Grid\Column|Collection notification_count
      *
      * @method Grid\Column|Collection id(string $label = null)
      * @method Grid\Column|Collection username(string $label = null)
@@ -149,6 +155,11 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection payload(string $label = null)
      * @method Grid\Column|Collection exception(string $label = null)
      * @method Grid\Column|Collection failed_at(string $label = null)
+     * @method Grid\Column|Collection type(string $label = null)
+     * @method Grid\Column|Collection notifiable_type(string $label = null)
+     * @method Grid\Column|Collection notifiable_id(string $label = null)
+     * @method Grid\Column|Collection data(string $label = null)
+     * @method Grid\Column|Collection read_at(string $label = null)
      * @method Grid\Column|Collection email(string $label = null)
      * @method Grid\Column|Collection token(string $label = null)
      * @method Grid\Column|Collection province(string $label = null)
@@ -162,6 +173,7 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection birthday(string $label = null)
      * @method Grid\Column|Collection defaultaddress_id(string $label = null)
      * @method Grid\Column|Collection weapp_openid(string $label = null)
+     * @method Grid\Column|Collection notification_count(string $label = null)
      */
     class Grid {}
 
@@ -230,6 +242,11 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection payload
      * @property Show\Field|Collection exception
      * @property Show\Field|Collection failed_at
+     * @property Show\Field|Collection type
+     * @property Show\Field|Collection notifiable_type
+     * @property Show\Field|Collection notifiable_id
+     * @property Show\Field|Collection data
+     * @property Show\Field|Collection read_at
      * @property Show\Field|Collection email
      * @property Show\Field|Collection token
      * @property Show\Field|Collection province
@@ -243,6 +260,7 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection birthday
      * @property Show\Field|Collection defaultaddress_id
      * @property Show\Field|Collection weapp_openid
+     * @property Show\Field|Collection notification_count
      *
      * @method Show\Field|Collection id(string $label = null)
      * @method Show\Field|Collection username(string $label = null)
@@ -306,6 +324,11 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection payload(string $label = null)
      * @method Show\Field|Collection exception(string $label = null)
      * @method Show\Field|Collection failed_at(string $label = null)
+     * @method Show\Field|Collection type(string $label = null)
+     * @method Show\Field|Collection notifiable_type(string $label = null)
+     * @method Show\Field|Collection notifiable_id(string $label = null)
+     * @method Show\Field|Collection data(string $label = null)
+     * @method Show\Field|Collection read_at(string $label = null)
      * @method Show\Field|Collection email(string $label = null)
      * @method Show\Field|Collection token(string $label = null)
      * @method Show\Field|Collection province(string $label = null)
@@ -319,6 +342,7 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection birthday(string $label = null)
      * @method Show\Field|Collection defaultaddress_id(string $label = null)
      * @method Show\Field|Collection weapp_openid(string $label = null)
+     * @method Show\Field|Collection notification_count(string $label = null)
      */
     class Show {}
 
