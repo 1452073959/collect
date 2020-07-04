@@ -56,6 +56,7 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection tittle
      * @property Grid\Column|Collection content
      * @property Grid\Column|Collection tel
+     * @property Grid\Column|Collection video
      * @property Grid\Column|Collection order
      * @property Grid\Column|Collection icon
      * @property Grid\Column|Collection uri
@@ -138,6 +139,7 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection tittle(string $label = null)
      * @method Grid\Column|Collection content(string $label = null)
      * @method Grid\Column|Collection tel(string $label = null)
+     * @method Grid\Column|Collection video(string $label = null)
      * @method Grid\Column|Collection order(string $label = null)
      * @method Grid\Column|Collection icon(string $label = null)
      * @method Grid\Column|Collection uri(string $label = null)
@@ -225,6 +227,7 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection tittle
      * @property Show\Field|Collection content
      * @property Show\Field|Collection tel
+     * @property Show\Field|Collection video
      * @property Show\Field|Collection order
      * @property Show\Field|Collection icon
      * @property Show\Field|Collection uri
@@ -307,6 +310,7 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection tittle(string $label = null)
      * @method Show\Field|Collection content(string $label = null)
      * @method Show\Field|Collection tel(string $label = null)
+     * @method Show\Field|Collection video(string $label = null)
      * @method Show\Field|Collection order(string $label = null)
      * @method Show\Field|Collection icon(string $label = null)
      * @method Show\Field|Collection uri(string $label = null)

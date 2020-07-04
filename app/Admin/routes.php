@@ -28,4 +28,6 @@ Route::group([
     $router->resource('about', 'AboutController');
     //系统推送
     $router->resource('push', 'PushController');
+    //视频
+    $router->resource('video', 'VideoController');
 });

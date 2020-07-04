@@ -22,12 +22,14 @@ class PushController extends AdminController
             $grid->title;
             $grid->content;
             $grid->created_at;
-            $grid->updated_at->sortable();
+//            $grid->updated_at->sortable();
         
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
         
             });
+            // 禁用详情按钮
+            $grid->disableViewButton();
         });
     }
 
@@ -59,10 +61,14 @@ class PushController extends AdminController
         return Form::make(new Push(), function (Form $form) {
             $form->display('id');
             $form->text('title');
-            $form->text('content');
+            $form->textarea('content');
         
             $form->display('created_at');
             $form->display('updated_at');
+            $form->disableResetButton();
+            $form->disableViewCheck();
+            $form->disableEditingCheck();
+            $form->disableCreatingCheck();
         });
     }
 }
