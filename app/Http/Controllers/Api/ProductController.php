@@ -33,9 +33,8 @@ class ProductController extends Controller
     //商品收藏
     public function favor(Product $product, Request $request)
     {
-//        $user = auth('api')->user();
-        $user=User::find(1);
-//        dd($product);
+        $user = auth('api')->user();
+
         if ($user->favoriteProducts()->find($product->id)) {
             return [];
         }
@@ -47,16 +46,15 @@ class ProductController extends Controller
     //商品取消收藏
     public function disfavor(Product $product, Request $request)
     {
-//        $user = auth('api')->user();
-        $user=User::find(1);
+        $user = auth('api')->user();
+
         $user->favoriteProducts()->detach($product);
         return [];
     }
     //收藏商品列表
     public function favorites(Request $request)
     {
-        // $user = auth('api')->user();
-        $user=User::find(1);
+         $user = auth('api')->user();
         $products = $user->favoriteProducts()->paginate(16);
         return $this->success($products);
     }
@@ -85,8 +83,8 @@ class ProductController extends Controller
     //商品详情
     public function show(Product $product, Request $request)
     {
-        //        $user = auth('api')->user();
-        $user=User::find(1);
+                $user = auth('api')->user();
+//        $user=User::find(1);
         Redis::rpush($user['id'],$product['id']);
         // 判断商品是否已经上架，如果没有上架则抛出异常。
         if ($product->status==0) {
@@ -98,7 +96,7 @@ class ProductController extends Controller
     //浏览历史
     public function history()
     {
-        $user=User::find(1);
+        $user = auth('api')->user();
         $history= Redis::lrange($user['id'],0,-1);
         $history=Product::wherein('id',$history)->paginate(16);
         return $this->success($history);

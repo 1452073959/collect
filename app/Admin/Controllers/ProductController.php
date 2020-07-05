@@ -78,9 +78,9 @@ class ProductController extends AdminController
         return Form::make(new Product(), function (Form $form) {
             $form->display('id');
 //            $form->text('cid');
-            $form->select('cid','所属分类')->options(config('app.url').'/api/productcate');
-            $form->text('title');
-            $form->editor('description');
+            $form->select('cid','所属分类')->options(config('app.url').'/api/productcate')->required();;;
+            $form->text('title')->required();
+            $form->editor('description')->required();
             $form->multipleImage('image')->saving(function ($paths) {
                 // 可以转化为由 , 隔开的字符串格式
                 // return implode(',', $paths);
@@ -88,10 +88,10 @@ class ProductController extends AdminController
                 return json_encode($paths);
             })->uniqueName();
 //            $form->text('sold_count');
-            $form->text('price');
-            $form->text('stock');
-            $form->radio('recommended')->options(['1' => '是', '2'=> '否'])->default('1');;
-            $form->radio('status')->options([1 => '上架', 2=> '下架'])->default('1');
+            $form->text('price')->required();
+            $form->text('stock')->required();
+            $form->radio('recommended')->options(['1' => '是', '2'=> '否'])->default('1')->required();
+            $form->radio('status')->options([1 => '上架', 2=> '下架'])->default('1')->required();
         
             $form->display('created_at');
             $form->display('updated_at');

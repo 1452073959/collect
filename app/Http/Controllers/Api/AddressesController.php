@@ -13,14 +13,14 @@ class AddressesController extends Controller
     public function index(Request $request)
     {
 
-        $user=User::find(1);
+        $user = auth('api')->user();
         $addres=  $user->addresses;
       return $this->success($addres);
     }
 
     public function store(UserAddressRequest $request)
     {
-        $user=User::find(1);
+        $user = auth('api')->user();
         $address=$user->addresses()->create($request->only([
             'province',
             'city',
@@ -64,7 +64,7 @@ class AddressesController extends Controller
 
     public function default(UserAddress $user_address)
     {
-        $user=User::find(1);
+        $user = auth('api')->user();
         $user->defaultaddress_id=$user_address['id'];
         $user->save();
         return $this->success($user);

@@ -60,4 +60,14 @@ class Order extends Model
 
         return false;
     }
+
+    public function getAddressAttribute($extra)
+    {
+        return json_decode($extra, true);
+    }
+
+    public function setAddressAttribute($value)
+    {
+        $this->attributes['address'] = json_encode($value);
+    }
 }

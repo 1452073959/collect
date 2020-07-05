@@ -57,6 +57,11 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection content
      * @property Grid\Column|Collection tel
      * @property Grid\Column|Collection video
+     * @property Grid\Column|Collection card
+     * @property Grid\Column|Collection bank
+     * @property Grid\Column|Collection moeny
+     * @property Grid\Column|Collection mannumber
+     * @property Grid\Column|Collection phone
      * @property Grid\Column|Collection order
      * @property Grid\Column|Collection icon
      * @property Grid\Column|Collection uri
@@ -79,6 +84,7 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection notifiable_id
      * @property Grid\Column|Collection data
      * @property Grid\Column|Collection read_at
+     * @property Grid\Column|Collection order_id
      * @property Grid\Column|Collection email
      * @property Grid\Column|Collection token
      * @property Grid\Column|Collection province
@@ -93,6 +99,8 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection defaultaddress_id
      * @property Grid\Column|Collection weapp_openid
      * @property Grid\Column|Collection notification_count
+     * @property Grid\Column|Collection balance
+     * @property Grid\Column|Collection pid
      *
      * @method Grid\Column|Collection id(string $label = null)
      * @method Grid\Column|Collection username(string $label = null)
@@ -140,6 +148,11 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection content(string $label = null)
      * @method Grid\Column|Collection tel(string $label = null)
      * @method Grid\Column|Collection video(string $label = null)
+     * @method Grid\Column|Collection card(string $label = null)
+     * @method Grid\Column|Collection bank(string $label = null)
+     * @method Grid\Column|Collection moeny(string $label = null)
+     * @method Grid\Column|Collection mannumber(string $label = null)
+     * @method Grid\Column|Collection phone(string $label = null)
      * @method Grid\Column|Collection order(string $label = null)
      * @method Grid\Column|Collection icon(string $label = null)
      * @method Grid\Column|Collection uri(string $label = null)
@@ -162,6 +175,7 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection notifiable_id(string $label = null)
      * @method Grid\Column|Collection data(string $label = null)
      * @method Grid\Column|Collection read_at(string $label = null)
+     * @method Grid\Column|Collection order_id(string $label = null)
      * @method Grid\Column|Collection email(string $label = null)
      * @method Grid\Column|Collection token(string $label = null)
      * @method Grid\Column|Collection province(string $label = null)
@@ -176,6 +190,8 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection defaultaddress_id(string $label = null)
      * @method Grid\Column|Collection weapp_openid(string $label = null)
      * @method Grid\Column|Collection notification_count(string $label = null)
+     * @method Grid\Column|Collection balance(string $label = null)
+     * @method Grid\Column|Collection pid(string $label = null)
      */
     class Grid {}
 
@@ -228,6 +244,11 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection content
      * @property Show\Field|Collection tel
      * @property Show\Field|Collection video
+     * @property Show\Field|Collection card
+     * @property Show\Field|Collection bank
+     * @property Show\Field|Collection moeny
+     * @property Show\Field|Collection mannumber
+     * @property Show\Field|Collection phone
      * @property Show\Field|Collection order
      * @property Show\Field|Collection icon
      * @property Show\Field|Collection uri
@@ -250,6 +271,7 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection notifiable_id
      * @property Show\Field|Collection data
      * @property Show\Field|Collection read_at
+     * @property Show\Field|Collection order_id
      * @property Show\Field|Collection email
      * @property Show\Field|Collection token
      * @property Show\Field|Collection province
@@ -264,6 +286,8 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection defaultaddress_id
      * @property Show\Field|Collection weapp_openid
      * @property Show\Field|Collection notification_count
+     * @property Show\Field|Collection balance
+     * @property Show\Field|Collection pid
      *
      * @method Show\Field|Collection id(string $label = null)
      * @method Show\Field|Collection username(string $label = null)
@@ -311,6 +335,11 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection content(string $label = null)
      * @method Show\Field|Collection tel(string $label = null)
      * @method Show\Field|Collection video(string $label = null)
+     * @method Show\Field|Collection card(string $label = null)
+     * @method Show\Field|Collection bank(string $label = null)
+     * @method Show\Field|Collection moeny(string $label = null)
+     * @method Show\Field|Collection mannumber(string $label = null)
+     * @method Show\Field|Collection phone(string $label = null)
      * @method Show\Field|Collection order(string $label = null)
      * @method Show\Field|Collection icon(string $label = null)
      * @method Show\Field|Collection uri(string $label = null)
@@ -333,6 +362,7 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection notifiable_id(string $label = null)
      * @method Show\Field|Collection data(string $label = null)
      * @method Show\Field|Collection read_at(string $label = null)
+     * @method Show\Field|Collection order_id(string $label = null)
      * @method Show\Field|Collection email(string $label = null)
      * @method Show\Field|Collection token(string $label = null)
      * @method Show\Field|Collection province(string $label = null)
@@ -347,6 +377,8 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection defaultaddress_id(string $label = null)
      * @method Show\Field|Collection weapp_openid(string $label = null)
      * @method Show\Field|Collection notification_count(string $label = null)
+     * @method Show\Field|Collection balance(string $label = null)
+     * @method Show\Field|Collection pid(string $label = null)
      */
     class Show {}
 

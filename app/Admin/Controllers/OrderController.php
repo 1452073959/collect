@@ -7,7 +7,7 @@ use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
 use Dcat\Admin\Controllers\AdminController;
-
+use Dcat\Admin\Layout\Content;
 class OrderController extends AdminController
 {
     /**
@@ -18,16 +18,16 @@ class OrderController extends AdminController
     protected function grid()
     {
         return Grid::make(new Order(), function (Grid $grid) {
-            $grid->model()->where('status',2)->orderBy('created_at', 'desc');
+            $grid->model()->where('status','>',1)->orderBy('created_at', 'desc');
 //            $grid->id->sortable();
             $grid->no;
-            $grid->user_id;
+//            $grid->user_id;
 //            $grid->address;
             $grid->total_amount;
 //            $grid->remark;
             $grid->paid_at;
 //            $grid->payment_no;
-            $grid->status;
+            $grid->status->using([1 => '未支付', 2 => '未发货',3=>'已发货']);;
 //            $grid->ship_data;
 //            $grid->created_at;
 //            $grid->updated_at->sortable();
@@ -36,6 +36,12 @@ class OrderController extends AdminController
                 $filter->equal('id');
         
             });
+            $grid->disableDeleteButton();
+            $grid->disableEditButton();
+            $grid->disableQuickEditButton();
+            //关闭新增按钮
+            $grid->disableCreateButton();
+//            $grid->disableViewButton();
         });
     }
 
@@ -46,22 +52,13 @@ class OrderController extends AdminController
      *
      * @return Show
      */
-    protected function detail($id)
+
+    public  function show($id ,Content $content)
     {
-        return Show::make($id, new Order(), function (Show $show) {
-            $show->id;
-            $show->no;
-            $show->user_id;
-            $show->address;
-            $show->total_amount;
-            $show->remark;
-            $show->paid_at;
-            $show->payment_no;
-            $show->status;
-            $show->ship_data;
-            $show->created_at;
-            $show->updated_at;
-        });
+//        dd( \App\Models\CommodityOrder::find($id)->toarray());
+        return $content->header('订单')
+            ->description('详情')
+            ->body(view('orders.show', ['order' => \App\Models\Order::find($id)]));
     }
 
     /**

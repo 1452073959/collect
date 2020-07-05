@@ -22,6 +22,8 @@ Route::group([
     $router->resource('product', 'ProductController');
     //订单管理
     $router->resource('order', 'OrderController');
+    //订单详情
+    $router->get('orders/{order}', 'OrdersController@show')->name('admin.orders.show');
     //帮助中心
     $router->resource('help', 'HelpController');
     //关于我们
@@ -30,4 +32,6 @@ Route::group([
     $router->resource('push', 'PushController');
     //视频
     $router->resource('video', 'VideoController');
+    //提现申请
+    $router->resource('tixian', 'WithdrawalController');
 });

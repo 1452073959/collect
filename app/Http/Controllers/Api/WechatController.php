@@ -34,6 +34,7 @@ class WechatController extends Controller
             $user->token = $weixinSessionKey;
             $user->nickname = $data['userInfo']['nickName'];
             $user->weapp_avatar = $data['userInfo']['avatarUrl'];
+            $user->pid = request('pid','0');
             $user->save();
 
         }else{
@@ -70,7 +71,7 @@ class WechatController extends Controller
     {
         $app = \EasyWeChat::miniProgram();
         $user = auth('api')->user();
-        $str='pid'.$user['id'];
+        $str=$user['id'];
         $response =  $app->app_code->getUnlimit($str);
         // 保存小程序码到文件
         if ($response instanceof \EasyWeChat\Kernel\Http\StreamResponse) {

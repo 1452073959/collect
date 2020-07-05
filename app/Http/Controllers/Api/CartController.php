@@ -11,8 +11,9 @@ class CartController extends Controller
     //添加商品到购物车
     public function add(Request $request)
     {
-        $user   = $request->user();
-        $user=User::find(1);
+        $user = auth('api')->user();
+
+//        dd($user);
         $skuId  = $request->input('product_id');
         $amount = $request->input('amount');
 
@@ -32,13 +33,20 @@ class CartController extends Controller
             $cart->save();
         }
 
-        return [];
+        return $this->success($cart);
     }
     //查看购物车
     public function index(Request $request)
     {
-        $user=User::find(1);
+        $user = auth('api')->user();
         $cartItems = $user->cartItems()->with(['product'])->get();
         return $this->success($cartItems);
+    }
+    //移除购物车
+    public function del( )
+    {
+        $data=request('del');
+       $res= CartItem::destroy($data);
+        return $this->success($res);
     }
 }

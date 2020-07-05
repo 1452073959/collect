@@ -11,7 +11,7 @@ return [
         'remark' => '订单备注',
         'paid_at' => '支付时间',
         'payment_no' => '微信订单号',
-        'status' => '1未支付2待发货3已发货',
+        'status' => '订单状态',
         'ship_data' => '物流数据',
     ],
     'options' => [
