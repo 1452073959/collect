@@ -77,4 +77,6 @@ $api->version('v1', [
     Route::get('push','Api\NotificationsController@index');
     //小程序码
     Route::get('ma','Api\WechatController@ma');
+    //创建订单,发起支付
+    Route::any('pay','Api\OrderController@pay');
 });
