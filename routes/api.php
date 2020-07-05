@@ -79,4 +79,8 @@ $api->version('v1', [
     Route::get('ma','Api\WechatController@ma');
     //创建订单,发起支付
     Route::any('pay','Api\OrderController@pay');
+    //支付通知
+    $api->any('notify', 'OrderController@notify');
+    //测试路由
+    $api->any('cache', 'OrderController@cache');
 });
