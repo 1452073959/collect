@@ -9,7 +9,7 @@ use EasyWeChat\Factory;
 use function EasyWeChat\Kernel\Support\generate_sign;
 use Cache;
 use App\Models\User;
-
+use Storage;
 class WechatController extends Controller
 {
     //登陆
@@ -64,6 +64,24 @@ class WechatController extends Controller
         $value1 = Cache::get('key1');
         dump($value);
         dump($value1);
+    }
+
+    public function ma()
+    {
+        $app = \EasyWeChat::miniProgram();
+        $response =  $app->app_code->getUnlimit('123456');
+        // 保存小程序码到文件
+        if ($response instanceof \EasyWeChat\Kernel\Http\StreamResponse) {
+            $filename = $response->save(public_path('uploads'));
+            return Storage::disk('admin')->url($filename);
+        }
+//        return Storage::disk('admin')->url($filename);
+
+// 或
+//        if ($response instanceof \EasyWeChat\Kernel\Http\StreamResponse) {
+//            $filename = $response->saveAs('/public/uploads/img', 'appcode.png');
+//        }
+        return $response;
     }
 
 

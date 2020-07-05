@@ -75,4 +75,6 @@ $api->version('v1', [
     Route::get('history','Api\ProductController@history');
     //系统推送
     Route::get('push','Api\NotificationsController@index');
+    //小程序码
+    Route::get('ma','Api\WechatController@ma');
 });
