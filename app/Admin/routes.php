@@ -12,8 +12,9 @@ Route::group([
     'middleware'    => config('admin.route.middleware'),
 ], function (Router $router) {
 
-    $router->get('/', 'HomeController@index');
-
+//    $router->get('/', 'HomeController@index');
+//    $router->get('/', 'UserController');
+    $router->resource('/', 'UserController');
     //swope
     $router->resource('swipe', 'SwipeController');
     $router->resource('user', 'UserController');
