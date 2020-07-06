@@ -1,7 +1,7 @@
 <?php 
 return [
     'labels' => [
-        'Video' => 'Video',
+        'Video' => '视频',
     ],
     'fields' => [
         'title' => '标题',

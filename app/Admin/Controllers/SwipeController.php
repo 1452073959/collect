@@ -18,6 +18,8 @@ class SwipeController extends AdminController
     protected function grid()
     {
         return Grid::make(new Swipe(), function (Grid $grid) {
+            // 禁用批量删除按钮
+            $grid->disableBatchDelete();
 //            $grid->id->sortable();
             $grid->img->display(function ($pictures) {
 

@@ -62,6 +62,16 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection moeny
      * @property Grid\Column|Collection mannumber
      * @property Grid\Column|Collection phone
+     * @property Grid\Column|Collection nickname
+     * @property Grid\Column|Collection weapp_avatar
+     * @property Grid\Column|Collection sex
+     * @property Grid\Column|Collection birthday
+     * @property Grid\Column|Collection defaultaddress_id
+     * @property Grid\Column|Collection weapp_openid
+     * @property Grid\Column|Collection token
+     * @property Grid\Column|Collection notification_count
+     * @property Grid\Column|Collection balance
+     * @property Grid\Column|Collection pid
      * @property Grid\Column|Collection order
      * @property Grid\Column|Collection icon
      * @property Grid\Column|Collection uri
@@ -86,21 +96,11 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection read_at
      * @property Grid\Column|Collection order_id
      * @property Grid\Column|Collection email
-     * @property Grid\Column|Collection token
      * @property Grid\Column|Collection province
      * @property Grid\Column|Collection city
      * @property Grid\Column|Collection district
      * @property Grid\Column|Collection contact_name
      * @property Grid\Column|Collection contact_phone
-     * @property Grid\Column|Collection nickname
-     * @property Grid\Column|Collection weapp_avatar
-     * @property Grid\Column|Collection sex
-     * @property Grid\Column|Collection birthday
-     * @property Grid\Column|Collection defaultaddress_id
-     * @property Grid\Column|Collection weapp_openid
-     * @property Grid\Column|Collection notification_count
-     * @property Grid\Column|Collection balance
-     * @property Grid\Column|Collection pid
      *
      * @method Grid\Column|Collection id(string $label = null)
      * @method Grid\Column|Collection username(string $label = null)
@@ -153,6 +153,16 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection moeny(string $label = null)
      * @method Grid\Column|Collection mannumber(string $label = null)
      * @method Grid\Column|Collection phone(string $label = null)
+     * @method Grid\Column|Collection nickname(string $label = null)
+     * @method Grid\Column|Collection weapp_avatar(string $label = null)
+     * @method Grid\Column|Collection sex(string $label = null)
+     * @method Grid\Column|Collection birthday(string $label = null)
+     * @method Grid\Column|Collection defaultaddress_id(string $label = null)
+     * @method Grid\Column|Collection weapp_openid(string $label = null)
+     * @method Grid\Column|Collection token(string $label = null)
+     * @method Grid\Column|Collection notification_count(string $label = null)
+     * @method Grid\Column|Collection balance(string $label = null)
+     * @method Grid\Column|Collection pid(string $label = null)
      * @method Grid\Column|Collection order(string $label = null)
      * @method Grid\Column|Collection icon(string $label = null)
      * @method Grid\Column|Collection uri(string $label = null)
@@ -177,21 +187,11 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection read_at(string $label = null)
      * @method Grid\Column|Collection order_id(string $label = null)
      * @method Grid\Column|Collection email(string $label = null)
-     * @method Grid\Column|Collection token(string $label = null)
      * @method Grid\Column|Collection province(string $label = null)
      * @method Grid\Column|Collection city(string $label = null)
      * @method Grid\Column|Collection district(string $label = null)
      * @method Grid\Column|Collection contact_name(string $label = null)
      * @method Grid\Column|Collection contact_phone(string $label = null)
-     * @method Grid\Column|Collection nickname(string $label = null)
-     * @method Grid\Column|Collection weapp_avatar(string $label = null)
-     * @method Grid\Column|Collection sex(string $label = null)
-     * @method Grid\Column|Collection birthday(string $label = null)
-     * @method Grid\Column|Collection defaultaddress_id(string $label = null)
-     * @method Grid\Column|Collection weapp_openid(string $label = null)
-     * @method Grid\Column|Collection notification_count(string $label = null)
-     * @method Grid\Column|Collection balance(string $label = null)
-     * @method Grid\Column|Collection pid(string $label = null)
      */
     class Grid {}
 
@@ -249,6 +249,16 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection moeny
      * @property Show\Field|Collection mannumber
      * @property Show\Field|Collection phone
+     * @property Show\Field|Collection nickname
+     * @property Show\Field|Collection weapp_avatar
+     * @property Show\Field|Collection sex
+     * @property Show\Field|Collection birthday
+     * @property Show\Field|Collection defaultaddress_id
+     * @property Show\Field|Collection weapp_openid
+     * @property Show\Field|Collection token
+     * @property Show\Field|Collection notification_count
+     * @property Show\Field|Collection balance
+     * @property Show\Field|Collection pid
      * @property Show\Field|Collection order
      * @property Show\Field|Collection icon
      * @property Show\Field|Collection uri
@@ -273,21 +283,11 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection read_at
      * @property Show\Field|Collection order_id
      * @property Show\Field|Collection email
-     * @property Show\Field|Collection token
      * @property Show\Field|Collection province
      * @property Show\Field|Collection city
      * @property Show\Field|Collection district
      * @property Show\Field|Collection contact_name
      * @property Show\Field|Collection contact_phone
-     * @property Show\Field|Collection nickname
-     * @property Show\Field|Collection weapp_avatar
-     * @property Show\Field|Collection sex
-     * @property Show\Field|Collection birthday
-     * @property Show\Field|Collection defaultaddress_id
-     * @property Show\Field|Collection weapp_openid
-     * @property Show\Field|Collection notification_count
-     * @property Show\Field|Collection balance
-     * @property Show\Field|Collection pid
      *
      * @method Show\Field|Collection id(string $label = null)
      * @method Show\Field|Collection username(string $label = null)
@@ -340,6 +340,16 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection moeny(string $label = null)
      * @method Show\Field|Collection mannumber(string $label = null)
      * @method Show\Field|Collection phone(string $label = null)
+     * @method Show\Field|Collection nickname(string $label = null)
+     * @method Show\Field|Collection weapp_avatar(string $label = null)
+     * @method Show\Field|Collection sex(string $label = null)
+     * @method Show\Field|Collection birthday(string $label = null)
+     * @method Show\Field|Collection defaultaddress_id(string $label = null)
+     * @method Show\Field|Collection weapp_openid(string $label = null)
+     * @method Show\Field|Collection token(string $label = null)
+     * @method Show\Field|Collection notification_count(string $label = null)
+     * @method Show\Field|Collection balance(string $label = null)
+     * @method Show\Field|Collection pid(string $label = null)
      * @method Show\Field|Collection order(string $label = null)
      * @method Show\Field|Collection icon(string $label = null)
      * @method Show\Field|Collection uri(string $label = null)
@@ -364,21 +374,11 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection read_at(string $label = null)
      * @method Show\Field|Collection order_id(string $label = null)
      * @method Show\Field|Collection email(string $label = null)
-     * @method Show\Field|Collection token(string $label = null)
      * @method Show\Field|Collection province(string $label = null)
      * @method Show\Field|Collection city(string $label = null)
      * @method Show\Field|Collection district(string $label = null)
      * @method Show\Field|Collection contact_name(string $label = null)
      * @method Show\Field|Collection contact_phone(string $label = null)
-     * @method Show\Field|Collection nickname(string $label = null)
-     * @method Show\Field|Collection weapp_avatar(string $label = null)
-     * @method Show\Field|Collection sex(string $label = null)
-     * @method Show\Field|Collection birthday(string $label = null)
-     * @method Show\Field|Collection defaultaddress_id(string $label = null)
-     * @method Show\Field|Collection weapp_openid(string $label = null)
-     * @method Show\Field|Collection notification_count(string $label = null)
-     * @method Show\Field|Collection balance(string $label = null)
-     * @method Show\Field|Collection pid(string $label = null)
      */
     class Show {}
 

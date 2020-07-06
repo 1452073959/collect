@@ -18,7 +18,7 @@ class PushController extends AdminController
     protected function grid()
     {
         return Grid::make(new Push(), function (Grid $grid) {
-            $grid->id->sortable();
+//            $grid->id->sortable();
             $grid->title;
             $grid->content;
             $grid->created_at;

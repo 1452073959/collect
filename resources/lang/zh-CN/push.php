@@ -1,7 +1,7 @@
 <?php 
 return [
     'labels' => [
-        'Push' => 'Push',
+        'Push' => '推送',
     ],
     'fields' => [
         'title' => '标题',

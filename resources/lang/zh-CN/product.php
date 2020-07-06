@@ -1,7 +1,7 @@
 <?php 
 return [
     'labels' => [
-        'Product' => 'Product',
+        'Product' => '商品',
     ],
     'fields' => [
         'cid' => 'cid',

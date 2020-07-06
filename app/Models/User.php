@@ -85,6 +85,16 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->hasMany(UserAddress::class);
     }
+    //佣金上级
+    public function balance()
+    {
+        return $this->belongsTo(User::class,'pid','id');
+    }
+    //下级
+    public function bal()
+    {
+        return $this->hasMany(User::class,'id','pid');
+    }
 
 
 

@@ -1,7 +1,7 @@
 <?php 
 return [
     'labels' => [
-        'Help' => 'Help',
+        'Help' => '帮助',
     ],
     'fields' => [
         'title' => '标题`',

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50724
 File Encoding         : 65001
 
-Date: 2020-07-05 15:52:32
+Date: 2020-07-05 20:18:30
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -47,7 +47,7 @@ CREATE TABLE `admin_menu` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of admin_menu
@@ -67,6 +67,7 @@ INSERT INTO `admin_menu` VALUES ('12', '0', '14', '帮助中心', 'fa-angellist'
 INSERT INTO `admin_menu` VALUES ('13', '0', '15', '关于我们', 'fa-area-chart', 'about', '2020-07-02 16:51:07', '2020-07-03 15:12:07');
 INSERT INTO `admin_menu` VALUES ('14', '0', '11', '系统推送', 'fa-arrow-circle-right', 'push', '2020-07-03 14:12:53', '2020-07-03 15:12:07');
 INSERT INTO `admin_menu` VALUES ('15', '0', '9', '视频', 'fa-bullhorn', 'video', '2020-07-03 15:11:02', '2020-07-03 15:12:07');
+INSERT INTO `admin_menu` VALUES ('16', '0', '16', '提现申请', 'fa-book', 'tixian', '2020-07-05 18:51:08', '2020-07-05 18:51:08');
 
 -- ----------------------------
 -- Table structure for admin_operation_log
@@ -83,7 +84,7 @@ CREATE TABLE `admin_operation_log` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `admin_operation_log_user_id_index` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=499 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=587 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of admin_operation_log
@@ -586,6 +587,94 @@ INSERT INTO `admin_operation_log` VALUES ('495', '1', 'admin/helpers/scaffold', 
 INSERT INTO `admin_operation_log` VALUES ('496', '1', 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"order_items\",\"exist-table\":\"collect|order_items\",\"model_name\":\"App\\\\Models\\\\OrderItem\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\OrderItemController\",\"create\":[\"model\",\"lang\"],\"fields\":[{\"name\":\"product_id\",\"translation\":\"\\u5546\\u54c1id\",\"type\":\"integer\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":\"\\u5546\\u54c1id\"},{\"name\":\"amount\",\"translation\":\"\\u6570\\u91cf\",\"type\":\"integer\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":\"\\u6570\\u91cf\"},{\"name\":\"price\",\"translation\":null,\"type\":\"decimal\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"primary_key\":\"id\",\"_token\":\"KjH79pfekqErjzEJTgrIm7BXgeiAA2BdfcYTjziR\"}', '2020-07-05 10:03:34', '2020-07-05 10:03:34');
 INSERT INTO `admin_operation_log` VALUES ('497', '1', 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2020-07-05 10:03:35', '2020-07-05 10:03:35');
 INSERT INTO `admin_operation_log` VALUES ('498', '0', 'admin/auth/login', 'GET', '127.0.0.1', '[]', '2020-07-05 14:22:19', '2020-07-05 14:22:19');
+INSERT INTO `admin_operation_log` VALUES ('499', '0', 'admin/auth/login', 'GET', '127.0.0.1', '[]', '2020-07-05 16:13:51', '2020-07-05 16:13:51');
+INSERT INTO `admin_operation_log` VALUES ('500', '0', 'admin/auth/login', 'GET', '127.0.0.1', '[]', '2020-07-05 17:11:36', '2020-07-05 17:11:36');
+INSERT INTO `admin_operation_log` VALUES ('501', '0', 'admin/auth/login', 'POST', '127.0.0.1', '{\"_token\":\"zEYQpuNp8yqkftZm4oxBz4MLa7BBjzCHkfdrzW1V\",\"username\":\"admin\",\"password\":\"adm******\"}', '2020-07-05 17:13:45', '2020-07-05 17:13:45');
+INSERT INTO `admin_operation_log` VALUES ('502', '1', 'admin', 'GET', '127.0.0.1', '[]', '2020-07-05 17:13:46', '2020-07-05 17:13:46');
+INSERT INTO `admin_operation_log` VALUES ('503', '1', 'admin/product', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:13:52', '2020-07-05 17:13:52');
+INSERT INTO `admin_operation_log` VALUES ('504', '1', 'admin/order', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:13:53', '2020-07-05 17:13:53');
+INSERT INTO `admin_operation_log` VALUES ('505', '1', 'admin/order', 'GET', '127.0.0.1', '[]', '2020-07-05 17:14:05', '2020-07-05 17:14:05');
+INSERT INTO `admin_operation_log` VALUES ('506', '1', 'admin/order', 'GET', '127.0.0.1', '[]', '2020-07-05 17:14:08', '2020-07-05 17:14:08');
+INSERT INTO `admin_operation_log` VALUES ('507', '1', 'admin/order', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:14:11', '2020-07-05 17:14:11');
+INSERT INTO `admin_operation_log` VALUES ('508', '1', 'admin/order', 'GET', '127.0.0.1', '[]', '2020-07-05 17:14:41', '2020-07-05 17:14:41');
+INSERT INTO `admin_operation_log` VALUES ('509', '1', 'admin/order/11/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:14:46', '2020-07-05 17:14:46');
+INSERT INTO `admin_operation_log` VALUES ('510', '1', 'admin/order/11/edit', 'GET', '127.0.0.1', '[]', '2020-07-05 17:14:50', '2020-07-05 17:14:50');
+INSERT INTO `admin_operation_log` VALUES ('511', '1', 'admin/order/11/edit', 'GET', '127.0.0.1', '[]', '2020-07-05 17:15:56', '2020-07-05 17:15:56');
+INSERT INTO `admin_operation_log` VALUES ('512', '1', 'admin/order/11/edit', 'GET', '127.0.0.1', '[]', '2020-07-05 17:16:24', '2020-07-05 17:16:24');
+INSERT INTO `admin_operation_log` VALUES ('513', '1', 'admin/order/11/edit', 'GET', '127.0.0.1', '[]', '2020-07-05 17:17:52', '2020-07-05 17:17:52');
+INSERT INTO `admin_operation_log` VALUES ('514', '1', 'admin/order', 'GET', '127.0.0.1', '[]', '2020-07-05 17:19:46', '2020-07-05 17:19:46');
+INSERT INTO `admin_operation_log` VALUES ('515', '1', 'admin/order/11/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:19:49', '2020-07-05 17:19:49');
+INSERT INTO `admin_operation_log` VALUES ('516', '1', 'admin/order', 'GET', '127.0.0.1', '[]', '2020-07-05 17:20:39', '2020-07-05 17:20:39');
+INSERT INTO `admin_operation_log` VALUES ('517', '1', 'admin/order/11', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:20:42', '2020-07-05 17:20:42');
+INSERT INTO `admin_operation_log` VALUES ('518', '1', 'admin/order/11', 'GET', '127.0.0.1', '[]', '2020-07-05 17:20:45', '2020-07-05 17:20:45');
+INSERT INTO `admin_operation_log` VALUES ('519', '1', 'admin/order/11', 'GET', '127.0.0.1', '[]', '2020-07-05 17:21:38', '2020-07-05 17:21:38');
+INSERT INTO `admin_operation_log` VALUES ('520', '1', 'admin/order/11', 'GET', '127.0.0.1', '[]', '2020-07-05 17:21:58', '2020-07-05 17:21:58');
+INSERT INTO `admin_operation_log` VALUES ('521', '1', 'admin/order/11', 'GET', '127.0.0.1', '[]', '2020-07-05 17:22:39', '2020-07-05 17:22:39');
+INSERT INTO `admin_operation_log` VALUES ('522', '1', 'admin/order/11', 'GET', '127.0.0.1', '[]', '2020-07-05 17:23:05', '2020-07-05 17:23:05');
+INSERT INTO `admin_operation_log` VALUES ('523', '1', 'admin/order/11', 'GET', '127.0.0.1', '[]', '2020-07-05 17:23:18', '2020-07-05 17:23:18');
+INSERT INTO `admin_operation_log` VALUES ('524', '1', 'admin/order/11', 'GET', '127.0.0.1', '[]', '2020-07-05 17:25:01', '2020-07-05 17:25:01');
+INSERT INTO `admin_operation_log` VALUES ('525', '1', 'admin/order/11', 'GET', '127.0.0.1', '[]', '2020-07-05 17:26:26', '2020-07-05 17:26:26');
+INSERT INTO `admin_operation_log` VALUES ('526', '1', 'admin/order/11', 'GET', '127.0.0.1', '[]', '2020-07-05 17:26:44', '2020-07-05 17:26:44');
+INSERT INTO `admin_operation_log` VALUES ('527', '1', 'admin/order/11', 'GET', '127.0.0.1', '[]', '2020-07-05 17:27:14', '2020-07-05 17:27:14');
+INSERT INTO `admin_operation_log` VALUES ('528', '1', 'admin/order/11', 'GET', '127.0.0.1', '[]', '2020-07-05 17:28:51', '2020-07-05 17:28:51');
+INSERT INTO `admin_operation_log` VALUES ('529', '1', 'admin/order', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:28:53', '2020-07-05 17:28:53');
+INSERT INTO `admin_operation_log` VALUES ('530', '1', 'admin/order/16', 'GET', '127.0.0.1', '[]', '2020-07-05 17:28:58', '2020-07-05 17:28:58');
+INSERT INTO `admin_operation_log` VALUES ('531', '1', 'admin/order/16', 'GET', '127.0.0.1', '[]', '2020-07-05 17:29:27', '2020-07-05 17:29:27');
+INSERT INTO `admin_operation_log` VALUES ('532', '1', 'admin/order/16', 'GET', '127.0.0.1', '[]', '2020-07-05 17:30:10', '2020-07-05 17:30:10');
+INSERT INTO `admin_operation_log` VALUES ('533', '1', 'admin/order/16', 'GET', '127.0.0.1', '[]', '2020-07-05 17:30:50', '2020-07-05 17:30:50');
+INSERT INTO `admin_operation_log` VALUES ('534', '1', 'admin/order/16', 'GET', '127.0.0.1', '[]', '2020-07-05 17:31:01', '2020-07-05 17:31:01');
+INSERT INTO `admin_operation_log` VALUES ('535', '1', 'admin/order/16', 'GET', '127.0.0.1', '[]', '2020-07-05 17:35:56', '2020-07-05 17:35:56');
+INSERT INTO `admin_operation_log` VALUES ('536', '1', 'admin/order/16', 'GET', '127.0.0.1', '[]', '2020-07-05 17:37:02', '2020-07-05 17:37:02');
+INSERT INTO `admin_operation_log` VALUES ('537', '1', 'admin/order', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:38:43', '2020-07-05 17:38:43');
+INSERT INTO `admin_operation_log` VALUES ('538', '1', 'admin/order', 'GET', '127.0.0.1', '[]', '2020-07-05 17:39:55', '2020-07-05 17:39:55');
+INSERT INTO `admin_operation_log` VALUES ('539', '1', 'admin/order', 'GET', '127.0.0.1', '[]', '2020-07-05 17:40:31', '2020-07-05 17:40:31');
+INSERT INTO `admin_operation_log` VALUES ('540', '1', 'admin/order', 'GET', '127.0.0.1', '[]', '2020-07-05 17:40:49', '2020-07-05 17:40:49');
+INSERT INTO `admin_operation_log` VALUES ('541', '1', 'admin/order', 'GET', '127.0.0.1', '[]', '2020-07-05 17:41:22', '2020-07-05 17:41:22');
+INSERT INTO `admin_operation_log` VALUES ('542', '1', 'admin/order', 'GET', '127.0.0.1', '[]', '2020-07-05 17:41:53', '2020-07-05 17:41:53');
+INSERT INTO `admin_operation_log` VALUES ('543', '1', 'admin/product', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:41:56', '2020-07-05 17:41:56');
+INSERT INTO `admin_operation_log` VALUES ('544', '1', 'admin/push', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:41:58', '2020-07-05 17:41:58');
+INSERT INTO `admin_operation_log` VALUES ('545', '1', 'admin/cate', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:42:03', '2020-07-05 17:42:03');
+INSERT INTO `admin_operation_log` VALUES ('546', '1', 'admin/video', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:42:04', '2020-07-05 17:42:04');
+INSERT INTO `admin_operation_log` VALUES ('547', '1', 'admin/swipe', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:42:05', '2020-07-05 17:42:05');
+INSERT INTO `admin_operation_log` VALUES ('548', '1', 'admin/about', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:42:09', '2020-07-05 17:42:09');
+INSERT INTO `admin_operation_log` VALUES ('549', '1', 'admin/about', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:42:13', '2020-07-05 17:42:13');
+INSERT INTO `admin_operation_log` VALUES ('550', '1', 'admin/about/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:42:15', '2020-07-05 17:42:15');
+INSERT INTO `admin_operation_log` VALUES ('551', '1', 'admin/help', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:42:20', '2020-07-05 17:42:20');
+INSERT INTO `admin_operation_log` VALUES ('552', '1', 'admin/help/1/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:42:23', '2020-07-05 17:42:23');
+INSERT INTO `admin_operation_log` VALUES ('553', '1', 'admin/help', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:42:31', '2020-07-05 17:42:31');
+INSERT INTO `admin_operation_log` VALUES ('554', '1', 'admin/about', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:42:34', '2020-07-05 17:42:34');
+INSERT INTO `admin_operation_log` VALUES ('555', '1', 'admin/order', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:42:37', '2020-07-05 17:42:37');
+INSERT INTO `admin_operation_log` VALUES ('556', '1', 'admin/product', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:42:39', '2020-07-05 17:42:39');
+INSERT INTO `admin_operation_log` VALUES ('557', '1', 'admin/product/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 17:42:43', '2020-07-05 17:42:43');
+INSERT INTO `admin_operation_log` VALUES ('558', '1', 'admin/product/create', 'GET', '127.0.0.1', '[]', '2020-07-05 17:43:36', '2020-07-05 17:43:36');
+INSERT INTO `admin_operation_log` VALUES ('559', '1', 'admin/cate', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:10:37', '2020-07-05 18:10:37');
+INSERT INTO `admin_operation_log` VALUES ('560', '1', 'admin/cate/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:10:39', '2020-07-05 18:10:39');
+INSERT INTO `admin_operation_log` VALUES ('561', '1', 'admin/helpers/scaffold', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:48:29', '2020-07-05 18:48:29');
+INSERT INTO `admin_operation_log` VALUES ('562', '1', 'admin/helpers/scaffold/table', 'POST', '127.0.0.1', '{\"db\":\"collect\",\"tb\":\"withdrawal\",\"_token\":\"89eQq7sULRKf5REMOfwtZjyMlwpVzSQVp2mqKAPR\"}', '2020-07-05 18:48:39', '2020-07-05 18:48:39');
+INSERT INTO `admin_operation_log` VALUES ('563', '1', 'admin/helpers/scaffold', 'GET', '127.0.0.1', '{\"singular\":\"withdrawal\"}', '2020-07-05 18:48:39', '2020-07-05 18:48:39');
+INSERT INTO `admin_operation_log` VALUES ('564', '1', 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"withdrawal\",\"exist-table\":\"collect|withdrawal\",\"model_name\":\"App\\\\Models\\\\Withdrawal\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\WithdrawalController\",\"create\":[\"model\",\"controller\",\"lang\"],\"fields\":[{\"name\":\"name\",\"translation\":null,\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"card\",\"translation\":\"\\u94f6\\u884c\\u5361\\u53f7\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":\"\\u94f6\\u884c\\u5361\\u53f7\"},{\"name\":\"bank\",\"translation\":\"\\u5f00\\u6237\\u884c\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":\"\\u5f00\\u6237\\u884c\"},{\"name\":\"moeny\",\"translation\":null,\"type\":\"decimal\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"mannumber\",\"translation\":\"\\u8eab\\u4efd\\u8bc1\\u53f7\",\"type\":\"integer\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":\"\\u8eab\\u4efd\\u8bc1\\u53f7\"},{\"name\":\"phone\",\"translation\":\"\\u8054\\u7cfb\\u7535\\u8bdd\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":\"\\u8054\\u7cfb\\u7535\\u8bdd\"},{\"name\":\"status\",\"translation\":\"1\\u5df2\\u7533\\u8bf72,\\u5df2\\u62e8\\u6b3e\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":\"1\\u5df2\\u7533\\u8bf72,\\u5df2\\u62e8\\u6b3e\"}],\"primary_key\":\"id\",\"timestamps\":\"1\",\"_token\":\"89eQq7sULRKf5REMOfwtZjyMlwpVzSQVp2mqKAPR\"}', '2020-07-05 18:48:56', '2020-07-05 18:48:56');
+INSERT INTO `admin_operation_log` VALUES ('565', '1', 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2020-07-05 18:48:57', '2020-07-05 18:48:57');
+INSERT INTO `admin_operation_log` VALUES ('566', '1', 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:50:30', '2020-07-05 18:50:30');
+INSERT INTO `admin_operation_log` VALUES ('567', '1', 'admin/auth/menu', 'POST', '127.0.0.1', '{\"parent_id\":null,\"title\":\"\\u63d0\\u73b0\\u7533\\u8bf7\",\"icon\":\"fa-book\",\"uri\":\"tixian\",\"roles\":[null],\"permissions\":null,\"_token\":\"89eQq7sULRKf5REMOfwtZjyMlwpVzSQVp2mqKAPR\"}', '2020-07-05 18:51:08', '2020-07-05 18:51:08');
+INSERT INTO `admin_operation_log` VALUES ('568', '1', 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:51:09', '2020-07-05 18:51:09');
+INSERT INTO `admin_operation_log` VALUES ('569', '1', 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2020-07-05 18:51:11', '2020-07-05 18:51:11');
+INSERT INTO `admin_operation_log` VALUES ('570', '1', 'admin/tixian', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:51:15', '2020-07-05 18:51:15');
+INSERT INTO `admin_operation_log` VALUES ('571', '1', 'admin/tixian', 'GET', '127.0.0.1', '[]', '2020-07-05 18:52:20', '2020-07-05 18:52:20');
+INSERT INTO `admin_operation_log` VALUES ('572', '1', 'admin/tixian/create', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:52:22', '2020-07-05 18:52:22');
+INSERT INTO `admin_operation_log` VALUES ('573', '1', 'admin/tixian', 'POST', '127.0.0.1', '{\"name\":\"\\u5f20\\u4e09\",\"card\":\"123456789\",\"bank\":\"\\u4e2d\\u56fd\\u94f6\\u884c\",\"moeny\":\"50\",\"mannumber\":\"123456789\",\"phone\":\"15766925847\",\"status\":\"1\",\"_token\":\"89eQq7sULRKf5REMOfwtZjyMlwpVzSQVp2mqKAPR\",\"_previous_\":\"http:\\/\\/collect.test\\/admin\\/tixian\"}', '2020-07-05 18:53:11', '2020-07-05 18:53:11');
+INSERT INTO `admin_operation_log` VALUES ('574', '1', 'admin/tixian', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:53:12', '2020-07-05 18:53:12');
+INSERT INTO `admin_operation_log` VALUES ('575', '1', 'admin/helpers/scaffold', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:55:47', '2020-07-05 18:55:47');
+INSERT INTO `admin_operation_log` VALUES ('576', '1', 'admin/helpers/extensions', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:55:49', '2020-07-05 18:55:49');
+INSERT INTO `admin_operation_log` VALUES ('577', '1', 'admin/helpers/scaffold', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:55:51', '2020-07-05 18:55:51');
+INSERT INTO `admin_operation_log` VALUES ('578', '1', 'admin/helpers/extensions', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:55:53', '2020-07-05 18:55:53');
+INSERT INTO `admin_operation_log` VALUES ('579', '1', 'admin/helpers/extensions', 'GET', '127.0.0.1', '[]', '2020-07-05 18:57:16', '2020-07-05 18:57:16');
+INSERT INTO `admin_operation_log` VALUES ('580', '1', 'admin/tixian', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:57:18', '2020-07-05 18:57:18');
+INSERT INTO `admin_operation_log` VALUES ('581', '1', 'admin/tixian', 'GET', '127.0.0.1', '[]', '2020-07-05 18:57:44', '2020-07-05 18:57:44');
+INSERT INTO `admin_operation_log` VALUES ('582', '1', 'admin/video', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:58:28', '2020-07-05 18:58:28');
+INSERT INTO `admin_operation_log` VALUES ('583', '1', 'admin/swipe', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:58:29', '2020-07-05 18:58:29');
+INSERT INTO `admin_operation_log` VALUES ('584', '1', 'admin/video', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:58:30', '2020-07-05 18:58:30');
+INSERT INTO `admin_operation_log` VALUES ('585', '1', 'admin/about', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:58:32', '2020-07-05 18:58:32');
+INSERT INTO `admin_operation_log` VALUES ('586', '1', 'admin/tixian', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2020-07-05 18:58:33', '2020-07-05 18:58:33');
 
 -- ----------------------------
 -- Table structure for admin_permissions
@@ -733,11 +822,12 @@ CREATE TABLE `cart_items` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of cart_items
 -- ----------------------------
+INSERT INTO `cart_items` VALUES ('3', '3', '1', '1', '2020-07-05 19:20:58', '2020-07-05 19:20:58');
 
 -- ----------------------------
 -- Table structure for categories
@@ -872,15 +962,17 @@ CREATE TABLE `order` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `no` (`no`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of order
 -- ----------------------------
-INSERT INTO `order` VALUES ('11', '20200705134512163126', '1', '{\"address\":\"\\u6c5f\\u82cf\\u7701\\u5357\\u4eac\\u5e02\\u6d66\\u53e3\\u533a\\u7b2c22\\u8857\\u9053\\u7b2c238\\u53f7\",\"contact_name\":\"\\u5170\\u5fd7\\u8bda\",\"contact_phone\":\"15184382924\",\"type\":\"normal\"}', '0.01', null, null, null, null, null, '2020-07-05 13:45:12', '2020-07-05 13:45:12');
-INSERT INTO `order` VALUES ('12', '20200705134702939700', '1', '{\"address\":\"\\u6c5f\\u82cf\\u7701\\u5357\\u4eac\\u5e02\\u6d66\\u53e3\\u533a\\u7b2c22\\u8857\\u9053\\u7b2c238\\u53f7\",\"contact_name\":\"\\u5170\\u5fd7\\u8bda\",\"contact_phone\":\"15184382924\",\"type\":\"normal\"}', '0.01', null, null, null, null, null, '2020-07-05 13:47:02', '2020-07-05 13:47:02');
-INSERT INTO `order` VALUES ('13', '20200705134944066375', '1', '{\"address\":\"\\u6c5f\\u82cf\\u7701\\u5357\\u4eac\\u5e02\\u6d66\\u53e3\\u533a\\u7b2c22\\u8857\\u9053\\u7b2c238\\u53f7\",\"contact_name\":\"\\u5170\\u5fd7\\u8bda\",\"contact_phone\":\"15184382924\",\"type\":\"normal\"}', '0.01', null, null, null, null, null, '2020-07-05 13:49:44', '2020-07-05 13:49:44');
+INSERT INTO `order` VALUES ('11', '20200705134512163126', '3', '{\"address\":\"\\u6c5f\\u82cf\\u7701\\u5357\\u4eac\\u5e02\\u6d66\\u53e3\\u533a\\u7b2c22\\u8857\\u9053\\u7b2c238\\u53f7\",\"contact_name\":\"\\u5170\\u5fd7\\u8bda\",\"contact_phone\":\"15184382924\",\"type\":\"normal\"}', '0.01', null, null, null, null, null, '2020-07-05 13:45:12', '2020-07-05 13:45:12');
+INSERT INTO `order` VALUES ('12', '20200705134702939700', '3', '{\"address\":\"\\u6c5f\\u82cf\\u7701\\u5357\\u4eac\\u5e02\\u6d66\\u53e3\\u533a\\u7b2c22\\u8857\\u9053\\u7b2c238\\u53f7\",\"contact_name\":\"\\u5170\\u5fd7\\u8bda\",\"contact_phone\":\"15184382924\",\"type\":\"normal\"}', '0.01', null, null, null, null, null, '2020-07-05 13:47:02', '2020-07-05 13:47:02');
+INSERT INTO `order` VALUES ('13', '20200705134944066375', '3', '{\"address\":\"\\u6c5f\\u82cf\\u7701\\u5357\\u4eac\\u5e02\\u6d66\\u53e3\\u533a\\u7b2c22\\u8857\\u9053\\u7b2c238\\u53f7\",\"contact_name\":\"\\u5170\\u5fd7\\u8bda\",\"contact_phone\":\"15184382924\",\"type\":\"normal\"}', '0.01', null, null, null, null, null, '2020-07-05 13:49:44', '2020-07-05 13:49:44');
 INSERT INTO `order` VALUES ('14', '20200705142045660092', '1', '{\"address\":\"\\u6c5f\\u82cf\\u7701\\u5357\\u4eac\\u5e02\\u6d66\\u53e3\\u533a\\u7b2c22\\u8857\\u9053\\u7b2c238\\u53f7\",\"contact_name\":\"\\u5170\\u5fd7\\u8bda\",\"contact_phone\":\"15184382924\",\"type\":\"normal\"}', '0.01', null, null, null, '1', null, '2020-07-05 14:20:45', '2020-07-05 14:20:45');
+INSERT INTO `order` VALUES ('15', '20200705161037490596', '1', '{\"address\":\"\\u6c5f\\u82cf\\u7701\\u5357\\u4eac\\u5e02\\u6d66\\u53e3\\u533a\\u7b2c22\\u8857\\u9053\\u7b2c238\\u53f7\",\"contact_name\":\"\\u5170\\u5fd7\\u8bda\",\"contact_phone\":\"15184382924\",\"type\":\"normal\"}', '0.01', null, null, null, '1', null, '2020-07-05 16:10:37', '2020-07-05 16:10:37');
+INSERT INTO `order` VALUES ('16', '20200705161811046178', '1', '{\"address\":\"\\u6c5f\\u82cf\\u7701\\u5357\\u4eac\\u5e02\\u6d66\\u53e3\\u533a\\u7b2c22\\u8857\\u9053\\u7b2c238\\u53f7\",\"contact_name\":\"\\u5170\\u5fd7\\u8bda\",\"contact_phone\":\"15184382924\",\"type\":\"normal\"}', '0.01', null, '2020-07-05 16:18:33', '4200000586202007058370743547', '3', '{\"express_company\":\"\\u4e2d\\u901a\",\"express_no\":\"123456\"}', '2020-07-05 16:18:11', '2020-07-05 16:18:33');
 
 -- ----------------------------
 -- Table structure for order_items
@@ -893,7 +985,7 @@ CREATE TABLE `order_items` (
   `amount` int(11) DEFAULT NULL COMMENT '数量',
   `price` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of order_items
@@ -906,6 +998,10 @@ INSERT INTO `order_items` VALUES ('10', '13', '1', '2', '50.00');
 INSERT INTO `order_items` VALUES ('11', '13', '2', '4', '0.01');
 INSERT INTO `order_items` VALUES ('12', '14', '1', '2', '50.00');
 INSERT INTO `order_items` VALUES ('13', '14', '2', '4', '0.01');
+INSERT INTO `order_items` VALUES ('14', '15', '1', '2', '50.00');
+INSERT INTO `order_items` VALUES ('15', '15', '2', '4', '0.01');
+INSERT INTO `order_items` VALUES ('16', '16', '1', '2', '50.00');
+INSERT INTO `order_items` VALUES ('17', '16', '2', '4', '0.01');
 
 -- ----------------------------
 -- Table structure for password_resets
@@ -1006,14 +1102,14 @@ CREATE TABLE `users` (
   `pid` int(11) NOT NULL DEFAULT '0' COMMENT '上级id',
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`weapp_avatar`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
 INSERT INTO `users` VALUES ('1', 'snow雪', 'https://wx.qlogo.cn/mmopen/vi_32/fvSzic2fdNUMgDEXQMSMy4qUHQCCCcyPhyZCaKibRcGFckNYyqicx2mfJiagqjKV0USu8icX9fnibDE9wqb4aMazNseA/132', null, null, '2', 'oUf9a5AT4xPDZy8lJ5Fpskh5gTqE', 'eyJpdiI6IkNIbEJKekVQUzljZzZ5TW03Z1dSNWc9PSIsInZhbHVlIjoiMWhlcTlCUlBqcUVjbnJyWmQ3SCtWR3BjRGMxYmVnNXd0RnF1djEyZytJZ0dlVmVsSWZxemFNXC9pazBLU25CRzciLCJtYWMiOiIzNDY0OTZmMmM0N2Q1N2FkY2YxOWNjOTVkM2U2N2ZiODcxMjlkYjRmYTlkMGJkZTkxOGNhOGY0YzFkMWNhYjA5In0=', '2020-06-18 17:27:23', '2020-07-03 14:44:24', '1', '0.00', '3');
 INSERT INTO `users` VALUES ('2', 'xxx', null, null, null, null, 'xsadsa', null, null, '2020-07-03 14:45:38', '0', '0.00', '0');
-INSERT INTO `users` VALUES ('3', 'snow雪', 'https://wx.qlogo.cn/mmopen/vi_32/P3OQkgnojFxA8yYWQQicicUbobTBg7lBh9E1m6kBR0kibQ90lv9QYowBWalB0knWBLZas27GZ0oJjWpciarPj0OLXw/132', null, null, null, 'oLZ7u0Frz9g4DmtKM21pqfqclkzM', 'eyJpdiI6Iit3cHpSYm9VSFZ2WEQxOTl6RnF6Y0E9PSIsInZhbHVlIjoib1c4dllHY3lPdElXMEtiS0VVZytRdDdNc1A1QWVXQmJzWjVSZUI4RE5pSE0wdXRUaVBjSWFzQTZhZ29kRWRTNSIsIm1hYyI6IjUxYzBkN2M2NzVmNzZiZTY1YWM3OGJmZjZmNWEyMTk1ZTY0MDhiMzZlYTFkNmZhYTZlZWNmYWY3YjBmZjgwNjMifQ==', '2020-07-04 12:05:05', '2020-07-04 13:18:10', '0', '0.00', '0');
+INSERT INTO `users` VALUES ('3', 'snow雪', 'https://wx.qlogo.cn/mmopen/vi_32/P3OQkgnojFxA8yYWQQicicUbobTBg7lBh9E1m6kBR0kibQ90lv9QYowBWalB0knWBLZas27GZ0oJjWpciarPj0OLXw/132', null, null, null, 'oLZ7u0Frz9g4DmtKM21pqfqclkzM', 'eyJpdiI6Ims5cWxzdTVIUytscVM4ek9LRXpDamc9PSIsInZhbHVlIjoiT1NLaXhTTldrUStsdjFUTTlCeEdNUnVKM2xtRnVqdGZTY3AwTlhVV2l5RDNhdWFDU2N1ckFxek8ydGJrdFlNdCIsIm1hYyI6Ijc2OGQwMjBmNGY4YmUxMmRkMTg3NTgyYjBhOWY0ZTY1OTE4NjM1YzM5ZWYyOTBiZmYyOWZiNmIyYmJiYzZhNmYifQ==', '2020-07-05 19:08:21', '2020-07-05 19:20:21', '0', '0.00', '0');
 
 -- ----------------------------
 -- Table structure for user_addresses
@@ -1079,3 +1175,29 @@ CREATE TABLE `video` (
 -- Records of video
 -- ----------------------------
 INSERT INTO `video` VALUES ('1', '测试视频', '测试视频描述', 'files/70c4662e8faeacb3df2ef4c3517f49c0.mp4', '2020-07-03 17:13:25', '2020-07-03 17:28:56');
+
+-- ----------------------------
+-- Table structure for withdrawal
+-- ----------------------------
+DROP TABLE IF EXISTS `withdrawal`;
+CREATE TABLE `withdrawal` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `card` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '银行卡号',
+  `bank` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '开户行',
+  `moeny` decimal(10,2) DEFAULT NULL,
+  `mannumber` int(11) DEFAULT NULL COMMENT '身份证号',
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '联系电话',
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '1已申请2,已拨款',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of withdrawal
+-- ----------------------------
+INSERT INTO `withdrawal` VALUES ('1', '3', '张三', '123456789', '中国银行', '50.00', '123456789', '15766925847', '1', '2020-07-05 18:53:11', '2020-07-05 18:53:11');

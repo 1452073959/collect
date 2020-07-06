@@ -20,9 +20,9 @@ class VideoController extends AdminController
         return Grid::make(new Video(), function (Grid $grid) {
             $grid->id->sortable();
             $grid->title;
-            $grid->description;
-            $grid->video;
-            $grid->created_at;
+//            $grid->description;
+            $grid->video->view('admin.video');
+//            $grid->created_at;
             $grid->updated_at->sortable();
         
             $grid->filter(function (Grid\Filter $filter) {

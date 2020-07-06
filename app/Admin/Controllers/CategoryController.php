@@ -18,8 +18,13 @@ class CategoryController extends AdminController
     protected function grid()
     {
         return Grid::make(new Category(), function (Grid $grid) {
-            $grid->id->sortable();
+//            $grid->id->sortable();
             $grid->text->tree();
+            //关闭新增按钮
+//            $grid->disableCreateButton();
+            $grid->disableDeleteButton();
+            // 禁用详情按钮
+            $grid->disableViewButton();
 //            $grid->parent_id;
 //            $grid->is_directory;
 //            $grid->level;
@@ -63,10 +68,10 @@ class CategoryController extends AdminController
     protected function form()
     {
         return Form::make(new Category(), function (Form $form) {
-            $form->display('id');
+//            $form->display('id');
 //            $form->text('cid');
             $form->text('text');
-            $form->select('parent_id','所属分类')->options('http://collect.test/api/cate')->default('0');
+            $form->select('parent_id','所属分类')->options('http://collect.test/api/cate')->default('0')->help('留空为顶级分类');;
             $form->disableResetButton();
             $form->disableViewCheck();
             $form->disableEditingCheck();

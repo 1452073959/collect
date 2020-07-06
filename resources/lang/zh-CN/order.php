@@ -1,7 +1,7 @@
 <?php 
 return [
     'labels' => [
-        'Order' => 'Order',
+        'Order' => '订单',
     ],
     'fields' => [
         'no' => '商户订单号',

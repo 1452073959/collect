@@ -18,6 +18,8 @@ class AboutController extends AdminController
     protected function grid()
     {
         return Grid::make(new About(), function (Grid $grid) {
+            // 禁用批量删除按钮
+            $grid->disableBatchDelete();
 //            $grid->id->sortable();
             $grid->name;
 //            $grid->image;

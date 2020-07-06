@@ -16,6 +16,7 @@ Route::group([
 
     //swope
     $router->resource('swipe', 'SwipeController');
+    $router->resource('user', 'UserController');
     //分类管理
     $router->resource('cate', 'CategoryController');
     //商品管理
