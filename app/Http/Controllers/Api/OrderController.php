@@ -133,6 +133,30 @@ class OrderController extends Controller
 
         return $this->success('发货成功');
     }
+
+    //订单列表
+    public function index(Request $request)
+    {
+        $user = auth('api')->user();
+        if(request('status')){
+            $where=['status'=>request('status')];
+        }else{
+            $where=[];
+        }
+        $orders = Order::query()
+            // 使用 with 方法预加载，避免N + 1问题
+            ->with(['items.product'])
+            ->where('user_id', $user['id'])
+            ->where($where)
+            ->orderBy('created_at', 'desc')
+            ->paginate(16);
+        return $this->success($orders);
+    }
+    //订单详情
+    public function show(Order $order, Request $request)
+    {
+        return  $order->load(['items.product']);
+    }
 //测试方法
     public function cache()
     {
@@ -142,4 +166,5 @@ class OrderController extends Controller
         dump($value);
         dump($value1);
     }
+
 }

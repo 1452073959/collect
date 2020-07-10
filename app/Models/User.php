@@ -46,7 +46,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'token',
     ];
 
     /**
@@ -86,14 +86,14 @@ class User extends Authenticatable implements JWTSubject
         return $this->hasMany(UserAddress::class);
     }
     //佣金上级
-    public function balance()
+    public function up()
     {
         return $this->belongsTo(User::class,'pid','id');
     }
     //下级
-    public function bal()
+    public function down()
     {
-        return $this->hasMany(User::class,'id','pid');
+        return $this->hasMany(User::class,'pid','id');
     }
 
 

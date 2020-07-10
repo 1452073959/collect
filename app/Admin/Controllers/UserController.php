@@ -21,7 +21,7 @@ class UserController extends AdminController
             // 禁用批量删除按钮
             $grid->disableBatchDelete();
 
-//            $grid->column('balance','上级');
+//            $grid->column('up','上级');
             $grid->id->sortable();
             $grid->nickname;
             $grid->weapp_avatar->image();
@@ -31,9 +31,9 @@ class UserController extends AdminController
 //            $grid->weapp_openid;
 //            $grid->token;
 //            $grid->notification_count;
-            $grid->model()->with(['balance']);
-            $grid->model()->with(['bal']);
-            $grid->column('balance.nickname','上级');
+            $grid->model()->with(['up']);
+            $grid->model()->with(['down']);
+            $grid->column('up.nickname','上级');
 //            $grid->column('bal','下级')->pluck('nickname')->map('nickname')->implode('-');;
 //            $grid->pid;
 //            $grid->created_at;

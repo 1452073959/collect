@@ -27,5 +27,19 @@ class Category extends Model
         });
     }
 
+    protected $hidden = [
+        'is_directory', 'level',
+    ];
+    public function categories()
+    {
+        return $this->hasMany(Category::class,'parent_id','id');
+    }
+
+
+    public function childrenCategories()
+    {
+        return $this->categories()->with('childrenCategories');
+    }
+
 
 }

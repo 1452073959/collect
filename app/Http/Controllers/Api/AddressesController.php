@@ -30,7 +30,7 @@ class AddressesController extends Controller
             'contact_phone',
         ]));
         //设置默认收货地址
-        if(request('default')==1){
+        if(request('default')){
             $user->defaultaddress_id=$address['id'];
             $user->save();
         }

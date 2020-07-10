@@ -45,8 +45,9 @@ class CartController extends Controller
     //移除购物车
     public function del( )
     {
-        $data=request('del');
-       $res= CartItem::destroy($data);
+        $data=request('product_id');
+        $user = auth('api')->user();
+        $res= CartItem::where('user_id',$user['id'])->where('product_id','in',$data)->delete();
         return $this->success($res);
     }
 }

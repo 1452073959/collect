@@ -56,7 +56,7 @@ $api->version('v1', [
     //查看购物车
     Route::get('cart', 'Api\CartController@index');
     //购物车删除
-
+    $api->post('delcart', 'ProductController@del');
     //收货地址列表
     Route::get('addresses', 'Api\AddressesController@index');
     //新增收货地址
@@ -84,12 +84,20 @@ $api->version('v1', [
     //支付通知
     $api->any('notify', 'OrderController@notify');
 
+    //我的上级
+    $api->get('up', 'ElseController@up');
+    //我的下级
+    $api->get('down', 'ElseController@down');
 
 
     //测试路由
     $api->any('cache', 'OrderController@cache');
     //订单发货
     $api->post('shipments', 'OrderController@shipments');
+    //订单列表
+    $api->get('orderlist', 'OrderController@index');
+    //订单详情
+    Route::get('orders/{order}', 'Api\OrderController@show');
 
 
 });

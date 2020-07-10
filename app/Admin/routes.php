@@ -36,4 +36,5 @@ Route::group([
     $router->resource('video', 'VideoController');
     //提现申请
     $router->resource('tixian', 'WithdrawalController');
+    //我的团队
 });

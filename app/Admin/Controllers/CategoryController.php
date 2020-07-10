@@ -71,7 +71,13 @@ class CategoryController extends AdminController
 //            $form->display('id');
 //            $form->text('cid');
             $form->text('text');
-            $form->select('parent_id','所属分类')->options('http://collect.test/api/cate')->default('0')->help('留空为顶级分类');;
+            $form->select('parent_id','所属分类')->options(config('app.url').'/api/cate')->customFormat(function ($value) {
+                if ($value === null) {
+                    return '0';
+                }
+                return $value;
+            })->help('留空为顶级分类');;
+            $form->image('image','分类图片')->uniqueName()->required();
             $form->disableResetButton();
             $form->disableViewCheck();
             $form->disableEditingCheck();
