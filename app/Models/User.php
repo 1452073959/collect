@@ -96,6 +96,10 @@ class User extends Authenticatable implements JWTSubject
         return $this->hasMany(User::class,'pid','id');
     }
 
+    public function log()
+    {
+        return $this->hasMany(Moneylog::class,'user_id','id');
+    }
 
 
 

@@ -10,9 +10,7 @@ class Order extends Model
 	
     protected $table = 'order';
     protected $guarded = [];
-    protected $fillable = [
-        'status',
-    ];
+
     protected $casts = [
         'address'   => 'json',
         'ship_data' => 'json',

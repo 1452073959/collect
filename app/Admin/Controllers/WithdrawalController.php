@@ -7,7 +7,7 @@ use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
 use Dcat\Admin\Controllers\AdminController;
-
+use Dcat\Admin\Layout\Content;
 class WithdrawalController extends AdminController
 {
     /**
@@ -22,15 +22,18 @@ class WithdrawalController extends AdminController
             $grid->id->sortable();
             $grid->column('user.nickname','昵称');
             $grid->name;
-            $grid->card;
+//            $grid->card;
             $grid->bank;
             $grid->moeny;
-            $grid->mannumber;
-            $grid->phone;
+//            $grid->mannumber;
+//            $grid->phone;
             $grid->status;
-            $grid->created_at;
-            $grid->updated_at->sortable();
-        
+
+            $grid->disableDeleteButton();
+            $grid->disableEditButton();
+            $grid->disableQuickEditButton();
+            //关闭新增按钮
+            $grid->disableCreateButton();
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
         
@@ -45,22 +48,12 @@ class WithdrawalController extends AdminController
      *
      * @return Show
      */
-    protected function detail($id)
+    public  function show($id ,Content $content)
     {
-        return Show::make($id, new Withdrawal(), function (Show $show) {
-            $show->id;
-            $show->name;
-            $show->card;
-            $show->bank;
-            $show->moeny;
-            $show->mannumber;
-            $show->phone;
-            $show->status;
-            $show->created_at;
-            $show->updated_at;
-        });
+        return $content->header('订单')
+            ->description('详情')
+            ->body(view('orders.money', ['money' => \App\Models\Withdrawal::find($id)]));
     }
-
     /**
      * Make a form builder.
      *
