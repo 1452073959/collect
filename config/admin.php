@@ -75,7 +75,7 @@ return [
     | Html title for all pages.
     |
     */
-    'title' => 'Admin',
+    'title' => 'collect',
 
     /*
     |--------------------------------------------------------------------------
@@ -195,7 +195,7 @@ return [
         ],
 
         // Whether enable menu bind to a permission.
-        'bind_permission' => true,
+        'bind_permission' => false,
 
     ],
 

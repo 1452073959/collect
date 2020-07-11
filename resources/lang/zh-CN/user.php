@@ -12,7 +12,7 @@ return [
         'weapp_openid' => '微信id',
         'token' => 'token',
         'notification_count' => '未读消息',
-        'balance' => 'balance',
+        'balance' => '佣金',
         'pid' => '上级id',
     ],
     'options' => [

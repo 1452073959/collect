@@ -22,7 +22,7 @@ class UserController extends AdminController
             $grid->disableBatchDelete();
 
 //            $grid->column('up','上级');
-            $grid->id->sortable();
+//            $grid->id->sortable();
             $grid->nickname;
             $grid->weapp_avatar->image();
 //            $grid->sex;
@@ -30,15 +30,21 @@ class UserController extends AdminController
 //            $grid->defaultaddress_id;
 //            $grid->weapp_openid;
 //            $grid->token;
-//            $grid->notification_count;
+            $grid->balance;
             $grid->model()->with(['up']);
             $grid->model()->with(['down']);
-            $grid->column('up.nickname','上级');
+            $grid->column('up.nickname','用户上级');
 //            $grid->column('bal','下级')->pluck('nickname')->map('nickname')->implode('-');;
 //            $grid->pid;
 //            $grid->created_at;
-            $grid->updated_at->sortable();
-        
+//            $grid->updated_at->sortable();
+            // 禁用详情按钮
+            //关闭操作
+            $grid->disableActions();
+            $grid->disableViewButton();
+            //关闭新增按钮
+            $grid->disableCreateButton();
+            $grid->disableDeleteButton();
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
         
