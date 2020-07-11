@@ -23,11 +23,11 @@ class WithdrawalController extends AdminController
             $grid->column('user.nickname','昵称');
             $grid->name;
 //            $grid->card;
-            $grid->bank;
+//            $grid->bank;
             $grid->moeny;
 //            $grid->mannumber;
 //            $grid->phone;
-            $grid->status;
+            $grid->status->using([ 1 => '未拨款',2=>'已拨款']);;
 
             $grid->disableDeleteButton();
             $grid->disableEditButton();
