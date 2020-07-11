@@ -9,6 +9,10 @@ class Order extends Model
 {
 	
     protected $table = 'order';
+    protected $guarded = [];
+    protected $fillable = [
+        'status',
+    ];
     protected $casts = [
         'address'   => 'json',
         'ship_data' => 'json',
@@ -16,6 +20,7 @@ class Order extends Model
     protected $dates = [
         'paid_at',
     ];
+
     //订单流水号
     protected static function boot()
     {
@@ -59,6 +64,11 @@ class Order extends Model
         \Log::warning('find order no failed');
 
         return false;
+    }
+    //
+    public function sign()
+    {
+        return $this->hasOne(Sign::class,'order_id','id');
     }
 
     public function getAddressAttribute($extra)
