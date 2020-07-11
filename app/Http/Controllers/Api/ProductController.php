@@ -82,6 +82,14 @@ class ProductController extends Controller
         $products = $builder->paginate(16);
         return $this->success($products);
     }
+
+    //首页推荐
+    public function stick()
+    {
+        $builder = Product::query()->where('status', 1)->where('recommended',1)->get();
+        return $this->success($builder);
+    }
+
     //商品详情
     public function show(Product $product, Request $request)
     {

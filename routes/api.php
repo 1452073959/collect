@@ -88,6 +88,9 @@ $api->version('v1', [
     $api->get('video', 'ElseController@video');
     //商品列表
     $api->get('product', 'ProductController@index');
+
+    //推荐
+    $api->get('productstick', 'ProductController@stick');
     //商品详情
     Route::get('productshow/{product}', 'Api\ProductController@show');
     //支付通知
