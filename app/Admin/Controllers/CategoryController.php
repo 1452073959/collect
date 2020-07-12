@@ -71,7 +71,7 @@ class CategoryController extends AdminController
 //            $form->display('id');
 //            $form->text('cid');
             $form->text('text');
-            $form->select('parent_id','所属分类')->options(config('app.url').'/api/cate')->customFormat(function ($value) {
+            $form->select('parent_id','所属分类')->options(config('app.url').'/api/productcate')->customFormat(function ($value) {
                 if ($value === null) {
                     return '0';
                 }

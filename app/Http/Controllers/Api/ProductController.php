@@ -16,18 +16,18 @@ class ProductController extends Controller
     {
 //        $q = $request->get('q');
 //        return Category::where('title', 'like', "%$q%")->get();
-//        $comments = Category::with('childrenCategories')->where('parent_id',0)->get();
-//
-//        return $comments;
-        $data= Category::all();
-        return $data;
+        $comments = Category::with('childrenCategories')->where('parent_id',0)->get();
+
+        return $comments;
+
     }
     //商品添加分类(去除目录)
     public function productcate(Request $request)
     {
-
-        $data= Category::where('parent_id','!=',0)->get();
+        $data= Category::all();
         return $data;
+//        $data= Category::where('parent_id','!=',0)->get();
+//        return $data;
     }
 
 
