@@ -16,9 +16,9 @@ class ProductController extends Controller
     {
 //        $q = $request->get('q');
 //        return Category::where('title', 'like', "%$q%")->get();
-        $comments = Category::with('childrenCategories')->where('parent_id',0)->get();
-
-        return $comments;
+//        $comments = Category::with('childrenCategories')->where('parent_id',0)->get();
+//
+//        return $comments;
         $data= Category::all();
         return $data;
     }
