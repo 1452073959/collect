@@ -93,6 +93,9 @@ $api->version('v1', [
     $api->get('productstick', 'ProductController@stick');
     //商品详情
     Route::get('productshow/{product}', 'Api\ProductController@show');
+    //swipe
+    $api->get('image', 'WechatController@image');
+
     //支付通知
     $api->any('notify', 'OrderController@notify');
 
