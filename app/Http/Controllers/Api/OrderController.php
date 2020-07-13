@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Api\Controller;
 use App\Models\Order;
+use App\Models\Settings;
 use App\Models\Sign;
 use Illuminate\Http\Request;
 use DB;
@@ -102,11 +103,12 @@ class OrderController extends Controller
                 $order->paid_at = date('Y-m-d H:i:s', time());; // 更新支付时间为当前时间
                 $order->status = 2;
                 $order->payment_no = $message['transaction_id'];
+                $setting=Settings::first();
                 $superiorsid = User::where('id', $order['user_id'])->value('pid');
                 $jing=$order['total_amount'];
-                if($jing>=1){
+                if($jing>=$setting['minmoney']){
                     //计算佣金
-                    $commission = ($order['total_amount']+=0) * 0.05;
+                    $commission = ($order['total_amount']+=0) * $setting['rate'] *0.01;
                     $flight = User::find($superiorsid);
                     $flight->balance = ($flight['balance']+=0) + $commission;
                     $flight->save();
