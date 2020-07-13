@@ -13,6 +13,8 @@ return [
         'stock' => '库存',
         'recommended' => '推荐位',
         'status' => '状态',
+        'smalldescription' => '简介',
+        'smallimage' => '封面图',
     ],
     'options' => [
     ],

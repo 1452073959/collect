@@ -23,11 +23,6 @@ class ProductController extends AdminController
             $grid->column('cate.text','分类');
             $grid->title;
 //            $grid->description;
-            $grid->image->display(function ($pictures) {
-
-                return json_decode($pictures, true);
-
-            })->image(config('app.url'). 'uploads/', 100, 100);;
 //            $grid->sold_count;
             $grid->price;
 //            $grid->stock;
@@ -92,7 +87,9 @@ class ProductController extends AdminController
 //            $form->text('cid');
             $form->select('cid','所属分类')->options(config('app.url').'/api/productcate')->required();;;
             $form->text('title')->required();
+            $form->textarea('smalldescription')->required();
             $form->editor('description')->required();
+            $form->image('smallimage')->uniqueName()->required();
             $form->multipleImage('image')->saving(function ($paths) {
                 // 可以转化为由 , 隔开的字符串格式
                 // return implode(',', $paths);
