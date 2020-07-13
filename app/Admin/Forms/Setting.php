@@ -44,7 +44,7 @@ class Setting extends Form
     {
 
         $data=Settings::first();
-        dump($data);
+//        dump($data);
         return [
             'minmoney'  => $data['minmoney'],
             'rate' => $data['rate'],
