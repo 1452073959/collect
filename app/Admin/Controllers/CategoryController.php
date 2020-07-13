@@ -24,7 +24,7 @@ class CategoryController extends AdminController
             $grid->disableFilterButton();
             //关闭新增按钮
 //            $grid->disableCreateButton();
-            $grid->disableDeleteButton();
+//            $grid->disableDeleteButton();
             // 禁用详情按钮
             $grid->disableViewButton();
 //            $grid->parent_id;
