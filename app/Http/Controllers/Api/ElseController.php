@@ -45,7 +45,7 @@ class ElseController extends Controller
 
         $moneywithdraw=Withdrawal::find($request->id);
         $moneywithdraw->status=2;
-        $money=$moneywithdraw['moeny']+=0;
+        $money=$moneywithdraw['money']+=0;
         $user=User::find($moneywithdraw['user_id']);
         $user->balance=($user['balance']+=0)-$money;
         $user->save();
@@ -72,4 +72,25 @@ class ElseController extends Controller
         $up=User::with('down')->where('id',$user['id'])->get();
         return $this->success($up);
     }
+    //银行卡
+    public function card(Request $request)
+    {
+        $user = auth('api')->user();
+
+        if($request->money){
+            $money=$request->money+=0;
+            $usermoney= $user['balance']+=0;
+            if($money > $usermoney){
+                return $this->failed('金额超出可提现金额');
+            }else{
+                $user->card()->create(  $request->all() );
+                return $this->success('添加成功');
+            }
+        }else{
+            return $this->failed('金额错误');
+        }
+
+
+    }
+
 }

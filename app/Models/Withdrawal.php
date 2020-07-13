@@ -9,7 +9,7 @@ class Withdrawal extends Model
 {
 	
     protected $table = 'withdrawal';
-
+    protected $guarded = [];
 
     public function user()
     {

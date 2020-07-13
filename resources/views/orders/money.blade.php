@@ -30,7 +30,7 @@
 
             <tr>
                 <td>申请金额：</td>
-                <td colspan="3">￥{{$money->moeny}}</td>
+                <td colspan="3">￥{{$money->money}}</td>
             </tr>
             <!-- 订单发货开始 -->
             <!-- 如果订单未发货，展示发货表单 -->

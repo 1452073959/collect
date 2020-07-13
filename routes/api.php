@@ -71,6 +71,8 @@ $api->version('v1', [
         Route::get('orders/{order}', 'Api\OrderController@show');
         //佣金明细
         Route::get('moenylist', 'Api\ElseController@money');
+        //银行卡
+        Route::post('addcard', 'Api\ElseController@card');
     });
     // 登录
     $api->post('logincode', 'WechatController@wechat');

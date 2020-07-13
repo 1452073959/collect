@@ -24,7 +24,7 @@ class WithdrawalController extends AdminController
             $grid->name;
 //            $grid->card;
 //            $grid->bank;
-            $grid->moeny;
+            $grid->money;
 //            $grid->mannumber;
 //            $grid->phone;
             $grid->status->using([ 1 => '未拨款',2=>'已拨款'])->filter(

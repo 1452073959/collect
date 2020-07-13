@@ -101,6 +101,9 @@ class User extends Authenticatable implements JWTSubject
         return $this->hasMany(Moneylog::class,'user_id','id');
     }
 
-
+    public function card()
+    {
+        return $this->hasOne(Withdrawal::class,'user_id','id');
+    }
 
 }
