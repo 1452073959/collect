@@ -67,7 +67,7 @@ class HelpController extends AdminController
     protected function form()
     {
         return Form::make(new Help(), function (Form $form) {
-            $form->display('id');
+//            $form->display('id');
             // 去除整个工具栏内容
             $form->disableHeader();
             $form->editor('content','帮助中心内容')->required();;
@@ -77,6 +77,8 @@ class HelpController extends AdminController
             $form->disableCreatingCheck();
             $form->display('created_at');
             $form->display('updated_at');
+            // 去除整个工具栏内容
+            $form->disableHeader();
         });
     }
 }

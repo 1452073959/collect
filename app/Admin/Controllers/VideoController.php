@@ -31,7 +31,7 @@ class VideoController extends AdminController
                 $filter->equal('id');
         
             });
-            $grid->disableDeleteButton();
+//            $grid->disableDeleteButton();
 //            $grid->disableEditButton();
             $grid->disableQuickEditButton();
             $grid->disableViewButton();
@@ -65,13 +65,19 @@ class VideoController extends AdminController
     protected function form()
     {
         return Form::make(new Video(), function (Form $form) {
-            $form->display('id');
+//            $form->display('id');
             $form->text('title');
             $form->textarea('description');
             $form->file('video')->maxSize(102400)->uniqueName();;
         
             $form->display('created_at');
             $form->display('updated_at');
+            $form->disableResetButton();
+            $form->disableViewCheck();
+            $form->disableEditingCheck();
+            $form->disableCreatingCheck();
+            // 去除整个工具栏内容
+            $form->disableHeader();
         });
     }
 }

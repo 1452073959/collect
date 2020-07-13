@@ -85,6 +85,8 @@ class CategoryController extends AdminController
             $form->disableViewCheck();
             $form->disableEditingCheck();
             $form->disableCreatingCheck();
+            // 去除整个工具栏内容
+            $form->disableHeader();
         });
     }
 

@@ -70,12 +70,13 @@ class AboutController extends AdminController
         return Form::make(new About(), function (Form $form) {
             // 去除整个工具栏内容
             $form->disableHeader();
-            $form->display('id');
+//            $form->display('id');
             $form->text('name');
             $form->image('image')->uniqueName();
             $form->textarea('content');
             $form->mobile('tel');
-
+            // 去除整个工具栏内容
+            $form->disableHeader();
             $form->disableResetButton();
             $form->disableViewCheck();
             $form->disableEditingCheck();

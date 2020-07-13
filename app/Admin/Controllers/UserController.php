@@ -87,7 +87,7 @@ class UserController extends AdminController
     protected function form()
     {
         return Form::make(new User(), function (Form $form) {
-            $form->display('id');
+//            $form->display('id');
             $form->text('nickname');
             $form->text('weapp_avatar');
             $form->text('sex');
@@ -98,7 +98,8 @@ class UserController extends AdminController
             $form->text('notification_count');
             $form->text('balance');
             $form->text('pid');
-        
+            // 去除整个工具栏内容
+            $form->disableHeader();
             $form->display('created_at');
             $form->display('updated_at');
         });

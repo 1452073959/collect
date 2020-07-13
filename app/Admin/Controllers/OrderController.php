@@ -84,7 +84,7 @@ class OrderController extends AdminController
     protected function form()
     {
         return Form::make(new Order(), function (Form $form) {
-            $form->display('id');
+//            $form->display('id');
             $form->text('no');
             $form->text('user_id');
             $form->text('address');
@@ -94,7 +94,8 @@ class OrderController extends AdminController
             $form->text('payment_no');
             $form->text('status');
             $form->text('ship_data');
-        
+            // 去除整个工具栏内容
+            $form->disableHeader();
             $form->display('created_at');
             $form->display('updated_at');
         });

@@ -61,10 +61,11 @@ class PushController extends AdminController
     protected function form()
     {
         return Form::make(new Push(), function (Form $form) {
-            $form->display('id');
+//            $form->display('id');
             $form->text('title');
             $form->textarea('content');
-        
+            // 去除整个工具栏内容
+            $form->disableHeader();
             $form->display('created_at');
             $form->display('updated_at');
             $form->disableResetButton();

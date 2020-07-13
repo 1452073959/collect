@@ -69,7 +69,7 @@ class WithdrawalController extends AdminController
     protected function form()
     {
         return Form::make(new Withdrawal(), function (Form $form) {
-            $form->display('id');
+//            $form->display('id');
             $form->text('name');
             $form->text('card');
             $form->text('bank');
@@ -77,7 +77,8 @@ class WithdrawalController extends AdminController
             $form->text('mannumber');
             $form->text('phone');
             $form->text('status');
-        
+            // 去除整个工具栏内容
+            $form->disableHeader();
             $form->display('created_at');
             $form->display('updated_at');
         });

@@ -73,6 +73,8 @@ class SwipeController extends AdminController
                 // 也可以转化为json
                 return json_encode($paths);
             });
+            // 去除整个工具栏内容
+            $form->disableHeader();
             $form->disableResetButton();
             $form->disableViewCheck();
             $form->disableEditingCheck();
