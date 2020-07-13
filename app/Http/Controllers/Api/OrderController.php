@@ -103,15 +103,18 @@ class OrderController extends Controller
                 $order->status = 2;
                 $order->payment_no = $message['transaction_id'];
                 $superiorsid = User::where('id', $order['user_id'])->value('pid');
-                //计算佣金
-                $commission = ($order['total_amount']+=0) * 0.5;
-                $flight = User::find($superiorsid);
-                $flight->balance = ($flight['balance']+=0) + $commission;
-                $flight->save();
-                $flight->log()->create([
-                    'action' => '下级购买获得佣金',
-                    'money' => $commission,
-                ]);
+                $jing=$order['total_amount'];
+                if($jing>=1){
+                    //计算佣金
+                    $commission = ($order['total_amount']+=0) * 0.5;
+                    $flight = User::find($superiorsid);
+                    $flight->balance = ($flight['balance']+=0) + $commission;
+                    $flight->save();
+                    $flight->log()->create([
+                        'action' => '下级购买获得佣金',
+                        'money' => $commission,
+                    ]);
+                }
             } else {
                 $order->status = 0;
                 return $fail('通信失败，请稍后再通知我');
