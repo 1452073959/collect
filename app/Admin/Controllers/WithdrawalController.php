@@ -27,7 +27,13 @@ class WithdrawalController extends AdminController
             $grid->moeny;
 //            $grid->mannumber;
 //            $grid->phone;
-            $grid->status->using([ 1 => '未拨款',2=>'已拨款']);;
+            $grid->status->using([ 1 => '未拨款',2=>'已拨款'])->filter(
+                Grid\Column\Filter\In::make([
+                    1 => '未拨款',
+                    2 => '已拨款',
+
+                ])
+            );;;;
 
             $grid->disableDeleteButton();
             $grid->disableEditButton();
@@ -35,8 +41,9 @@ class WithdrawalController extends AdminController
             //关闭新增按钮
             $grid->disableCreateButton();
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
-        
+//                $filter->equal('id');
+                $filter->like('user.nickname', '昵称');
+                $filter->like('name', '姓名');
             });
         });
     }

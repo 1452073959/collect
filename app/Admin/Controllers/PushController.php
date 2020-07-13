@@ -19,8 +19,10 @@ class PushController extends AdminController
     {
         return Grid::make(new Push(), function (Grid $grid) {
 //            $grid->id->sortable();
+            // 禁用过滤器按钮
+            $grid->disableFilterButton();
             $grid->title;
-            $grid->content;
+//            $grid->content;
             $grid->created_at;
 //            $grid->updated_at->sortable();
         

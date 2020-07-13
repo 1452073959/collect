@@ -20,6 +20,10 @@ class HelpController extends AdminController
         return Grid::make(new Help(), function (Grid $grid) {
             // 禁用批量删除按钮
             $grid->disableBatchDelete();
+            // 禁用过滤器按钮
+            $grid->disableFilterButton();
+            // 禁用
+            $grid->disableRowSelector();
             $grid->setActionClass(Grid\Displayers\Actions::class);
 //            $grid->id->sortable();
             $grid->title;

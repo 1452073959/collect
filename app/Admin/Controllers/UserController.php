@@ -46,7 +46,8 @@ class UserController extends AdminController
             $grid->disableCreateButton();
             $grid->disableDeleteButton();
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
+//                $filter->equal('id');
+                $filter->like('nickname', '昵称');
         
             });
         });

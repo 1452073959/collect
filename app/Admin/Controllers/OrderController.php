@@ -8,6 +8,7 @@ use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
 use Dcat\Admin\Controllers\AdminController;
 use Dcat\Admin\Layout\Content;
+
 class OrderController extends AdminController
 {
     /**
@@ -21,20 +22,34 @@ class OrderController extends AdminController
             $grid->model()->where('status','>',1)->orderBy('created_at', 'desc');
 //            $grid->id->sortable();
             $grid->no;
+            $grid->model()->with(['user']);
+            $grid->column('user.nickname','用户');
 //            $grid->user_id;
 //            $grid->address;
             $grid->total_amount;
 //            $grid->remark;
             $grid->paid_at;
 //            $grid->payment_no;
-            $grid->status->using([1 => '未支付', 2 => '未发货',3=>'已发货']);;
+            $grid->status->using([1 => '未支付', 2 => '未发货',3=>'已发货'])->filter(
+                Grid\Column\Filter\In::make([
+                    0 => '未知',
+                    1 => '未支付',
+                    2 => '未发货',
+                    3 => '已发货',
+                ])
+            );
 //            $grid->ship_data;
 //            $grid->created_at;
 //            $grid->updated_at->sortable();
-        
+            // 显示
+            $grid->showFilter();
+
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
-        
+
+//                $filter->equal('id');
+                $filter->like('no', '商户订单号');
+                $filter->like('user.nickname', '用户');
+
             });
             $grid->disableDeleteButton();
             $grid->disableEditButton();

@@ -30,14 +30,26 @@ class ProductController extends AdminController
             })->image(config('app.url'). 'uploads/', 100, 100);;
 //            $grid->sold_count;
             $grid->price;
-            $grid->stock;
-            $grid->recommended->using([ 1 => '是',2=>'否']);
-            $grid->status->using([ 1 => '上架',2=>'下架']);
+//            $grid->stock;
+            $grid->recommended->using([ 1 => '是',2=>'否'])->filter(
+                Grid\Column\Filter\In::make([
+                    1 => '是',
+                    2 => '否',
+                ])
+            );;;
+            $grid->status->using([ 1 => '上架',2=>'下架'])->filter(
+                Grid\Column\Filter\In::make([
+                    1 => '上架',
+                    2 => '下架',
+
+                ])
+            );;
 //            $grid->created_at;
 //            $grid->updated_at->sortable();
-        
+            $grid->disableViewButton();
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
+                $filter->like('title', '商品名称');
+                $filter->equal('cid','商品分类')->select(config('app.url').'/api/productcate');
         
             });
         });

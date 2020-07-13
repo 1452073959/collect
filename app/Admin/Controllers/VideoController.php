@@ -18,7 +18,9 @@ class VideoController extends AdminController
     protected function grid()
     {
         return Grid::make(new Video(), function (Grid $grid) {
-            $grid->id->sortable();
+//            $grid->id->sortable();
+            // 禁用过滤器按钮
+            $grid->disableFilterButton();
             $grid->title;
 //            $grid->description;
             $grid->video->view('admin.video');

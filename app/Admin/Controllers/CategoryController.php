@@ -20,6 +20,8 @@ class CategoryController extends AdminController
         return Grid::make(new Category(), function (Grid $grid) {
 //            $grid->id->sortable();
             $grid->text->tree();
+// 禁用过滤器按钮
+            $grid->disableFilterButton();
             //关闭新增按钮
 //            $grid->disableCreateButton();
             $grid->disableDeleteButton();
@@ -68,6 +70,7 @@ class CategoryController extends AdminController
     protected function form()
     {
         return Form::make(new Category(), function (Form $form) {
+
 //            $form->display('id');
 //            $form->text('cid');
             $form->text('text');

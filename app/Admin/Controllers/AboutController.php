@@ -20,11 +20,15 @@ class AboutController extends AdminController
         return Grid::make(new About(), function (Grid $grid) {
             // 禁用批量删除按钮
             $grid->disableBatchDelete();
+            // 禁用
+            $grid->disableRowSelector();
+            // 禁用过滤器按钮
+            $grid->disableFilterButton();
 //            $grid->id->sortable();
             $grid->name;
 //            $grid->image;
 //            $grid->content;
-            $grid->tel;
+//            $grid->tel;
             $grid->disableDeleteButton();
 //            $grid->disableEditButton();
             $grid->disableQuickEditButton();
