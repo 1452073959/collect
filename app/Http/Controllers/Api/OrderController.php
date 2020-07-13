@@ -106,7 +106,7 @@ class OrderController extends Controller
                 $jing=$order['total_amount'];
                 if($jing>=1){
                     //计算佣金
-                    $commission = ($order['total_amount']+=0) * 0.5;
+                    $commission = ($order['total_amount']+=0) * 0.05;
                     $flight = User::find($superiorsid);
                     $flight->balance = ($flight['balance']+=0) + $commission;
                     $flight->save();
