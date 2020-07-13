@@ -32,6 +32,11 @@ class ElseController extends Controller
         $video=Video::get();
         return $this->success($video);
     }
+
+    public function videoshow(Video $video)
+    {
+        return $this->success($video);
+    }
     //佣金记录
     public function money()
     {

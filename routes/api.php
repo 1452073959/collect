@@ -88,6 +88,8 @@ $api->version('v1', [
     $api->get('about', 'ElseController@about');
     //视频地址
     $api->get('video', 'ElseController@video');
+    //视频详情
+    Route::get('video/{video}', 'Api\ElseController@videoshow');
     //商品列表
     $api->get('product', 'ProductController@index');
 
