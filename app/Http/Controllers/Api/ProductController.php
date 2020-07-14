@@ -24,11 +24,12 @@ class ProductController extends Controller
     //商品添加分类(去除目录)
     public function productcate(Request $request)
     {
-        $data= Category::all();
-        return $data;
-//        $data= Category::where('parent_id','!=',0)->get();
+//        $data= Category::all();
 //        return $data;
+        $data= Category::where('parent_id','!=',0)->get();
+        return $data;
     }
+
 
 
 
@@ -79,7 +80,7 @@ class ProductController extends Controller
         {
             $builder->where('cid', request('cid'));
         }
-        $products = $builder->paginate(16);
+        $products = $builder->with('favoriteuser')->paginate(16);
         return $this->success($products);
     }
 
