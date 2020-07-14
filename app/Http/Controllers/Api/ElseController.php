@@ -29,7 +29,11 @@ class ElseController extends Controller
     //视频
     public function video()
     {
-        $video=Video::get();
+        if(request('status')){
+            $video=Video::where('status',request('status'))->get();
+        }else{
+            $video=Video::get();
+        }
         return $this->success($video);
     }
 

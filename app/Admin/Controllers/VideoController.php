@@ -31,6 +31,13 @@ class VideoController extends AdminController
                 $filter->equal('id');
         
             });
+            $grid->status->using([ 1 => '是',2=>'否'])->filter(
+                Grid\Column\Filter\In::make([
+                    1 => '是',
+                    2 => '否',
+
+                ])
+            );;
 //            $grid->disableDeleteButton();
 //            $grid->disableEditButton();
             $grid->disableQuickEditButton();
@@ -67,9 +74,9 @@ class VideoController extends AdminController
         return Form::make(new Video(), function (Form $form) {
 //            $form->display('id');
             $form->text('title');
-            $form->textarea('description');
+            $form->editor('description');
             $form->file('video')->maxSize(102400)->uniqueName();;
-        
+            $form->radio('status','首页推荐')->options([1 => '是', 2=> '否'])->default('1')->required();
             $form->display('created_at');
             $form->display('updated_at');
             $form->disableResetButton();
