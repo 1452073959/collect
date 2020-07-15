@@ -82,6 +82,8 @@ $api->version('v1', [
     $api->get('cate', 'ProductController@cate');
     //不带根分类的分类接口
     $api->get('productcate', 'ProductController@productcate');
+    //商品分类
+    $api->get('admincate', 'ProductController@admincate');
     //帮助中心
     $api->get('help', 'ElseController@help');
     //关于我
