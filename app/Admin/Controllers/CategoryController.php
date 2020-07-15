@@ -80,7 +80,7 @@ class CategoryController extends AdminController
                 }
                 return $value;
             })->help('留空为顶级分类');;
-//            $form->image('image','分类图片')->uniqueName()->required();
+            $form->image('image','分类图片')->uniqueName()->required();
             $form->disableResetButton();
             $form->disableViewCheck();
             $form->disableEditingCheck();

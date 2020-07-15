@@ -26,7 +26,7 @@ class ProductController extends Controller
     {
 //        $data= Category::all();
 //        return $data;
-        $data= Category::where('parent_id','!=',0)->get();
+        $data= Category::where('parent_id',0)->get();
         return $data;
     }
 
