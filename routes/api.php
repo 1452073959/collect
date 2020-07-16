@@ -37,6 +37,7 @@ $api->version('v1', [
         Route::get('cart', 'Api\CartController@index');
         //购物车删除
         Route::post('delcart', 'Api\CartController@del');
+        Route::post('updatecart', 'Api\CartController@update');
         //收货地址列表
         Route::get('addresses', 'Api\AddressesController@index');
         //新增收货地址

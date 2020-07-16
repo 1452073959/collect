@@ -50,4 +50,16 @@ class CartController extends Controller
         $res= CartItem::where('user_id',$user['id'])->whereIn('product_id',$data)->delete();
         return $this->success($res);
     }
+
+    //购物车编辑
+    public function update(Request $request )
+    {
+        $data=request('product_id');
+        $amount = $request->input('amount');
+        $user = auth('api')->user();
+        $res= CartItem::where('user_id',$user['id'])->where('product_id',$data)->update([
+            'amount' => $amount,
+        ]);
+        return $this->success($res);
+    }
 }
