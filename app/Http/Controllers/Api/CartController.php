@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\Controller;
 use Illuminate\Http\Request;
 use App\Models\CartItem;
 use App\Models\User;
+use App\Models\Product;
 class CartController extends Controller
 {
     //添加商品到购物车
@@ -60,6 +61,9 @@ class CartController extends Controller
         $res= CartItem::where('user_id',$user['id'])->where('product_id',$data)->update([
             'amount' => $amount,
         ]);
-        return $this->success($res);
+        $totalprice = 0;
+        $sku = Product::find($data);
+        $totalprice += $sku->price * $amount;
+        return $this->success(['totalprice'=>$totalprice]);
     }
 }
