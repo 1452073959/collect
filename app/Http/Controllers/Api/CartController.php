@@ -47,7 +47,7 @@ class CartController extends Controller
     {
         $data=request('product_id');
         $user = auth('api')->user();
-        $res= CartItem::where('user_id',$user['id'])->where('product_id','in',$data)->delete();
+        $res= CartItem::where('user_id',$user['id'])->whereIn('product_id',$data)->delete();
         return $this->success($res);
     }
 }
