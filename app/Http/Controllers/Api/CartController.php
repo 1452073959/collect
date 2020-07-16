@@ -41,6 +41,12 @@ class CartController extends Controller
     {
         $user = auth('api')->user();
         $cartItems = $user->cartItems()->with(['product'])->get();
+
+        foreach ($cartItems as $k => $v) {
+            $totalprice = 0;
+            $totalprice += $v['product']['price'] * $v['amount'];
+            $cartItems[$k]['totalprice'] =$totalprice;
+        }
         return $this->success($cartItems);
     }
     //移除购物车
