@@ -48,7 +48,8 @@ class OrderController extends Controller
 
             // 将下单的商品从购物车中移除
             $skuIds = collect($items)->pluck('id');
-            $user->cartItems()->whereIn('id', $skuIds)->delete();
+//            dd($skuIds);
+          $a=  $user->cartItems()->whereIn('product_id', $skuIds)->delete();
 
             $this->dispatch(new CloseOrder($order, 3600));
             return $order;

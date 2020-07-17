@@ -42,9 +42,10 @@ class ProductController extends AdminController
 //            $grid->created_at;
 //            $grid->updated_at->sortable();
             $grid->disableViewButton();
+            $grid->disableDeleteButton();
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->like('title', '商品名称');
-                $filter->equal('cid','商品分类')->select(config('app.url').'/api/productcate');
+                $filter->equal('cid','商品分类')->select(config('app.url').'/api/admincate');
         
             });
         });
