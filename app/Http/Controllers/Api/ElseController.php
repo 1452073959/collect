@@ -45,7 +45,7 @@ class ElseController extends Controller
     public function money()
     {
         $user = auth('api')->user();
-        $moeny=Moneylog::get();
+        $moeny=Moneylog::where('user_id',$user['id'])->get();
         return $this->success($moeny);
     }
     //
