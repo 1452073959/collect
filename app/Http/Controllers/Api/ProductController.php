@@ -74,6 +74,8 @@ class ProductController extends Controller
         // 判断是否有提交 search 参数，如果有就赋值给 $search 变量
         // search 参数用来模糊搜索商品
         if ($search = $request->input('search', '')) {
+            $user = auth('api')->user();
+            Redis::lpush($user['weapp_openid'],$search);
             $like = '%'.$search.'%';
             // 模糊搜索商品标题、商品详情、SKU 标题、SKU描述
             $builder->where(function ($query) use ($like) {
@@ -100,7 +102,7 @@ class ProductController extends Controller
     public function show(Product $product, Request $request)
     {
           $user = auth('api')->user();
-//        $user=User::find(1);
+
         Redis::rpush($user['id'],$product['id']);
         // 判断商品是否已经上架，如果没有上架则抛出异常。
         if ($product->status==2) {
@@ -129,6 +131,13 @@ class ProductController extends Controller
         $user = auth('api')->user();
         $history= Redis::lrange($user['id'],0,-1);
         $history=Product::wherein('id',$history)->paginate(16);
+        return $this->success($history);
+    }
+    //
+    public function searchhistory()
+    {
+        $user = auth('api')->user();
+        $history= Redis::lrange($user['weapp_openid'],0,2);
         return $this->success($history);
     }
 

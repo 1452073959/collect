@@ -74,6 +74,9 @@ $api->version('v1', [
         Route::get('moenylist', 'Api\ElseController@money');
         //银行卡
         Route::post('addcard', 'Api\ElseController@card');
+        Route::get('searchhistory', 'Api\ProductController@searchhistory');
+        //
+
     });
     // 登录
     $api->post('logincode', 'WechatController@wechat');
