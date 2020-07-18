@@ -99,7 +99,7 @@ class ProductController extends Controller
     //商品详情
     public function show(Product $product, Request $request)
     {
-                $user = auth('api')->user();
+          $user = auth('api')->user();
 //        $user=User::find(1);
         Redis::rpush($user['id'],$product['id']);
         // 判断商品是否已经上架，如果没有上架则抛出异常。
@@ -111,11 +111,14 @@ class ProductController extends Controller
     }
 
     //商品
-    public function multiproduct()
+    public function multiproduct(Request $request)
     {
-        $data=request('product_id');
-        $res= Product::whereIn('id',$data)->get();
-        return $this->success($res);
+        $items = $request->input('items');
+        foreach ($items as $k => $v) {
+            $sku = Product::find($v['id']);
+            $sku['totalAmount']=$sku['price'] * $v['amount'];
+        }
+        return $this->success($sku);
     }
 
     //浏览历史
