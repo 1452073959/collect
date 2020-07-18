@@ -95,7 +95,8 @@ $api->version('v1', [
     Route::get('video/{video}', 'Api\ElseController@videoshow');
     //商品列表
     $api->get('product', 'ProductController@index');
-
+    //商品信息
+    $api->post('multiproduct', 'ProductController@multiproduct');
     //推荐
     $api->get('productstick', 'ProductController@stick');
     //商品详情

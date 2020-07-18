@@ -103,12 +103,21 @@ class ProductController extends Controller
 //        $user=User::find(1);
         Redis::rpush($user['id'],$product['id']);
         // 判断商品是否已经上架，如果没有上架则抛出异常。
-        if ($product->status==0) {
+        if ($product->status==2) {
             return $this->failed('该商品已下架');
         }
 
         return $this->success($product);
     }
+
+    //商品
+    public function multiproduct()
+    {
+        $data=request('product_id');
+        $res= Product::whereIn('id',$data)->get();
+        return $this->success($res);
+    }
+
     //浏览历史
     public function history()
     {
