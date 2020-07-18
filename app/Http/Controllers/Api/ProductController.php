@@ -114,11 +114,13 @@ class ProductController extends Controller
     public function multiproduct(Request $request)
     {
         $items = $request->input('items');
+        $product=[];
         foreach ($items as $k => $v) {
             $sku = Product::find($v['id']);
             $sku['totalAmount']=$sku['price'] * $v['amount'];
+            $product[]=$sku;
         }
-        return $this->success($sku);
+        return $this->success($product);
     }
 
     //浏览历史
