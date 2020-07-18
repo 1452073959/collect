@@ -19,7 +19,8 @@ class OrderController extends AdminController
     protected function grid()
     {
         return Grid::make(new Order(), function (Grid $grid) {
-            $grid->model()->where('status','>',1)->orderBy('created_at', 'desc');
+
+            $grid->model()->whereIn('status',[ 2, 3])->orderBy('created_at', 'desc');
 //            $grid->id->sortable();
             $grid->no;
             $grid->model()->with(['user']);
