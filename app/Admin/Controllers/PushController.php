@@ -30,8 +30,11 @@ class PushController extends AdminController
                 $filter->equal('id');
         
             });
+            $grid->disableDeleteButton();
+            $grid->disableEditButton();
+            $grid->disableQuickEditButton();
             // 禁用详情按钮
-            $grid->disableViewButton();
+//            $grid->disableViewButton();
         });
     }
 
@@ -45,7 +48,7 @@ class PushController extends AdminController
     protected function detail($id)
     {
         return Show::make($id, new Push(), function (Show $show) {
-            $show->id;
+//            $show->id;
             $show->title;
             $show->content;
             $show->created_at;
