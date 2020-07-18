@@ -73,6 +73,11 @@
                     <td>{{ $order->ship_data['express_company'] }}</td>
                     <td>物流单号：</td>
                     <td>{{ $order->ship_data['express_no'] }}</td>
+
+                </tr>
+                <tr>
+                    <td>发货时间：</td>
+                    <td>{{ $order->updated_at }}</td>
                 </tr>
             @endif
             <!-- 订单发货结束 -->
