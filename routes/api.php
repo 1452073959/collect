@@ -110,6 +110,11 @@ $api->version('v1', [
     //swipe
     $api->get('image', 'WechatController@image');
 
+    // 短信验证码
+    Route::post('verificationCodes', 'Api\WechatController@store');
+    //绑定手机
+    Route::post('phonecode', 'Api\UserController@store');
+
     //支付通知
     $api->any('notify', 'OrderController@notify');
 
