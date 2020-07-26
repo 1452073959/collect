@@ -41,6 +41,23 @@ class ElseController extends Controller
     {
         return $this->success($video);
     }
+
+    public function videosearch(Request $request)
+    {
+        $builder = Video::query()->where('status', 1);
+        // 判断是否有提交 search 参数，如果有就赋值给 $search 变量
+        // search 参数用来模糊搜索商品
+        if ($search = $request->input('search', '')) {
+            $like = '%'.$search.'%';
+            // 模糊搜索商品标题、商品详情、SKU 标题、SKU描述
+            $builder->where(function ($query) use ($like) {
+                $query->where('title', 'like', $like);
+
+            });
+        }
+        $products = $builder->get();
+        return $this->success($products);
+    }
     //佣金记录
     public function money()
     {

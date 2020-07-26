@@ -74,6 +74,7 @@ $api->version('v1', [
         Route::get('moenylist', 'Api\ElseController@money');
         //银行卡
         Route::post('addcard', 'Api\ElseController@card');
+        //搜索历史
         Route::get('searchhistory', 'Api\ProductController@searchhistory');
         //
 
@@ -94,6 +95,8 @@ $api->version('v1', [
     $api->get('about', 'ElseController@about');
     //视频地址
     $api->get('video', 'ElseController@video');
+    //视频搜索
+    $api->get('videosearch', 'ElseController@videosearch');
     //视频详情
     Route::get('video/{video}', 'Api\ElseController@videoshow');
     //商品列表
