@@ -6,6 +6,7 @@ return [
     'fields' => [
         'id' => 'id',
         'img' => '图片',
+        'link' => '链接',
     ],
     'options' => [
     ],
