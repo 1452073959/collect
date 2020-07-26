@@ -15,6 +15,7 @@ return [
         'status' => '状态',
         'smalldescription' => '简介',
         'smallimage' => '封面图',
+        'promotionprice' => '划线价',
     ],
     'options' => [
     ],

@@ -76,6 +76,9 @@ $api->version('v1', [
         Route::post('addcard', 'Api\ElseController@card');
         //搜索历史
         Route::get('searchhistory', 'Api\ProductController@searchhistory');
+        //情况搜索历史
+        Route::get('searchdel', 'Api\ProductController@del');
+
         //
 
     });

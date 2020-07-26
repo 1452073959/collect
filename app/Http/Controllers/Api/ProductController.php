@@ -141,4 +141,10 @@ class ProductController extends Controller
         return $this->success($history);
     }
 
+    public function del()
+    {
+        $user = auth('api')->user();
+        Redis::del($user['weapp_openid']);
+    }
+
 }

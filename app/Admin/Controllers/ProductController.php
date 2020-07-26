@@ -99,6 +99,8 @@ class ProductController extends AdminController
             })->uniqueName();
 //            $form->text('sold_count');
             $form->text('price')->required();
+            $form->text('promotionprice')->required();
+
 //            $form->text('stock')->required();
             $form->radio('recommended')->options(['1' => '是', '2'=> '否'])->default('1')->required();
             $form->radio('status')->options([1 => '上架', 2=> '下架'])->default('1')->required();
