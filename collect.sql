@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50726
 File Encoding         : 65001
 
-Date: 2020-07-25 07:47:43
+Date: 2020-07-27 21:16:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -79,7 +79,7 @@ CREATE TABLE `admin_operation_log` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `admin_operation_log_user_id_index` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2723 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3011 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of admin_operation_log
@@ -2806,6 +2806,294 @@ INSERT INTO `admin_operation_log` VALUES ('2719', '0', 'admin/auth/login', 'POST
 INSERT INTO `admin_operation_log` VALUES ('2720', '1', 'admin', 'GET', '14.25.34.246', '[]', '2020-07-24 14:56:42', '2020-07-24 14:56:42');
 INSERT INTO `admin_operation_log` VALUES ('2721', '1', 'admin/swipe', 'GET', '14.25.34.246', '{\"_pjax\":\"#pjax-container\"}', '2020-07-24 14:56:45', '2020-07-24 14:56:45');
 INSERT INTO `admin_operation_log` VALUES ('2722', '1', 'admin/user', 'GET', '14.25.34.246', '{\"_pjax\":\"#pjax-container\"}', '2020-07-24 14:56:46', '2020-07-24 14:56:46');
+INSERT INTO `admin_operation_log` VALUES ('2723', '0', 'admin/auth/login', 'GET', '183.192.13.75', '[]', '2020-07-26 09:28:34', '2020-07-26 09:28:34');
+INSERT INTO `admin_operation_log` VALUES ('2724', '0', 'admin/auth/login', 'POST', '183.192.13.75', '{\"_token\":\"3KxtAdewyxZ6f4ZJnRit5rIxkowwVNUOQejtQ50e\",\"username\":\"admin\",\"password\":\"adm******\"}', '2020-07-26 09:28:37', '2020-07-26 09:28:37');
+INSERT INTO `admin_operation_log` VALUES ('2725', '1', 'admin', 'GET', '183.192.13.75', '[]', '2020-07-26 09:28:37', '2020-07-26 09:28:37');
+INSERT INTO `admin_operation_log` VALUES ('2726', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:28:41', '2020-07-26 09:28:41');
+INSERT INTO `admin_operation_log` VALUES ('2727', '1', 'admin', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:28:43', '2020-07-26 09:28:43');
+INSERT INTO `admin_operation_log` VALUES ('2728', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:28:43', '2020-07-26 09:28:43');
+INSERT INTO `admin_operation_log` VALUES ('2729', '1', 'admin/swipe/1/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:28:47', '2020-07-26 09:28:47');
+INSERT INTO `admin_operation_log` VALUES ('2730', '1', 'admin/user', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:29:31', '2020-07-26 09:29:31');
+INSERT INTO `admin_operation_log` VALUES ('2731', '1', 'admin/video', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:29:35', '2020-07-26 09:29:35');
+INSERT INTO `admin_operation_log` VALUES ('2732', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:29:41', '2020-07-26 09:29:41');
+INSERT INTO `admin_operation_log` VALUES ('2733', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\",\"_token\":\"Hd84rq7WFgyaYKUbOUYswrdh93QaltPxw36iOYs8\",\"_parent_id_\":\"30\",\"_tier_\":\"1\",\"_children_page_30\":\"1\"}', '2020-07-26 09:29:45', '2020-07-26 09:29:45');
+INSERT INTO `admin_operation_log` VALUES ('2734', '1', 'admin/cate/create', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:29:48', '2020-07-26 09:29:48');
+INSERT INTO `admin_operation_log` VALUES ('2735', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:29:52', '2020-07-26 09:29:52');
+INSERT INTO `admin_operation_log` VALUES ('2736', '1', 'admin/push', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:29:54', '2020-07-26 09:29:54');
+INSERT INTO `admin_operation_log` VALUES ('2737', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:29:56', '2020-07-26 09:29:56');
+INSERT INTO `admin_operation_log` VALUES ('2738', '1', 'admin/product/6/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:30:02', '2020-07-26 09:30:02');
+INSERT INTO `admin_operation_log` VALUES ('2739', '1', 'admin/order', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:31:01', '2020-07-26 09:31:01');
+INSERT INTO `admin_operation_log` VALUES ('2740', '1', 'admin/order/80', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:31:16', '2020-07-26 09:31:16');
+INSERT INTO `admin_operation_log` VALUES ('2741', '1', 'admin/help', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:31:40', '2020-07-26 09:31:40');
+INSERT INTO `admin_operation_log` VALUES ('2742', '1', 'admin/about', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:31:41', '2020-07-26 09:31:41');
+INSERT INTO `admin_operation_log` VALUES ('2743', '1', 'admin/tixian', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:31:41', '2020-07-26 09:31:41');
+INSERT INTO `admin_operation_log` VALUES ('2744', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:31:43', '2020-07-26 09:31:43');
+INSERT INTO `admin_operation_log` VALUES ('2745', '1', 'admin/user', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:31:44', '2020-07-26 09:31:44');
+INSERT INTO `admin_operation_log` VALUES ('2746', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:31:47', '2020-07-26 09:31:47');
+INSERT INTO `admin_operation_log` VALUES ('2747', '1', 'admin/swipe/1/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:31:49', '2020-07-26 09:31:49');
+INSERT INTO `admin_operation_log` VALUES ('2748', '1', 'admin/user', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:32:07', '2020-07-26 09:32:07');
+INSERT INTO `admin_operation_log` VALUES ('2749', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:32:42', '2020-07-26 09:32:42');
+INSERT INTO `admin_operation_log` VALUES ('2750', '1', 'admin/user', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:32:43', '2020-07-26 09:32:43');
+INSERT INTO `admin_operation_log` VALUES ('2751', '1', 'admin/video', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:32:44', '2020-07-26 09:32:44');
+INSERT INTO `admin_operation_log` VALUES ('2752', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:32:47', '2020-07-26 09:32:47');
+INSERT INTO `admin_operation_log` VALUES ('2753', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\",\"_token\":\"Hd84rq7WFgyaYKUbOUYswrdh93QaltPxw36iOYs8\",\"_parent_id_\":\"28\",\"_tier_\":\"1\",\"_children_page_28\":\"1\"}', '2020-07-26 09:32:52', '2020-07-26 09:32:52');
+INSERT INTO `admin_operation_log` VALUES ('2754', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:32:53', '2020-07-26 09:32:53');
+INSERT INTO `admin_operation_log` VALUES ('2755', '1', 'admin/swipe/1/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:33:31', '2020-07-26 09:33:31');
+INSERT INTO `admin_operation_log` VALUES ('2756', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:36:53', '2020-07-26 09:36:53');
+INSERT INTO `admin_operation_log` VALUES ('2757', '1', 'admin/product/7/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:36:58', '2020-07-26 09:36:58');
+INSERT INTO `admin_operation_log` VALUES ('2758', '1', 'admin/product/7', 'PUT', '183.192.13.75', '{\"cid\":\"45\",\"title\":\"\\u5927\\u9053\\u65e0\\u5f62\",\"smalldescription\":\"\\u6c34\\u6728\\u6052\\u7f18\",\"description\":\"<p>\\u3010\\u4ea7\\u54c1\\u540d\\u79f0\\u3011 \\u5927\\u9053\\u65e0\\u5f62<\\/p><p>\\u3010\\u4ea7&nbsp; &nbsp; &nbsp; &nbsp;\\u5730\\u3011 \\u8d35\\u5dde<\\/p><p>\\u3010\\u4ea7\\u54c1\\u5206\\u7c7b\\u3011\\u6728\\u5316\\u77f3<br data-mce-bogus=\\\"1\\\"><\\/p><p>\\u3010\\u6545&nbsp; &nbsp; &nbsp; &nbsp;\\u4e8b\\u3011\\u7f18\\u77f3\\u89c6\\u7a97<br data-mce-bogus=\\\"1\\\"><\\/p><p>\\u3010\\u5173 \\u952e \\u5b57\\u3011 \\u5927\\u9053\\u65e0\\u5f62 \\u8d35\\u5dde \\u7f18\\u77f3\\u89c6\\u7a97<br data-mce-bogus=\\\"1\\\"><\\/p>\",\"smallimage\":\"images\\/c7cad6fa93085a9fc5c551bb8067818a.jpg\",\"file-smallimage\":null,\"_file_\":null,\"image\":\"images\\/9758e36d3b44b075b0fd2f833b87a4a2.jpg,images\\/c9f5a87dd87145f4dcc294dd59941490.jpg\",\"file-image\":null,\"file\":null,\"price\":\"100.00\",\"recommended\":\"1\",\"status\":\"1\",\"_token\":\"Hd84rq7WFgyaYKUbOUYswrdh93QaltPxw36iOYs8\",\"_method\":\"PUT\",\"_previous_\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/product\"}', '2020-07-26 09:40:21', '2020-07-26 09:40:21');
+INSERT INTO `admin_operation_log` VALUES ('2759', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:40:21', '2020-07-26 09:40:21');
+INSERT INTO `admin_operation_log` VALUES ('2760', '1', 'admin/product/6/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:40:40', '2020-07-26 09:40:40');
+INSERT INTO `admin_operation_log` VALUES ('2761', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:40:42', '2020-07-26 09:40:42');
+INSERT INTO `admin_operation_log` VALUES ('2762', '1', 'admin/product/7/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:40:45', '2020-07-26 09:40:45');
+INSERT INTO `admin_operation_log` VALUES ('2763', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:40:51', '2020-07-26 09:40:51');
+INSERT INTO `admin_operation_log` VALUES ('2764', '1', 'admin/order', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:46:59', '2020-07-26 09:46:59');
+INSERT INTO `admin_operation_log` VALUES ('2765', '1', 'admin/help', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:47:00', '2020-07-26 09:47:00');
+INSERT INTO `admin_operation_log` VALUES ('2766', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:47:01', '2020-07-26 09:47:01');
+INSERT INTO `admin_operation_log` VALUES ('2767', '1', 'admin/order', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:47:02', '2020-07-26 09:47:02');
+INSERT INTO `admin_operation_log` VALUES ('2768', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:47:04', '2020-07-26 09:47:04');
+INSERT INTO `admin_operation_log` VALUES ('2769', '1', 'admin/user', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:47:04', '2020-07-26 09:47:04');
+INSERT INTO `admin_operation_log` VALUES ('2770', '1', 'admin/video', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:47:05', '2020-07-26 09:47:05');
+INSERT INTO `admin_operation_log` VALUES ('2771', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:47:08', '2020-07-26 09:47:08');
+INSERT INTO `admin_operation_log` VALUES ('2772', '1', 'admin/push', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:47:09', '2020-07-26 09:47:09');
+INSERT INTO `admin_operation_log` VALUES ('2773', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:47:11', '2020-07-26 09:47:11');
+INSERT INTO `admin_operation_log` VALUES ('2774', '1', 'admin/order', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:47:12', '2020-07-26 09:47:12');
+INSERT INTO `admin_operation_log` VALUES ('2775', '1', 'admin/help', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:47:12', '2020-07-26 09:47:12');
+INSERT INTO `admin_operation_log` VALUES ('2776', '1', 'admin/about', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:47:13', '2020-07-26 09:47:13');
+INSERT INTO `admin_operation_log` VALUES ('2777', '1', 'admin/tixian', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 09:47:14', '2020-07-26 09:47:14');
+INSERT INTO `admin_operation_log` VALUES ('2778', '0', 'admin/auth/login', 'GET', '112.96.165.207', '[]', '2020-07-26 12:41:58', '2020-07-26 12:41:58');
+INSERT INTO `admin_operation_log` VALUES ('2779', '0', 'admin/auth/login', 'GET', '120.235.165.161', '[]', '2020-07-26 12:42:18', '2020-07-26 12:42:18');
+INSERT INTO `admin_operation_log` VALUES ('2780', '0', 'admin/auth/login', 'POST', '120.235.165.161', '{\"_token\":\"TWipkU486wDALEorJuXtYMSZtOvTwmcmtjAAgTXN\",\"username\":\"admin\",\"password\":\"adm******\"}', '2020-07-26 12:42:21', '2020-07-26 12:42:21');
+INSERT INTO `admin_operation_log` VALUES ('2781', '1', 'admin/product', 'GET', '120.235.165.161', '[]', '2020-07-26 12:42:21', '2020-07-26 12:42:21');
+INSERT INTO `admin_operation_log` VALUES ('2782', '1', 'admin/swipe', 'GET', '120.235.165.161', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 12:42:23', '2020-07-26 12:42:23');
+INSERT INTO `admin_operation_log` VALUES ('2783', '0', 'admin/auth/login', 'GET', '112.96.165.207', '[]', '2020-07-26 13:40:36', '2020-07-26 13:40:36');
+INSERT INTO `admin_operation_log` VALUES ('2784', '0', 'admin/auth/login', 'GET', '112.96.165.207', '[]', '2020-07-26 15:02:22', '2020-07-26 15:02:22');
+INSERT INTO `admin_operation_log` VALUES ('2785', '0', 'admin/auth/login', 'POST', '112.96.165.207', '{\"_token\":\"fup7V6Cosdz5nJSTiQdkCJBid2orePnkK2IQnznW\",\"username\":\"admin\",\"password\":\"adm******\"}', '2020-07-26 15:02:30', '2020-07-26 15:02:30');
+INSERT INTO `admin_operation_log` VALUES ('2786', '1', 'admin', 'GET', '112.96.165.207', '[]', '2020-07-26 15:02:30', '2020-07-26 15:02:30');
+INSERT INTO `admin_operation_log` VALUES ('2787', '1', 'admin/swipe', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:02:35', '2020-07-26 15:02:35');
+INSERT INTO `admin_operation_log` VALUES ('2788', '1', 'admin/swipe', 'GET', '112.96.165.207', '[]', '2020-07-26 15:03:33', '2020-07-26 15:03:33');
+INSERT INTO `admin_operation_log` VALUES ('2789', '1', 'admin/swipe', 'GET', '112.96.165.207', '[]', '2020-07-26 15:14:13', '2020-07-26 15:14:13');
+INSERT INTO `admin_operation_log` VALUES ('2790', '1', 'admin/swipe', 'GET', '112.96.165.207', '[]', '2020-07-26 15:18:46', '2020-07-26 15:18:46');
+INSERT INTO `admin_operation_log` VALUES ('2791', '1', 'admin/swipe', 'GET', '112.96.165.207', '[]', '2020-07-26 15:19:03', '2020-07-26 15:19:03');
+INSERT INTO `admin_operation_log` VALUES ('2792', '1', 'admin/swipe', 'GET', '112.96.165.207', '[]', '2020-07-26 15:19:08', '2020-07-26 15:19:08');
+INSERT INTO `admin_operation_log` VALUES ('2793', '0', 'admin/auth/login', 'GET', '112.96.165.207', '[]', '2020-07-26 15:46:39', '2020-07-26 15:46:39');
+INSERT INTO `admin_operation_log` VALUES ('2794', '0', 'admin/auth/login', 'POST', '112.96.165.207', '{\"_token\":\"glaqISnYDvW3nutaKDx0G6N7jtHSq32nDNuT5IM3\",\"username\":\"admin\",\"password\":\"adm******\"}', '2020-07-26 15:46:43', '2020-07-26 15:46:43');
+INSERT INTO `admin_operation_log` VALUES ('2795', '1', 'admin', 'GET', '112.96.165.207', '[]', '2020-07-26 15:46:44', '2020-07-26 15:46:44');
+INSERT INTO `admin_operation_log` VALUES ('2796', '1', 'admin', 'GET', '112.96.165.207', '[]', '2020-07-26 15:46:45', '2020-07-26 15:46:45');
+INSERT INTO `admin_operation_log` VALUES ('2797', '1', 'admin/cate', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:46:46', '2020-07-26 15:46:46');
+INSERT INTO `admin_operation_log` VALUES ('2798', '1', 'admin/product', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:46:50', '2020-07-26 15:46:50');
+INSERT INTO `admin_operation_log` VALUES ('2799', '1', 'admin/swipe', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:46:50', '2020-07-26 15:46:50');
+INSERT INTO `admin_operation_log` VALUES ('2800', '1', 'admin/swipe', 'GET', '112.96.165.207', '[]', '2020-07-26 15:46:52', '2020-07-26 15:46:52');
+INSERT INTO `admin_operation_log` VALUES ('2801', '1', 'admin/swipe/create', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:46:54', '2020-07-26 15:46:54');
+INSERT INTO `admin_operation_log` VALUES ('2802', '1', 'admin/swipe', 'POST', '112.96.165.207', '{\"link\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/swipe\\/create\",\"img\":null,\"file-img\":null,\"_file_\":null,\"_token\":\"RYDQP0AGVG5Ozht0StRnHXNXzvyWmrmm2VvajNWB\",\"_previous_\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/swipe\"}', '2020-07-26 15:47:21', '2020-07-26 15:47:21');
+INSERT INTO `admin_operation_log` VALUES ('2803', '1', 'admin/swipe', 'POST', '112.96.165.207', '{\"link\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/swipe\\/create\",\"img\":null,\"file-img\":null,\"_file_\":null,\"_token\":\"RYDQP0AGVG5Ozht0StRnHXNXzvyWmrmm2VvajNWB\",\"_previous_\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/swipe\"}', '2020-07-26 15:47:28', '2020-07-26 15:47:28');
+INSERT INTO `admin_operation_log` VALUES ('2804', '1', 'admin/swipe', 'POST', '112.96.165.207', '{\"link\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/swipe\\/create\",\"img\":null,\"file-img\":null,\"_file_\":null,\"_token\":\"RYDQP0AGVG5Ozht0StRnHXNXzvyWmrmm2VvajNWB\",\"_previous_\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/swipe\"}', '2020-07-26 15:47:50', '2020-07-26 15:47:50');
+INSERT INTO `admin_operation_log` VALUES ('2805', '1', 'admin/swipe', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:47:51', '2020-07-26 15:47:51');
+INSERT INTO `admin_operation_log` VALUES ('2806', '1', 'admin/swipe/2/edit', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:47:59', '2020-07-26 15:47:59');
+INSERT INTO `admin_operation_log` VALUES ('2807', '1', 'admin/swipe/2', 'PUT', '112.96.165.207', '{\"_id\":\"31M5WPmEbXVBvHqk\",\"_token\":\"RYDQP0AGVG5Ozht0StRnHXNXzvyWmrmm2VvajNWB\",\"upload_column\":\"img\",\"_method\":\"PUT\",\"id\":\"WU_FILE_1\",\"name\":\"3ac2f4e9d8f6b84f0caf583bbf4ee011_t.gif\",\"type\":\"image\\/gif\",\"lastModifiedDate\":\"Sun Jul 12 2020 20:46:45 GMT+0800 (\\u4e2d\\u56fd\\u6807\\u51c6\\u65f6\\u95f4)\",\"size\":\"11100\"}', '2020-07-26 15:48:06', '2020-07-26 15:48:06');
+INSERT INTO `admin_operation_log` VALUES ('2808', '1', 'admin/swipe/2', 'PUT', '112.96.165.207', '{\"_id\":\"31M5WPmEbXVBvHqk\",\"_token\":\"RYDQP0AGVG5Ozht0StRnHXNXzvyWmrmm2VvajNWB\",\"_method\":\"PUT\",\"img\":\"images\\/29544a2d141d629e868fa2f43d5901f6.gif\"}', '2020-07-26 15:48:06', '2020-07-26 15:48:06');
+INSERT INTO `admin_operation_log` VALUES ('2809', '1', 'admin/swipe/2', 'PUT', '112.96.165.207', '{\"link\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/swipe\\/create\",\"img\":\"images\\/29544a2d141d629e868fa2f43d5901f6.gif\",\"file-img\":null,\"_file_\":null,\"_token\":\"RYDQP0AGVG5Ozht0StRnHXNXzvyWmrmm2VvajNWB\",\"_method\":\"PUT\",\"_previous_\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/swipe\"}', '2020-07-26 15:48:07', '2020-07-26 15:48:07');
+INSERT INTO `admin_operation_log` VALUES ('2810', '1', 'admin/swipe', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:48:08', '2020-07-26 15:48:08');
+INSERT INTO `admin_operation_log` VALUES ('2811', '1', 'admin/swipe/1/edit', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:48:11', '2020-07-26 15:48:11');
+INSERT INTO `admin_operation_log` VALUES ('2812', '1', 'admin/swipe/1', 'PUT', '112.96.165.207', '{\"_file_del_\":null,\"_token\":\"RYDQP0AGVG5Ozht0StRnHXNXzvyWmrmm2VvajNWB\",\"_method\":\"PUT\",\"key\":\"images\\/4abf547252bd3b8fee0e8d8904476fad.jpg\",\"_column\":\"img\"}', '2020-07-26 15:48:16', '2020-07-26 15:48:16');
+INSERT INTO `admin_operation_log` VALUES ('2813', '1', 'admin/swipe/1', 'PUT', '112.96.165.207', '{\"_file_del_\":null,\"_token\":\"RYDQP0AGVG5Ozht0StRnHXNXzvyWmrmm2VvajNWB\",\"_method\":\"PUT\",\"key\":\"images\\/ddb12255862fff1cc3f0bcdae1858322.jpg\",\"_column\":\"img\"}', '2020-07-26 15:48:17', '2020-07-26 15:48:17');
+INSERT INTO `admin_operation_log` VALUES ('2814', '1', 'admin/swipe/1', 'PUT', '112.96.165.207', '{\"link\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/swipe\\/1\\/edit\",\"img\":\"images\\/b1ab49a1e2346cbc9e1490bcccb8043a.jpg\",\"file-img\":null,\"_file_\":null,\"_token\":\"RYDQP0AGVG5Ozht0StRnHXNXzvyWmrmm2VvajNWB\",\"_method\":\"PUT\",\"_previous_\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/swipe\"}', '2020-07-26 15:48:27', '2020-07-26 15:48:27');
+INSERT INTO `admin_operation_log` VALUES ('2815', '1', 'admin/swipe', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:48:27', '2020-07-26 15:48:27');
+INSERT INTO `admin_operation_log` VALUES ('2816', '1', 'admin/swipe', 'GET', '112.96.165.207', '[]', '2020-07-26 15:48:29', '2020-07-26 15:48:29');
+INSERT INTO `admin_operation_log` VALUES ('2817', '1', 'admin/swipe/1/edit', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:48:33', '2020-07-26 15:48:33');
+INSERT INTO `admin_operation_log` VALUES ('2818', '1', 'admin/swipe/1', 'PUT', '112.96.165.207', '{\"_file_del_\":null,\"_token\":\"RYDQP0AGVG5Ozht0StRnHXNXzvyWmrmm2VvajNWB\",\"_method\":\"PUT\",\"key\":\"images\\/b1ab49a1e2346cbc9e1490bcccb8043a.jpg\",\"_column\":\"img\"}', '2020-07-26 15:48:37', '2020-07-26 15:48:37');
+INSERT INTO `admin_operation_log` VALUES ('2819', '1', 'admin/swipe/1', 'PUT', '112.96.165.207', '{\"_id\":\"7HdhkzoRLjYSAfFB\",\"_token\":\"RYDQP0AGVG5Ozht0StRnHXNXzvyWmrmm2VvajNWB\",\"upload_column\":\"img\",\"_method\":\"PUT\",\"id\":\"WU_FILE_0\",\"name\":\"35b97cce3b47103a4108ecd9c220a63d_t.gif\",\"type\":\"image\\/gif\",\"lastModifiedDate\":\"Thu Jul 09 2020 19:37:11 GMT+0800 (\\u4e2d\\u56fd\\u6807\\u51c6\\u65f6\\u95f4)\",\"size\":\"8489\"}', '2020-07-26 15:48:48', '2020-07-26 15:48:48');
+INSERT INTO `admin_operation_log` VALUES ('2820', '1', 'admin/swipe/1', 'PUT', '112.96.165.207', '{\"_id\":\"7HdhkzoRLjYSAfFB\",\"_token\":\"RYDQP0AGVG5Ozht0StRnHXNXzvyWmrmm2VvajNWB\",\"_method\":\"PUT\",\"img\":\"images\\/b51702ef1e085381da90c4a6bb9ff197.gif\"}', '2020-07-26 15:48:48', '2020-07-26 15:48:48');
+INSERT INTO `admin_operation_log` VALUES ('2821', '1', 'admin/swipe/1', 'PUT', '112.96.165.207', '{\"link\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/swipe\\/1\\/edit\",\"img\":\"images\\/b51702ef1e085381da90c4a6bb9ff197.gif\",\"file-img\":null,\"_file_\":null,\"_token\":\"RYDQP0AGVG5Ozht0StRnHXNXzvyWmrmm2VvajNWB\",\"_method\":\"PUT\",\"_previous_\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/swipe\"}', '2020-07-26 15:48:49', '2020-07-26 15:48:49');
+INSERT INTO `admin_operation_log` VALUES ('2822', '1', 'admin/swipe', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:48:49', '2020-07-26 15:48:49');
+INSERT INTO `admin_operation_log` VALUES ('2823', '1', 'admin/swipe', 'GET', '112.96.165.207', '[]', '2020-07-26 15:48:51', '2020-07-26 15:48:51');
+INSERT INTO `admin_operation_log` VALUES ('2824', '1', 'admin/swipe', 'GET', '112.96.165.207', '[]', '2020-07-26 15:57:57', '2020-07-26 15:57:57');
+INSERT INTO `admin_operation_log` VALUES ('2825', '1', 'admin/user', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:06', '2020-07-26 15:58:06');
+INSERT INTO `admin_operation_log` VALUES ('2826', '1', 'admin/cate', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:11', '2020-07-26 15:58:11');
+INSERT INTO `admin_operation_log` VALUES ('2827', '1', 'admin/push', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:11', '2020-07-26 15:58:11');
+INSERT INTO `admin_operation_log` VALUES ('2828', '1', 'admin/product', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:12', '2020-07-26 15:58:12');
+INSERT INTO `admin_operation_log` VALUES ('2829', '1', 'admin/order', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:13', '2020-07-26 15:58:13');
+INSERT INTO `admin_operation_log` VALUES ('2830', '1', 'admin/order', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:15', '2020-07-26 15:58:15');
+INSERT INTO `admin_operation_log` VALUES ('2831', '1', 'admin/help', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:16', '2020-07-26 15:58:16');
+INSERT INTO `admin_operation_log` VALUES ('2832', '1', 'admin/help', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:17', '2020-07-26 15:58:17');
+INSERT INTO `admin_operation_log` VALUES ('2833', '1', 'admin/order', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:17', '2020-07-26 15:58:17');
+INSERT INTO `admin_operation_log` VALUES ('2834', '1', 'admin/order/84', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:20', '2020-07-26 15:58:20');
+INSERT INTO `admin_operation_log` VALUES ('2835', '1', 'admin/help', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:24', '2020-07-26 15:58:24');
+INSERT INTO `admin_operation_log` VALUES ('2836', '1', 'admin/about', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:24', '2020-07-26 15:58:24');
+INSERT INTO `admin_operation_log` VALUES ('2837', '1', 'admin/push', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:25', '2020-07-26 15:58:25');
+INSERT INTO `admin_operation_log` VALUES ('2838', '1', 'admin/cate', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:26', '2020-07-26 15:58:26');
+INSERT INTO `admin_operation_log` VALUES ('2839', '1', 'admin/video', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:58:26', '2020-07-26 15:58:26');
+INSERT INTO `admin_operation_log` VALUES ('2840', '1', 'admin/swipe', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 15:59:00', '2020-07-26 15:59:00');
+INSERT INTO `admin_operation_log` VALUES ('2841', '1', 'admin/swipe', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 16:35:06', '2020-07-26 16:35:06');
+INSERT INTO `admin_operation_log` VALUES ('2842', '1', 'admin/user', 'GET', '112.96.165.207', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 17:20:49', '2020-07-26 17:20:49');
+INSERT INTO `admin_operation_log` VALUES ('2843', '0', 'admin/auth/login', 'GET', '116.23.17.141', '[]', '2020-07-26 20:00:09', '2020-07-26 20:00:09');
+INSERT INTO `admin_operation_log` VALUES ('2844', '0', 'admin/auth/login', 'POST', '116.23.17.141', '{\"_token\":\"GyXIiHJMj8svDBFf7EDwtQv0xdMkDxRislPxWB1j\",\"username\":\"admin\",\"password\":\"adm******\"}', '2020-07-26 20:00:16', '2020-07-26 20:00:16');
+INSERT INTO `admin_operation_log` VALUES ('2845', '1', 'admin/swipe/1/edit', 'GET', '116.23.17.141', '[]', '2020-07-26 20:00:16', '2020-07-26 20:00:16');
+INSERT INTO `admin_operation_log` VALUES ('2846', '1', 'admin/auth/login', 'GET', '116.23.17.141', '[]', '2020-07-26 20:00:21', '2020-07-26 20:00:21');
+INSERT INTO `admin_operation_log` VALUES ('2847', '1', 'admin', 'GET', '116.23.17.141', '[]', '2020-07-26 20:00:21', '2020-07-26 20:00:21');
+INSERT INTO `admin_operation_log` VALUES ('2848', '0', 'admin/auth/login', 'GET', '116.23.17.141', '[]', '2020-07-26 20:14:05', '2020-07-26 20:14:05');
+INSERT INTO `admin_operation_log` VALUES ('2849', '0', 'admin/auth/login', 'GET', '116.23.17.141', '[]', '2020-07-26 20:16:31', '2020-07-26 20:16:31');
+INSERT INTO `admin_operation_log` VALUES ('2850', '0', 'admin/auth/login', 'GET', '183.192.13.75', '[]', '2020-07-26 21:31:17', '2020-07-26 21:31:17');
+INSERT INTO `admin_operation_log` VALUES ('2851', '0', 'admin/auth/login', 'POST', '183.192.13.75', '{\"_token\":\"vXDEHA9NbeLiWaKYLJuB2Wlix08sk8zDSpyVrEgb\",\"username\":\"admin\",\"password\":\"adm******\"}', '2020-07-26 21:31:28', '2020-07-26 21:31:28');
+INSERT INTO `admin_operation_log` VALUES ('2852', '1', 'admin/swipe/1/edit', 'GET', '183.192.13.75', '[]', '2020-07-26 21:31:28', '2020-07-26 21:31:28');
+INSERT INTO `admin_operation_log` VALUES ('2853', '1', 'admin', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:31:33', '2020-07-26 21:31:33');
+INSERT INTO `admin_operation_log` VALUES ('2854', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:31:34', '2020-07-26 21:31:34');
+INSERT INTO `admin_operation_log` VALUES ('2855', '1', 'admin/user', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:31:40', '2020-07-26 21:31:40');
+INSERT INTO `admin_operation_log` VALUES ('2856', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:31:45', '2020-07-26 21:31:45');
+INSERT INTO `admin_operation_log` VALUES ('2857', '1', 'admin', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:31:45', '2020-07-26 21:31:45');
+INSERT INTO `admin_operation_log` VALUES ('2858', '1', 'admin/swipe/1/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:31:47', '2020-07-26 21:31:47');
+INSERT INTO `admin_operation_log` VALUES ('2859', '1', 'admin/auth/login', 'GET', '183.192.13.75', '[]', '2020-07-26 21:31:48', '2020-07-26 21:31:48');
+INSERT INTO `admin_operation_log` VALUES ('2860', '1', 'admin', 'GET', '183.192.13.75', '[]', '2020-07-26 21:31:48', '2020-07-26 21:31:48');
+INSERT INTO `admin_operation_log` VALUES ('2861', '1', 'admin/swipe/1/edit', 'GET', '183.192.13.75', '[]', '2020-07-26 21:33:13', '2020-07-26 21:33:13');
+INSERT INTO `admin_operation_log` VALUES ('2862', '0', 'admin/auth/login', 'GET', '183.192.13.75', '[]', '2020-07-26 21:38:49', '2020-07-26 21:38:49');
+INSERT INTO `admin_operation_log` VALUES ('2863', '0', 'admin/auth/login', 'POST', '183.192.13.75', '{\"_token\":\"eHQQxeDUwL2fZ8osxWnN6AmJexLg5YOyhzf85CUB\",\"username\":\"admin\",\"password\":\"adm******\"}', '2020-07-26 21:38:53', '2020-07-26 21:38:53');
+INSERT INTO `admin_operation_log` VALUES ('2864', '1', 'admin', 'GET', '183.192.13.75', '[]', '2020-07-26 21:38:53', '2020-07-26 21:38:53');
+INSERT INTO `admin_operation_log` VALUES ('2865', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:38:56', '2020-07-26 21:38:56');
+INSERT INTO `admin_operation_log` VALUES ('2866', '1', 'admin/swipe/1/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:39:01', '2020-07-26 21:39:01');
+INSERT INTO `admin_operation_log` VALUES ('2867', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:39:07', '2020-07-26 21:39:07');
+INSERT INTO `admin_operation_log` VALUES ('2868', '1', 'admin/user', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:39:09', '2020-07-26 21:39:09');
+INSERT INTO `admin_operation_log` VALUES ('2869', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:39:10', '2020-07-26 21:39:10');
+INSERT INTO `admin_operation_log` VALUES ('2870', '1', 'admin/tixian', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:39:10', '2020-07-26 21:39:10');
+INSERT INTO `admin_operation_log` VALUES ('2871', '1', 'admin/order', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:39:11', '2020-07-26 21:39:11');
+INSERT INTO `admin_operation_log` VALUES ('2872', '1', 'admin/order/84', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:40:04', '2020-07-26 21:40:04');
+INSERT INTO `admin_operation_log` VALUES ('2873', '1', 'admin/user', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:45:04', '2020-07-26 21:45:04');
+INSERT INTO `admin_operation_log` VALUES ('2874', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:45:05', '2020-07-26 21:45:05');
+INSERT INTO `admin_operation_log` VALUES ('2875', '1', 'admin/push', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:45:05', '2020-07-26 21:45:05');
+INSERT INTO `admin_operation_log` VALUES ('2876', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:45:06', '2020-07-26 21:45:06');
+INSERT INTO `admin_operation_log` VALUES ('2877', '1', 'admin/product/7/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:45:10', '2020-07-26 21:45:10');
+INSERT INTO `admin_operation_log` VALUES ('2878', '0', 'admin/auth/login', 'GET', '120.235.165.161', '[]', '2020-07-26 21:48:19', '2020-07-26 21:48:19');
+INSERT INTO `admin_operation_log` VALUES ('2879', '0', 'admin/auth/login', 'POST', '120.235.165.161', '{\"_token\":\"VwB6HmYaCcwBbCG25Y9PpkK9TFYkPmmekoo4na5b\",\"username\":\"admin\",\"password\":\"adm******\"}', '2020-07-26 21:48:21', '2020-07-26 21:48:21');
+INSERT INTO `admin_operation_log` VALUES ('2880', '1', 'admin/product', 'GET', '120.235.165.161', '[]', '2020-07-26 21:48:21', '2020-07-26 21:48:21');
+INSERT INTO `admin_operation_log` VALUES ('2881', '1', 'admin/swipe', 'GET', '120.235.165.161', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:48:23', '2020-07-26 21:48:23');
+INSERT INTO `admin_operation_log` VALUES ('2882', '1', 'admin/swipe/create', 'GET', '183.192.13.75', '[]', '2020-07-26 21:49:00', '2020-07-26 21:49:00');
+INSERT INTO `admin_operation_log` VALUES ('2883', '1', 'admin/swipe/create', 'GET', '183.192.13.75', '[]', '2020-07-26 21:49:49', '2020-07-26 21:49:49');
+INSERT INTO `admin_operation_log` VALUES ('2884', '1', 'admin/swipe/1/edit', 'GET', '183.192.13.75', '[]', '2020-07-26 21:50:01', '2020-07-26 21:50:01');
+INSERT INTO `admin_operation_log` VALUES ('2885', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 21:53:38', '2020-07-26 21:53:38');
+INSERT INTO `admin_operation_log` VALUES ('2886', '1', 'admin/swipe/1/edit', 'GET', '183.192.13.75', '[]', '2020-07-26 22:03:57', '2020-07-26 22:03:57');
+INSERT INTO `admin_operation_log` VALUES ('2887', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:36:22', '2020-07-26 22:36:22');
+INSERT INTO `admin_operation_log` VALUES ('2888', '1', 'admin', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:36:23', '2020-07-26 22:36:23');
+INSERT INTO `admin_operation_log` VALUES ('2889', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:52:18', '2020-07-26 22:52:18');
+INSERT INTO `admin_operation_log` VALUES ('2890', '1', 'admin/user', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:52:26', '2020-07-26 22:52:26');
+INSERT INTO `admin_operation_log` VALUES ('2891', '1', 'admin/video', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:52:37', '2020-07-26 22:52:37');
+INSERT INTO `admin_operation_log` VALUES ('2892', '1', 'admin/video/3/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:52:41', '2020-07-26 22:52:41');
+INSERT INTO `admin_operation_log` VALUES ('2893', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:53:14', '2020-07-26 22:53:14');
+INSERT INTO `admin_operation_log` VALUES ('2894', '1', 'admin', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:53:15', '2020-07-26 22:53:15');
+INSERT INTO `admin_operation_log` VALUES ('2895', '1', 'admin/swipe', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:53:17', '2020-07-26 22:53:17');
+INSERT INTO `admin_operation_log` VALUES ('2896', '1', 'admin/swipe/1/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:53:42', '2020-07-26 22:53:42');
+INSERT INTO `admin_operation_log` VALUES ('2897', '1', 'admin/user', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:54:31', '2020-07-26 22:54:31');
+INSERT INTO `admin_operation_log` VALUES ('2898', '1', 'admin/user', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:54:37', '2020-07-26 22:54:37');
+INSERT INTO `admin_operation_log` VALUES ('2899', '1', 'admin/video', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:54:38', '2020-07-26 22:54:38');
+INSERT INTO `admin_operation_log` VALUES ('2900', '1', 'admin/video/1/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:54:42', '2020-07-26 22:54:42');
+INSERT INTO `admin_operation_log` VALUES ('2901', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:54:46', '2020-07-26 22:54:46');
+INSERT INTO `admin_operation_log` VALUES ('2902', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_parent_id_\":\"28\",\"_tier_\":\"1\",\"_children_page_28\":\"1\"}', '2020-07-26 22:54:51', '2020-07-26 22:54:51');
+INSERT INTO `admin_operation_log` VALUES ('2903', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_parent_id_\":\"29\",\"_pjax\":\"#pjax-container\",\"_tier_\":\"2\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_children_page_29\":\"1\"}', '2020-07-26 22:54:54', '2020-07-26 22:54:54');
+INSERT INTO `admin_operation_log` VALUES ('2904', '1', 'admin/cate/28/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:54:57', '2020-07-26 22:54:57');
+INSERT INTO `admin_operation_log` VALUES ('2905', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:55:26', '2020-07-26 22:55:26');
+INSERT INTO `admin_operation_log` VALUES ('2906', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_parent_id_\":\"30\",\"_tier_\":\"1\",\"_children_page_30\":\"1\"}', '2020-07-26 22:55:28', '2020-07-26 22:55:28');
+INSERT INTO `admin_operation_log` VALUES ('2907', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_parent_id_\":\"33\",\"_pjax\":\"#pjax-container\",\"_tier_\":\"2\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_children_page_33\":\"1\"}', '2020-07-26 22:55:29', '2020-07-26 22:55:29');
+INSERT INTO `admin_operation_log` VALUES ('2908', '1', 'admin/cate/33/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:55:33', '2020-07-26 22:55:33');
+INSERT INTO `admin_operation_log` VALUES ('2909', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:55:38', '2020-07-26 22:55:38');
+INSERT INTO `admin_operation_log` VALUES ('2910', '1', 'admin/push', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:55:41', '2020-07-26 22:55:41');
+INSERT INTO `admin_operation_log` VALUES ('2911', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:55:43', '2020-07-26 22:55:43');
+INSERT INTO `admin_operation_log` VALUES ('2912', '1', 'admin/product/6/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:55:46', '2020-07-26 22:55:46');
+INSERT INTO `admin_operation_log` VALUES ('2913', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:56:06', '2020-07-26 22:56:06');
+INSERT INTO `admin_operation_log` VALUES ('2914', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:56:08', '2020-07-26 22:56:08');
+INSERT INTO `admin_operation_log` VALUES ('2915', '1', 'admin/order', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:56:08', '2020-07-26 22:56:08');
+INSERT INTO `admin_operation_log` VALUES ('2916', '1', 'admin/order/84', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:56:12', '2020-07-26 22:56:12');
+INSERT INTO `admin_operation_log` VALUES ('2917', '1', 'admin/order', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:56:14', '2020-07-26 22:56:14');
+INSERT INTO `admin_operation_log` VALUES ('2918', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:56:14', '2020-07-26 22:56:14');
+INSERT INTO `admin_operation_log` VALUES ('2919', '1', 'admin/product/6/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:56:17', '2020-07-26 22:56:17');
+INSERT INTO `admin_operation_log` VALUES ('2920', '1', 'admin/order', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:56:57', '2020-07-26 22:56:57');
+INSERT INTO `admin_operation_log` VALUES ('2921', '1', 'admin/help', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:57:12', '2020-07-26 22:57:12');
+INSERT INTO `admin_operation_log` VALUES ('2922', '1', 'admin/about', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:57:14', '2020-07-26 22:57:14');
+INSERT INTO `admin_operation_log` VALUES ('2923', '1', 'admin/tixian', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:57:16', '2020-07-26 22:57:16');
+INSERT INTO `admin_operation_log` VALUES ('2924', '1', 'admin/tixian/1', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:57:19', '2020-07-26 22:57:19');
+INSERT INTO `admin_operation_log` VALUES ('2925', '1', 'admin/tixian', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:57:28', '2020-07-26 22:57:28');
+INSERT INTO `admin_operation_log` VALUES ('2926', '1', 'admin/about', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:57:28', '2020-07-26 22:57:28');
+INSERT INTO `admin_operation_log` VALUES ('2927', '1', 'admin/help', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:57:29', '2020-07-26 22:57:29');
+INSERT INTO `admin_operation_log` VALUES ('2928', '1', 'admin/order', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:57:53', '2020-07-26 22:57:53');
+INSERT INTO `admin_operation_log` VALUES ('2929', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:57:55', '2020-07-26 22:57:55');
+INSERT INTO `admin_operation_log` VALUES ('2930', '1', 'admin/push', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:57:56', '2020-07-26 22:57:56');
+INSERT INTO `admin_operation_log` VALUES ('2931', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:57:58', '2020-07-26 22:57:58');
+INSERT INTO `admin_operation_log` VALUES ('2932', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_parent_id_\":\"30\",\"_tier_\":\"1\",\"_children_page_30\":\"1\"}', '2020-07-26 22:58:00', '2020-07-26 22:58:00');
+INSERT INTO `admin_operation_log` VALUES ('2933', '1', 'admin/cate/33/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:58:02', '2020-07-26 22:58:02');
+INSERT INTO `admin_operation_log` VALUES ('2934', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:58:05', '2020-07-26 22:58:05');
+INSERT INTO `admin_operation_log` VALUES ('2935', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_parent_id_\":\"30\",\"_tier_\":\"1\",\"_children_page_30\":\"1\"}', '2020-07-26 22:58:06', '2020-07-26 22:58:06');
+INSERT INTO `admin_operation_log` VALUES ('2936', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_parent_id_\":\"33\",\"_pjax\":\"#pjax-container\",\"_tier_\":\"2\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_children_page_33\":\"1\"}', '2020-07-26 22:58:08', '2020-07-26 22:58:08');
+INSERT INTO `admin_operation_log` VALUES ('2937', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_parent_id_\":\"55\",\"_pjax\":\"#pjax-container\",\"_tier_\":\"2\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_children_page_55\":\"1\"}', '2020-07-26 22:58:09', '2020-07-26 22:58:09');
+INSERT INTO `admin_operation_log` VALUES ('2938', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_parent_id_\":\"56\",\"_pjax\":\"#pjax-container\",\"_tier_\":\"2\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_children_page_56\":\"1\"}', '2020-07-26 22:58:11', '2020-07-26 22:58:11');
+INSERT INTO `admin_operation_log` VALUES ('2939', '1', 'admin/cate/56/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:58:19', '2020-07-26 22:58:19');
+INSERT INTO `admin_operation_log` VALUES ('2940', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:58:21', '2020-07-26 22:58:21');
+INSERT INTO `admin_operation_log` VALUES ('2941', '1', 'admin/video', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 22:58:22', '2020-07-26 22:58:22');
+INSERT INTO `admin_operation_log` VALUES ('2942', '1', 'admin', 'GET', '183.192.13.75', '[]', '2020-07-26 23:55:51', '2020-07-26 23:55:51');
+INSERT INTO `admin_operation_log` VALUES ('2943', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 23:55:54', '2020-07-26 23:55:54');
+INSERT INTO `admin_operation_log` VALUES ('2944', '1', 'admin/product/7/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 23:55:58', '2020-07-26 23:55:58');
+INSERT INTO `admin_operation_log` VALUES ('2945', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 23:57:07', '2020-07-26 23:57:07');
+INSERT INTO `admin_operation_log` VALUES ('2946', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_parent_id_\":\"30\",\"_tier_\":\"1\",\"_children_page_30\":\"1\"}', '2020-07-26 23:57:10', '2020-07-26 23:57:10');
+INSERT INTO `admin_operation_log` VALUES ('2947', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_parent_id_\":\"28\",\"_pjax\":\"#pjax-container\",\"_tier_\":\"1\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_children_page_28\":\"1\"}', '2020-07-26 23:57:11', '2020-07-26 23:57:11');
+INSERT INTO `admin_operation_log` VALUES ('2948', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_parent_id_\":\"29\",\"_pjax\":\"#pjax-container\",\"_tier_\":\"2\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_children_page_29\":\"1\"}', '2020-07-26 23:57:50', '2020-07-26 23:57:50');
+INSERT INTO `admin_operation_log` VALUES ('2949', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_parent_id_\":\"45\",\"_pjax\":\"#pjax-container\",\"_tier_\":\"2\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_children_page_45\":\"1\"}', '2020-07-26 23:57:51', '2020-07-26 23:57:51');
+INSERT INTO `admin_operation_log` VALUES ('2950', '1', 'admin/cate/29/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 23:58:12', '2020-07-26 23:58:12');
+INSERT INTO `admin_operation_log` VALUES ('2951', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 23:58:38', '2020-07-26 23:58:38');
+INSERT INTO `admin_operation_log` VALUES ('2952', '1', 'admin/push', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 23:58:40', '2020-07-26 23:58:40');
+INSERT INTO `admin_operation_log` VALUES ('2953', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 23:58:41', '2020-07-26 23:58:41');
+INSERT INTO `admin_operation_log` VALUES ('2954', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_parent_id_\":\"30\",\"_tier_\":\"1\",\"_children_page_30\":\"1\"}', '2020-07-26 23:58:42', '2020-07-26 23:58:42');
+INSERT INTO `admin_operation_log` VALUES ('2955', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_parent_id_\":\"28\",\"_pjax\":\"#pjax-container\",\"_tier_\":\"1\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_children_page_28\":\"1\"}', '2020-07-26 23:58:45', '2020-07-26 23:58:45');
+INSERT INTO `admin_operation_log` VALUES ('2956', '1', 'admin/cate/create', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-26 23:59:33', '2020-07-26 23:59:33');
+INSERT INTO `admin_operation_log` VALUES ('2957', '1', 'admin/cate', 'POST', '183.192.13.75', '{\"text\":\"\\u6d4b\\u8bd5\",\"parent_id\":\"30\",\"image\":null,\"file-image\":null,\"_file_\":null,\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_previous_\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/cate\"}', '2020-07-26 23:59:47', '2020-07-26 23:59:47');
+INSERT INTO `admin_operation_log` VALUES ('2958', '1', 'admin/cate', 'POST', '183.192.13.75', '{\"text\":\"\\u6d4b\\u8bd5\",\"parent_id\":\"30\",\"image\":null,\"file-image\":null,\"_file_\":null,\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_previous_\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/cate\"}', '2020-07-27 00:00:06', '2020-07-27 00:00:06');
+INSERT INTO `admin_operation_log` VALUES ('2959', '1', 'admin/cate', 'POST', '183.192.13.75', '{\"_id\":\"5Kc2mTGcYlvWibIQ\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"upload_column\":\"image\",\"id\":\"WU_FILE_0\",\"name\":\"\\u522b\\u6709\\u6d1e\\u5929.jpg\",\"type\":\"image\\/jpeg\",\"lastModifiedDate\":\"Wed Dec 23 2015 11:42:42 GMT+0800 (\\u4e2d\\u56fd\\u6807\\u51c6\\u65f6\\u95f4)\",\"size\":\"255154\"}', '2020-07-27 00:00:16', '2020-07-27 00:00:16');
+INSERT INTO `admin_operation_log` VALUES ('2960', '1', 'admin/cate', 'POST', '183.192.13.75', '{\"text\":\"\\u6d4b\\u8bd5\",\"parent_id\":\"30\",\"image\":\"images\\/272c44e2324eb125c861c39029364e38.jpg\",\"file-image\":null,\"_file_\":null,\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_previous_\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/cate\"}', '2020-07-27 00:00:18', '2020-07-27 00:00:18');
+INSERT INTO `admin_operation_log` VALUES ('2961', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:00:18', '2020-07-27 00:00:18');
+INSERT INTO `admin_operation_log` VALUES ('2962', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:00:21', '2020-07-27 00:00:21');
+INSERT INTO `admin_operation_log` VALUES ('2963', '1', 'admin/product/create', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:00:22', '2020-07-27 00:00:22');
+INSERT INTO `admin_operation_log` VALUES ('2964', '1', 'admin/product', 'POST', '183.192.13.75', '{\"cid\":\"57\",\"title\":\"\\u6d4b\\u8bd5\",\"smalldescription\":\"\\u6d4b\\u8bd5\",\"description\":\"<p>\\u3010111\\u3011<\\/p>\",\"smallimage\":null,\"file-smallimage\":null,\"_file_\":null,\"image\":null,\"file-image\":null,\"file\":null,\"price\":\"1\",\"recommended\":\"1\",\"status\":\"1\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_previous_\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/product\"}', '2020-07-27 00:01:34', '2020-07-27 00:01:34');
+INSERT INTO `admin_operation_log` VALUES ('2965', '1', 'admin/product', 'POST', '183.192.13.75', '{\"_id\":\"BmYql4SJSwQ9yARM\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"upload_column\":\"image\",\"id\":\"WU_FILE_2\",\"name\":\"15\\u66f2\\u5f84\\u6d1e\\u5929.jpg\",\"type\":\"image\\/jpeg\",\"lastModifiedDate\":\"Sun Jun 14 2020 12:44:59 GMT+0800 (\\u4e2d\\u56fd\\u6807\\u51c6\\u65f6\\u95f4)\",\"size\":\"155949\"}', '2020-07-27 00:01:41', '2020-07-27 00:01:41');
+INSERT INTO `admin_operation_log` VALUES ('2966', '1', 'admin/product', 'POST', '183.192.13.75', '{\"_id\":\"OqXvOEu366mo0Pdt\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"upload_column\":\"smallimage\",\"id\":\"WU_FILE_1\",\"name\":\"12\\u5927\\u9053\\u65e0\\u5f62.jpg\",\"type\":\"image\\/jpeg\",\"lastModifiedDate\":\"Sun Jun 14 2020 12:50:16 GMT+0800 (\\u4e2d\\u56fd\\u6807\\u51c6\\u65f6\\u95f4)\",\"size\":\"63705\"}', '2020-07-27 00:01:41', '2020-07-27 00:01:41');
+INSERT INTO `admin_operation_log` VALUES ('2967', '1', 'admin/product', 'POST', '183.192.13.75', '{\"cid\":\"57\",\"title\":\"\\u6d4b\\u8bd5\",\"smalldescription\":\"\\u6d4b\\u8bd5\",\"description\":\"<p>\\u3010111\\u3011<\\/p>\",\"smallimage\":\"images\\/cef98803edc929185231d9cb6606074c.jpg\",\"file-smallimage\":null,\"_file_\":null,\"image\":\"images\\/0c64e84a68bd338cad819733a73ce289.jpg\",\"file-image\":null,\"file\":null,\"price\":\"1\",\"recommended\":\"1\",\"status\":\"1\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_previous_\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/product\"}', '2020-07-27 00:01:43', '2020-07-27 00:01:43');
+INSERT INTO `admin_operation_log` VALUES ('2968', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:01:43', '2020-07-27 00:01:43');
+INSERT INTO `admin_operation_log` VALUES ('2969', '1', 'admin/push', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:02:23', '2020-07-27 00:02:23');
+INSERT INTO `admin_operation_log` VALUES ('2970', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:02:24', '2020-07-27 00:02:24');
+INSERT INTO `admin_operation_log` VALUES ('2971', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:02:26', '2020-07-27 00:02:26');
+INSERT INTO `admin_operation_log` VALUES ('2972', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_parent_id_\":\"28\",\"_tier_\":\"1\",\"_children_page_28\":\"1\"}', '2020-07-27 00:02:32', '2020-07-27 00:02:32');
+INSERT INTO `admin_operation_log` VALUES ('2973', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_parent_id_\":\"29\",\"_pjax\":\"#pjax-container\",\"_tier_\":\"2\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_children_page_29\":\"1\"}', '2020-07-27 00:02:58', '2020-07-27 00:02:58');
+INSERT INTO `admin_operation_log` VALUES ('2974', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_parent_id_\":\"45\",\"_pjax\":\"#pjax-container\",\"_tier_\":\"2\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_children_page_45\":\"1\"}', '2020-07-27 00:03:00', '2020-07-27 00:03:00');
+INSERT INTO `admin_operation_log` VALUES ('2975', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_parent_id_\":\"46\",\"_pjax\":\"#pjax-container\",\"_tier_\":\"2\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_children_page_46\":\"1\"}', '2020-07-27 00:03:01', '2020-07-27 00:03:01');
+INSERT INTO `admin_operation_log` VALUES ('2976', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:04:17', '2020-07-27 00:04:17');
+INSERT INTO `admin_operation_log` VALUES ('2977', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_parent_id_\":\"28\",\"_tier_\":\"1\",\"_children_page_28\":\"1\"}', '2020-07-27 00:05:08', '2020-07-27 00:05:08');
+INSERT INTO `admin_operation_log` VALUES ('2978', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:05:31', '2020-07-27 00:05:31');
+INSERT INTO `admin_operation_log` VALUES ('2979', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:05:38', '2020-07-27 00:05:38');
+INSERT INTO `admin_operation_log` VALUES ('2980', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_parent_id_\":\"28\",\"_tier_\":\"1\",\"_children_page_28\":\"1\"}', '2020-07-27 00:05:39', '2020-07-27 00:05:39');
+INSERT INTO `admin_operation_log` VALUES ('2981', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:05:44', '2020-07-27 00:05:44');
+INSERT INTO `admin_operation_log` VALUES ('2982', '1', 'admin/product/12/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:05:58', '2020-07-27 00:05:58');
+INSERT INTO `admin_operation_log` VALUES ('2983', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:06:01', '2020-07-27 00:06:01');
+INSERT INTO `admin_operation_log` VALUES ('2984', '1', 'admin/product/16/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:06:05', '2020-07-27 00:06:05');
+INSERT INTO `admin_operation_log` VALUES ('2985', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:06:11', '2020-07-27 00:06:11');
+INSERT INTO `admin_operation_log` VALUES ('2986', '1', 'admin/product/10/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:06:15', '2020-07-27 00:06:15');
+INSERT INTO `admin_operation_log` VALUES ('2987', '1', 'admin/product/10', 'PUT', '183.192.13.75', '{\"cid\":\"29\",\"title\":\"\\u554a\\u554a\",\"smalldescription\":\"\\u554a\\u554a\",\"description\":\"<p>\\u554a\\u554a\\u554a\\u554a<\\/p>\",\"smallimage\":\"images\\/34a6763fa7cd40cbe0692a672c0eeb52.png\",\"file-smallimage\":null,\"_file_\":null,\"image\":\"images\\/5326dc2a06698068520dd2820b9cf805.png\",\"file-image\":null,\"file\":null,\"price\":\"0.01\",\"recommended\":\"1\",\"status\":\"1\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_method\":\"PUT\",\"_previous_\":\"https:\\/\\/collect.xinxiaxue.cn\\/admin\\/product\"}', '2020-07-27 00:06:25', '2020-07-27 00:06:25');
+INSERT INTO `admin_operation_log` VALUES ('2988', '1', 'admin/product', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:06:25', '2020-07-27 00:06:25');
+INSERT INTO `admin_operation_log` VALUES ('2989', '1', 'admin/product/11/edit', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:06:39', '2020-07-27 00:06:39');
+INSERT INTO `admin_operation_log` VALUES ('2990', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:06:47', '2020-07-27 00:06:47');
+INSERT INTO `admin_operation_log` VALUES ('2991', '1', 'admin/cate', 'GET', '183.192.13.75', '{\"_pjax\":\"#pjax-container\",\"_token\":\"Bq404RbOSiBkpz8R145MgR13YRZVKjlQI4Ajs31i\",\"_parent_id_\":\"28\",\"_tier_\":\"1\",\"_children_page_28\":\"1\"}', '2020-07-27 00:06:50', '2020-07-27 00:06:50');
+INSERT INTO `admin_operation_log` VALUES ('2992', '0', 'admin/auth/login', 'GET', '183.192.13.75', '[]', '2020-07-27 00:09:40', '2020-07-27 00:09:40');
+INSERT INTO `admin_operation_log` VALUES ('2993', '0', 'admin/auth/login', 'GET', '183.192.13.75', '[]', '2020-07-27 00:09:44', '2020-07-27 00:09:44');
+INSERT INTO `admin_operation_log` VALUES ('2994', '0', 'admin/auth/login', 'POST', '183.192.13.75', '{\"_token\":\"im4wXDMfVfnozByiLlrTLAn9eBdvugSrKXR3ZCTa\",\"username\":\"admin\",\"password\":\"adm******\",\"remember\":\"1\"}', '2020-07-27 00:10:16', '2020-07-27 00:10:16');
+INSERT INTO `admin_operation_log` VALUES ('2995', '1', 'admin/swipe/1/edit', 'GET', '183.192.13.75', '[]', '2020-07-27 00:10:16', '2020-07-27 00:10:16');
+INSERT INTO `admin_operation_log` VALUES ('2996', '1', 'admin/auth/login', 'GET', '183.192.13.75', '[]', '2020-07-27 00:10:18', '2020-07-27 00:10:18');
+INSERT INTO `admin_operation_log` VALUES ('2997', '1', 'admin', 'GET', '183.192.13.75', '[]', '2020-07-27 00:10:18', '2020-07-27 00:10:18');
+INSERT INTO `admin_operation_log` VALUES ('2998', '0', 'admin/auth/login', 'GET', '223.104.63.93', '[]', '2020-07-27 00:54:07', '2020-07-27 00:54:07');
+INSERT INTO `admin_operation_log` VALUES ('2999', '0', 'admin/auth/login', 'POST', '223.104.63.93', '{\"_token\":\"va7JsBQFKedw2dzyrCCajNUaARi0wloS0WvEK3YE\",\"username\":\"admin\",\"password\":\"jok******\"}', '2020-07-27 00:54:12', '2020-07-27 00:54:12');
+INSERT INTO `admin_operation_log` VALUES ('3000', '0', 'admin/auth/login', 'POST', '223.104.63.93', '{\"_token\":\"va7JsBQFKedw2dzyrCCajNUaARi0wloS0WvEK3YE\",\"username\":\"admin\",\"password\":\"adm******\"}', '2020-07-27 00:54:15', '2020-07-27 00:54:15');
+INSERT INTO `admin_operation_log` VALUES ('3001', '1', 'admin', 'GET', '223.104.63.93', '[]', '2020-07-27 00:54:15', '2020-07-27 00:54:15');
+INSERT INTO `admin_operation_log` VALUES ('3002', '1', 'admin/video', 'GET', '223.104.63.93', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:54:21', '2020-07-27 00:54:21');
+INSERT INTO `admin_operation_log` VALUES ('3003', '1', 'admin/cate', 'GET', '223.104.63.93', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:54:22', '2020-07-27 00:54:22');
+INSERT INTO `admin_operation_log` VALUES ('3004', '1', 'admin/swipe', 'GET', '223.104.63.93', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:54:23', '2020-07-27 00:54:23');
+INSERT INTO `admin_operation_log` VALUES ('3005', '1', 'admin/product', 'GET', '223.104.63.93', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:56:20', '2020-07-27 00:56:20');
+INSERT INTO `admin_operation_log` VALUES ('3006', '1', 'admin/product/14/edit', 'GET', '223.104.63.93', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:56:24', '2020-07-27 00:56:24');
+INSERT INTO `admin_operation_log` VALUES ('3007', '1', 'admin/product', 'GET', '223.104.63.93', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:56:57', '2020-07-27 00:56:57');
+INSERT INTO `admin_operation_log` VALUES ('3008', '1', 'admin/product/6/edit', 'GET', '223.104.63.93', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:57:00', '2020-07-27 00:57:00');
+INSERT INTO `admin_operation_log` VALUES ('3009', '1', 'admin/order', 'GET', '223.104.63.93', '{\"_pjax\":\"#pjax-container\"}', '2020-07-27 00:57:14', '2020-07-27 00:57:14');
+INSERT INTO `admin_operation_log` VALUES ('3010', '0', 'admin/auth/login', 'GET', '182.254.52.17', '[]', '2020-07-27 19:20:47', '2020-07-27 19:20:47');
 
 -- ----------------------------
 -- Table structure for admin_permission_menu
@@ -2974,19 +3262,18 @@ CREATE TABLE `cart_items` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of cart_items
 -- ----------------------------
 INSERT INTO `cart_items` VALUES ('20', '11', '7', '2', '2020-07-18 17:45:42', '2020-07-20 22:41:59');
 INSERT INTO `cart_items` VALUES ('21', '11', '8', '2', '2020-07-18 17:46:18', '2020-07-20 22:42:38');
-INSERT INTO `cart_items` VALUES ('25', '6', '10', '1', '2020-07-18 20:45:22', '2020-07-18 20:45:22');
 INSERT INTO `cart_items` VALUES ('27', '9', '7', '1', '2020-07-18 21:25:06', '2020-07-18 21:25:06');
-INSERT INTO `cart_items` VALUES ('28', '6', '7', '20', '2020-07-18 21:38:22', '2020-07-19 00:07:57');
-INSERT INTO `cart_items` VALUES ('30', '6', '9', '1', '2020-07-18 21:50:34', '2020-07-18 21:50:34');
-INSERT INTO `cart_items` VALUES ('38', '6', '8', '3', '2020-07-19 00:08:17', '2020-07-19 00:15:01');
 INSERT INTO `cart_items` VALUES ('40', '9', '10', '2', '2020-07-19 00:26:36', '2020-07-19 00:42:50');
+INSERT INTO `cart_items` VALUES ('55', '6', '7', '1', '2020-07-26 18:30:46', '2020-07-26 18:30:46');
+INSERT INTO `cart_items` VALUES ('56', '8', '10', '2', '2020-07-26 19:19:45', '2020-07-26 21:35:12');
+INSERT INTO `cart_items` VALUES ('57', '8', '11', '1', '2020-07-26 23:56:17', '2020-07-26 23:56:17');
 
 -- ----------------------------
 -- Table structure for categories
@@ -3017,6 +3304,7 @@ INSERT INTO `categories` VALUES ('45', '水木恒缘', '28', null, 'images/9899d
 INSERT INTO `categories` VALUES ('46', '原缘玉秀', '28', null, 'images/6f419b97bc80092d4e5df8df401ad148.jpg', null, '2020-07-01 13:26:42', '2020-07-16 20:22:30');
 INSERT INTO `categories` VALUES ('55', '石头情缘', '30', null, 'images/79e54195af1d25836b1fbde10bc273e9.jpg', null, '2020-07-16 20:41:40', '2020-07-16 20:41:40');
 INSERT INTO `categories` VALUES ('56', '哈哈哈哈', '30', null, 'images/17594269d7bf5a7f251153aa08716037.png', null, '2020-07-18 18:44:16', '2020-07-18 18:44:16');
+INSERT INTO `categories` VALUES ('57', '测试', '30', null, 'images/272c44e2324eb125c861c39029364e38.jpg', null, '2020-07-27 00:00:18', '2020-07-27 00:00:18');
 
 -- ----------------------------
 -- Table structure for failed_jobs
@@ -3175,7 +3463,7 @@ CREATE TABLE `order` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `no` (`no`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of order
@@ -3216,6 +3504,10 @@ INSERT INTO `order` VALUES ('79', '20200718230612718185', '6', '{\"address\":\"\
 INSERT INTO `order` VALUES ('80', '20200718235051511894', '8', '{\"address\":\"\\u5317\\u4eac\\u5e02\\u5317\\u4eac\\u5e02\\u4e1c\\u57ce\\u533a\\u6d4b\\u662f\\u662f\\u662f\",\"contact_name\":\"test007\",\"contact_phone\":\"12345678912\"}', '0.01', null, '2020-07-18 23:50:56', '4200000582202007189900327380', '2', null, '2020-07-18 23:50:51', '2020-07-18 23:50:56');
 INSERT INTO `order` VALUES ('81', '20200719100956621386', '8', '{\"address\":null}', '0.00', null, null, null, '4', null, '2020-07-19 10:09:56', '2020-07-19 11:09:59');
 INSERT INTO `order` VALUES ('82', '20200719151851622376', '8', '{\"address\":\"\\u5317\\u4eac\\u5e02\\u5317\\u4eac\\u5e02\\u4e1c\\u57ce\\u533a\\u6d4b\\u662f\\u662f\\u662f\",\"contact_name\":\"test007\",\"contact_phone\":\"12345678912\"}', '0.00', null, null, null, '4', null, '2020-07-19 15:18:51', '2020-07-19 16:18:53');
+INSERT INTO `order` VALUES ('83', '20200725170454971884', '6', '{\"address\":\"\\u5317\\u4eac\\u5e02\\u5317\\u4eac\\u5e02\\u4e1c\\u57ce\\u533atestsssssssssssss\",\"contact_name\":\"test\",\"contact_phone\":\"55123123125\"}', '0.00', null, null, null, '4', null, '2020-07-25 17:04:54', '2020-07-25 18:04:55');
+INSERT INTO `order` VALUES ('84', '20200725182430340021', '8', '{\"address\":\"\\u5317\\u4eac\\u5e02\\u5317\\u4eac\\u5e02\\u4e1c\\u57ce\\u533a\\u6d4b\\u662f\\u662f\\u662f\",\"contact_name\":\"test007\",\"contact_phone\":\"12345678912\"}', '0.02', null, '2020-07-25 18:24:40', '4200000600202007251955656991', '2', null, '2020-07-25 18:24:30', '2020-07-25 18:24:40');
+INSERT INTO `order` VALUES ('85', '20200725234458182954', '8', '{\"address\":\"\\u5317\\u4eac\\u5e02\\u5317\\u4eac\\u5e02\\u4e1c\\u57ce\\u533a\\u6d4b\\u662f\\u662f\\u662f\",\"contact_name\":\"test007\",\"contact_phone\":\"12345678912\"}', '1000.00', null, null, null, '4', null, '2020-07-25 23:44:58', '2020-07-26 00:44:58');
+INSERT INTO `order` VALUES ('86', '20200725235735256136', '8', '{\"address\":\"\\u5317\\u4eac\\u5e02\\u5317\\u4eac\\u5e02\\u4e1c\\u57ce\\u533a\\u6d4b\\u662f\\u662f\\u662f\",\"contact_name\":\"test007\",\"contact_phone\":\"12345678912\"}', '1887.00', null, null, null, '4', null, '2020-07-25 23:57:35', '2020-07-26 00:57:37');
 
 -- ----------------------------
 -- Table structure for order_items
@@ -3228,7 +3520,7 @@ CREATE TABLE `order_items` (
   `amount` int(11) DEFAULT NULL COMMENT '数量',
   `price` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=107 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=110 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of order_items
@@ -3334,6 +3626,9 @@ INSERT INTO `order_items` VALUES ('103', '77', '8', '1', '2000.00');
 INSERT INTO `order_items` VALUES ('104', '78', '7', '1', '100.00');
 INSERT INTO `order_items` VALUES ('105', '79', '8', '1', '2000.00');
 INSERT INTO `order_items` VALUES ('106', '80', '10', '1', '0.01');
+INSERT INTO `order_items` VALUES ('107', '84', '10', '2', '0.01');
+INSERT INTO `order_items` VALUES ('108', '85', '7', '10', '100.00');
+INSERT INTO `order_items` VALUES ('109', '86', '9', '1', '1887.00');
 
 -- ----------------------------
 -- Table structure for password_resets
@@ -3361,6 +3656,7 @@ CREATE TABLE `products` (
   `description` text COLLATE utf8mb4_unicode_ci COMMENT '描述',
   `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '商品图片',
   `sold_count` tinyint(10) DEFAULT NULL COMMENT '销量',
+  `promotionprice` decimal(10,2) DEFAULT NULL,
   `price` decimal(10,2) DEFAULT NULL COMMENT '价格',
   `stock` tinyint(10) DEFAULT NULL COMMENT '库存',
   `recommended` tinyint(10) DEFAULT '1' COMMENT '推荐位1否2是',
@@ -3371,21 +3667,22 @@ CREATE TABLE `products` (
   `smalldescription` text COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`),
   KEY `cid` (`cid`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of products
 -- ----------------------------
-INSERT INTO `products` VALUES ('6', '29', '荷塘秋趣', '<p>荷塘秋趣<br data-mce-bogus=\"1\"></p>', '[\"images\\/ec61eed55f2e1e93c76f727f9caac393.jpg\",\"images\\/a577cb30a4f05ac7e24923d6ed0a55af.jpg\",\"images\\/62f24b116a559b110af537d2c28fe58e.jpg\"]', null, '1000.00', null, '2', '2', '2020-07-15 21:41:04', '2020-07-18 16:47:43', 'images/ebda0c7f0554566eba1b62bed8c5071a.jpg', '荷塘秋趣');
-INSERT INTO `products` VALUES ('7', '45', '大道无形', '<p>【产品名称】满江红</p><p><br data-mce-bogus=\"1\"></p>', '[\"images\\/9758e36d3b44b075b0fd2f833b87a4a2.jpg\",\"images\\/c9f5a87dd87145f4dcc294dd59941490.jpg\"]', null, '100.00', null, '1', '1', '2020-07-15 21:50:07', '2020-07-19 20:36:30', 'images/c7cad6fa93085a9fc5c551bb8067818a.jpg', '大道无形');
-INSERT INTO `products` VALUES ('8', '46', '双峰凝秀', '<p>双峰凝秀<br data-mce-bogus=\"1\"></p>', '[]', null, '2000.00', null, '1', '1', '2020-07-15 21:50:53', '2020-07-15 21:50:53', 'images/715b9296bdeeba2a7905a02a0acf39f1.jpg', '双峰凝秀');
-INSERT INTO `products` VALUES ('9', '28', '义薄云天', '<p>义薄云天义薄云天<br data-mce-bogus=\"1\"></p>', '[\"images\\/c231462bda735fa29f9f5f39b1de9d9e.jpg\"]', null, '1887.00', null, '1', '1', '2020-07-16 19:11:08', '2020-07-16 19:11:08', 'images/0761333f3ea358444583c56a7e7d31d4.jpg', '义薄云天');
-INSERT INTO `products` VALUES ('10', '56', '啊啊', '<p>啊啊啊啊</p>', '[\"images\\/5326dc2a06698068520dd2820b9cf805.png\"]', null, '0.01', null, '1', '1', '2020-07-18 18:47:00', '2020-07-18 22:49:23', 'images/34a6763fa7cd40cbe0692a672c0eeb52.png', '啊啊');
-INSERT INTO `products` VALUES ('11', '56', '123', '<p>111</p>', '[\"images\\/26e2a7cec1864907f4e5a9079be77468.png\"]', null, '1.00', null, '1', '1', '2020-07-18 22:28:39', '2020-07-18 22:49:33', 'images/fd93d163bd692a0fe87eb205d42e431d.png', '12');
-INSERT INTO `products` VALUES ('12', '56', '122', '<p>444</p>', '[\"images\\/3e50aa8fb7e1a0d4b6188237f74c7e9c.png\"]', null, '444.00', null, '1', '2', '2020-07-18 22:28:59', '2020-07-18 23:45:21', 'images/ea240a2b89ef610a26009c836d644860.png', '334');
-INSERT INTO `products` VALUES ('13', '33', '义薄云天88', '<p>test</p>', '[\"images\\/97f7f50f138775560c3ef31c236a7970.jpg\"]', null, '2.00', null, '1', '2', '2020-07-18 23:32:15', '2020-07-18 23:38:15', 'images/0e4b0c01ee4cf7eeb229a53b21862abf.jpg', 'test');
-INSERT INTO `products` VALUES ('14', '33', '测试二级商品', '<p>test</p>', '[]', null, '111.00', null, '1', '2', '2020-07-18 23:32:45', '2020-07-19 00:10:20', null, 'test');
-INSERT INTO `products` VALUES ('15', '56', '义薄云天', '<p>test</p>', '[\"images\\/204c0ba0d21d1990a9d36f205fd6b39f.png\"]', null, '11.00', null, '1', '2', '2020-07-18 23:33:34', '2020-07-19 00:14:41', 'images/598f071dff9605e1cb77372294d9aca3.png', 'test');
+INSERT INTO `products` VALUES ('6', '29', '荷塘秋趣', '<p>荷塘秋趣<br data-mce-bogus=\"1\"></p>', '[\"images\\/ec61eed55f2e1e93c76f727f9caac393.jpg\",\"images\\/a577cb30a4f05ac7e24923d6ed0a55af.jpg\",\"images\\/62f24b116a559b110af537d2c28fe58e.jpg\"]', null, null, '1000.00', null, '2', '2', '2020-07-15 21:41:04', '2020-07-18 16:47:43', 'images/ebda0c7f0554566eba1b62bed8c5071a.jpg', '荷塘秋趣');
+INSERT INTO `products` VALUES ('7', '45', '大道无形', '<p>【产品名称】 大道无形</p><p>【产&nbsp; &nbsp; &nbsp; &nbsp;地】 贵州</p><p>【产品分类】木化石<br data-mce-bogus=\"1\"></p><p>【故&nbsp; &nbsp; &nbsp; &nbsp;事】缘石视窗<br data-mce-bogus=\"1\"></p><p>【关 键 字】 大道无形 贵州 缘石视窗<br data-mce-bogus=\"1\"></p>', '[\"images\\/9758e36d3b44b075b0fd2f833b87a4a2.jpg\",\"images\\/c9f5a87dd87145f4dcc294dd59941490.jpg\"]', null, null, '100.00', null, '1', '1', '2020-07-15 21:50:07', '2020-07-26 09:40:21', 'images/c7cad6fa93085a9fc5c551bb8067818a.jpg', '水木恒缘');
+INSERT INTO `products` VALUES ('8', '46', '双峰凝秀', '<p>双峰凝秀<br data-mce-bogus=\"1\"></p>', '[]', null, null, '2000.00', null, '1', '1', '2020-07-15 21:50:53', '2020-07-15 21:50:53', 'images/715b9296bdeeba2a7905a02a0acf39f1.jpg', '双峰凝秀');
+INSERT INTO `products` VALUES ('9', '28', '义薄云天', '<p>义薄云天义薄云天<br data-mce-bogus=\"1\"></p>', '[\"images\\/c231462bda735fa29f9f5f39b1de9d9e.jpg\"]', null, null, '1887.00', null, '1', '1', '2020-07-16 19:11:08', '2020-07-16 19:11:08', 'images/0761333f3ea358444583c56a7e7d31d4.jpg', '义薄云天');
+INSERT INTO `products` VALUES ('10', '29', '啊啊', '<p>啊啊啊啊</p>', '[\"images\\/5326dc2a06698068520dd2820b9cf805.png\"]', null, null, '0.01', null, '1', '1', '2020-07-18 18:47:00', '2020-07-27 00:06:25', 'images/34a6763fa7cd40cbe0692a672c0eeb52.png', '啊啊');
+INSERT INTO `products` VALUES ('11', '56', '123', '<p>111</p>', '[\"images\\/26e2a7cec1864907f4e5a9079be77468.png\"]', null, null, '1.00', null, '1', '1', '2020-07-18 22:28:39', '2020-07-18 22:49:33', 'images/fd93d163bd692a0fe87eb205d42e431d.png', '12');
+INSERT INTO `products` VALUES ('12', '56', '122', '<p>444</p>', '[\"images\\/3e50aa8fb7e1a0d4b6188237f74c7e9c.png\"]', null, null, '444.00', null, '1', '2', '2020-07-18 22:28:59', '2020-07-18 23:45:21', 'images/ea240a2b89ef610a26009c836d644860.png', '334');
+INSERT INTO `products` VALUES ('13', '33', '义薄云天88', '<p>test</p>', '[\"images\\/97f7f50f138775560c3ef31c236a7970.jpg\"]', null, null, '2.00', null, '1', '2', '2020-07-18 23:32:15', '2020-07-18 23:38:15', 'images/0e4b0c01ee4cf7eeb229a53b21862abf.jpg', 'test');
+INSERT INTO `products` VALUES ('14', '33', '测试二级商品', '<p>test</p>', '[]', null, null, '111.00', null, '1', '2', '2020-07-18 23:32:45', '2020-07-19 00:10:20', null, 'test');
+INSERT INTO `products` VALUES ('15', '56', '义薄云天', '<p>test</p>', '[\"images\\/204c0ba0d21d1990a9d36f205fd6b39f.png\"]', null, null, '11.00', null, '1', '2', '2020-07-18 23:33:34', '2020-07-19 00:14:41', 'images/598f071dff9605e1cb77372294d9aca3.png', 'test');
+INSERT INTO `products` VALUES ('16', '57', '测试', '<p>【111】</p>', '[\"images\\/0c64e84a68bd338cad819733a73ce289.jpg\"]', null, null, '1.00', null, '1', '1', '2020-07-27 00:01:43', '2020-07-27 00:01:43', 'images/cef98803edc929185231d9cb6606074c.jpg', '测试');
 
 -- ----------------------------
 -- Table structure for push
@@ -3432,7 +3729,7 @@ CREATE TABLE `sign` (
   `sign` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `user` (`order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of sign
@@ -3456,6 +3753,9 @@ INSERT INTO `sign` VALUES ('17', '77', '{\"appId\":\"wx2f09f4c587931bac\",\"time
 INSERT INTO `sign` VALUES ('18', '78', '{\"appId\":\"wx2f09f4c587931bac\",\"timeStamp\":\"1595081728\",\"nonceStr\":\"9cd5Vv0tb4yqNl3R\",\"package\":\"prepay_id=wx1822152859630510fc170e7c1445186300\",\"signType\":\"MD5\",\"paySign\":\"38695A5650A93389668A89D0BAC9D73A\"}');
 INSERT INTO `sign` VALUES ('19', '79', '{\"appId\":\"wx2f09f4c587931bac\",\"timeStamp\":\"1595084773\",\"nonceStr\":\"uqLvZQYDEmPBkFph\",\"package\":\"prepay_id=wx182306129785828b5f3c53821387325800\",\"signType\":\"MD5\",\"paySign\":\"34080839ED816CE8F0C7F7F012AF8705\"}');
 INSERT INTO `sign` VALUES ('20', '80', '{\"appId\":\"wx2f09f4c587931bac\",\"timeStamp\":\"1595087451\",\"nonceStr\":\"kd5Ounbg0tHYDcHz\",\"package\":\"prepay_id=wx18235051211681c1863591c11548411200\",\"signType\":\"MD5\",\"paySign\":\"D7730DA57B26E02247535BA9D72B6968\"}');
+INSERT INTO `sign` VALUES ('21', '84', '{\"appId\":\"wx2f09f4c587931bac\",\"timeStamp\":\"1595672670\",\"nonceStr\":\"UUi3k2g5KitTBMdL\",\"package\":\"prepay_id=wx25182430197356dbc747cfdb1979999500\",\"signType\":\"MD5\",\"paySign\":\"0C0BB3AB328AE7CA301410149935824D\"}');
+INSERT INTO `sign` VALUES ('22', '85', '{\"appId\":\"wx2f09f4c587931bac\",\"timeStamp\":\"1595691899\",\"nonceStr\":\"1C9UFNAFc4LWKbOJ\",\"package\":\"prepay_id=wx25234459118097ede4147bdb1930477200\",\"signType\":\"MD5\",\"paySign\":\"A00FB85619758906AA5EEF621159CC12\"}');
+INSERT INTO `sign` VALUES ('23', '86', '{\"appId\":\"wx2f09f4c587931bac\",\"timeStamp\":\"1595692655\",\"nonceStr\":\"BIxaWBPRYKNzVgo9\",\"package\":\"prepay_id=wx25235735770562108a97ea221122710400\",\"signType\":\"MD5\",\"paySign\":\"B916E7C9D8ED7215E0BDDB10647E2A95\"}');
 
 -- ----------------------------
 -- Table structure for swipe
@@ -3464,14 +3764,16 @@ DROP TABLE IF EXISTS `swipe`;
 CREATE TABLE `swipe` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `img` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '//图片',
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of swipe
 -- ----------------------------
-INSERT INTO `swipe` VALUES ('1', '[\"images\\/4abf547252bd3b8fee0e8d8904476fad.jpg\",\"images\\/ddb12255862fff1cc3f0bcdae1858322.jpg\",\"images\\/b1ab49a1e2346cbc9e1490bcccb8043a.jpg\"]');
+INSERT INTO `swipe` VALUES ('1', 'images/b51702ef1e085381da90c4a6bb9ff197.gif', 'https://collect.xinxiaxue.cn/admin/swipe/1/edit');
+INSERT INTO `swipe` VALUES ('2', 'images/29544a2d141d629e868fa2f43d5901f6.gif', 'https://collect.xinxiaxue.cn/admin/swipe/create');
 
 -- ----------------------------
 -- Table structure for user_addresses
@@ -3503,7 +3805,7 @@ INSERT INTO `user_addresses` VALUES ('14', '6', '北京市', '北京市', '东�
 INSERT INTO `user_addresses` VALUES ('15', '6', '北京市', '北京市', '东城区', 'test', 'test', '18888888888');
 INSERT INTO `user_addresses` VALUES ('16', '6', '北京市', '北京市', '东城区', '1被咯故事中', '你好', '12457878888');
 INSERT INTO `user_addresses` VALUES ('17', '7', '北京市', '北京市', '东城区', '测试', '测试', '15692425988');
-INSERT INTO `user_addresses` VALUES ('19', '8', '北京市', '北京市', '东城区', '测是是是', 'test007', '12345678912');
+INSERT INTO `user_addresses` VALUES ('19', '8', '北京市', '北京市', '东城区', '测是是是', '测试', '12345678912');
 INSERT INTO `user_addresses` VALUES ('20', '11', '河北省', '石家庄市', '长安区', '啾啾啾啾啾啾', '朱晨晨', '15766925847');
 
 -- ----------------------------
@@ -3519,7 +3821,7 @@ CREATE TABLE `user_product` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of user_product
@@ -3536,6 +3838,7 @@ INSERT INTO `user_product` VALUES ('12', '6', '7', '2020-07-17 15:18:43', '2020-
 INSERT INTO `user_product` VALUES ('16', '11', '9', '2020-07-18 17:45:08', '2020-07-18 17:45:08');
 INSERT INTO `user_product` VALUES ('17', '7', '7', '2020-07-18 22:19:54', '2020-07-18 22:19:54');
 INSERT INTO `user_product` VALUES ('20', '9', '10', '2020-07-19 00:42:53', '2020-07-19 00:42:53');
+INSERT INTO `user_product` VALUES ('21', '8', '10', '2020-07-26 21:35:02', '2020-07-26 21:35:02');
 
 -- ----------------------------
 -- Table structure for users
@@ -3563,9 +3866,9 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('6', '沙茶酱', 'https://wx.qlogo.cn/mmopen/vi_32/W2XzgxgBicvDohDylT4tZp53W8SlGz6UB3VKyR826CibgmHVkBqJGyKcNb6ibh0PibqHDFfpmcSQrqGOvpc2q651ZQ/132', '18127921778', '女', '2020-07-18', '11', 'obkkt5NTitx4lVbwj2j9zqvR6Vnc', 'eyJpdiI6ImdSYlBpOVwvZDJUZWd0TDJ4dENZTTRBPT0iLCJ2YWx1ZSI6InZzSWk4K3hWa1JBYXJZaFdnU2lGOXlqZnlWNVhPanJqZ25MNnV0VzRkQnZnK0pqZk5RUytCMm9NMmI1cEt6UDAiLCJtYWMiOiJhYmNlY2ZlZGMyZmM2ZmJkZWFiNjA2N2RiMzBmZjAxNjgzNWI5MjJlOTVhZWE4YzNiNmI5YjJiZjAzMDZiMzdjIn0=', '2020-07-12 21:28:21', '2020-07-19 00:15:06', '0', '0.00', '0');
-INSERT INTO `users` VALUES ('7', 'Richard祝', 'https://wx.qlogo.cn/mmopen/vi_32/pB0xZyLN3iaMfF38NNGIk6JSGoLHMfVHxqcwsUc8cuXXxXeQgrnC1FiaZb6nRMq6cozvFzG1ibvEkbdrxbYtqRfpA/132', '', '', '', '17', 'obkkt5ElQGqi-j-nytjRgyKCjcMI', 'eyJpdiI6IisyOENRSzl5NGM5Z0xUXC9kK3hLUzFRPT0iLCJ2YWx1ZSI6Im5SaWM1S0xtbFhEbVwvZTJQeDZ0UXM5NVpMUDAxQkFyTU9LS09ScDJjUmJrXC9MSHVLd2xpNHVLczl1MjkrZVNNVCIsIm1hYyI6ImJkMmI5NWRjYjY0NGU0MTJmYjkyOTNmNWNlM2QyYjlhMmZkYWNiZjA5NTFkZTIxYzA2Mzc3MzJkZjlkZGYwMDYifQ==', '2020-07-13 23:47:34', '2020-07-19 20:35:30', '0', '0.00', '0');
-INSERT INTO `users` VALUES ('8', 'Wqj', 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKRwphBdIgWmL1hCiarc7xibwXn9ETFL9zLN6fgmwtHylI5JEKJLwF85st2ZNP8yvjZbgkVrUUsrqJg/132', '18616390269', '男', '2020-07-18', '18', 'obkkt5Md0VVewDF7pXjbys9pvz00', 'eyJpdiI6ImZsYWNMV1VZbFhVRUlSaTk4Y2tnZnc9PSIsInZhbHVlIjoiem05SmZnWXdhdEpROXFydDdyaCtaclF5KzlwK0c3VjVrSjJcL2NqNmVSd1RUSXBrTU5lTzVSZWhWd2gwT0Q0VloiLCJtYWMiOiI1YjQ4NGZlYzI4OTM2ZTYzY2M2MTQ5MWRkODk2ZDYzODdjNTVmMTA2MzJkMjY0NTQwYzMwYmQyNzRjNTdkYjA0In0=', '2020-07-15 21:41:38', '2020-07-23 21:39:41', '0', '0.00', '0');
+INSERT INTO `users` VALUES ('6', '沙茶酱', 'https://wx.qlogo.cn/mmopen/vi_32/W2XzgxgBicvDohDylT4tZp53W8SlGz6UB3VKyR826CibgmHVkBqJGyKcNb6ibh0PibqHDFfpmcSQrqGOvpc2q651ZQ/132', '18127921778', '女', '2020-07-18', '11', 'obkkt5NTitx4lVbwj2j9zqvR6Vnc', 'eyJpdiI6IlU3c1lhZ3hPSENLT3BGbnNRVjdrckE9PSIsInZhbHVlIjoiXC9DQXM2N3hWOHFPR1hiUytZeW1JZkVlWDdlaWs3WCtXd1wvc1BWSXhJeFBWdVkrYWJ6ekNuRmZXNDhiZHdxQXVuIiwibWFjIjoiODU1NjhkY2I4NjA1MWEzYjlmMmU0N2FmNjlkMTE0MjY1MGVjM2E1NTUxOWI5NzY0YmUyYTI1MjczZTM4NzIyMiJ9', '2020-07-12 21:28:21', '2020-07-26 20:15:11', '0', '0.00', '0');
+INSERT INTO `users` VALUES ('7', 'Richard祝', 'https://wx.qlogo.cn/mmopen/vi_32/pB0xZyLN3iaMfF38NNGIk6JSGoLHMfVHxqcwsUc8cuXXxXeQgrnC1FiaZb6nRMq6cozvFzG1ibvEkbdrxbYtqRfpA/132', '', '', '', '17', 'obkkt5ElQGqi-j-nytjRgyKCjcMI', 'eyJpdiI6ImpycExvK3NSUXZ6RERKWDRpcDFmNVE9PSIsInZhbHVlIjoiM1E0QlpNZjlOUjY1bTVFN2c1a0lUOENpY0o1S1p3a2VEejB0RkhWOXpPQTNJTytMNWQ4MjkyRjlya2dYak1GeSIsIm1hYyI6IjRkNjAyYTg2YTVlY2UwZmVkODUyYmNhMjhhMGQwYzJhODlkYWRkMDQxMzcyMDUzOTQzNjVkMzlhZWM3MzQ3NGIifQ==', '2020-07-13 23:47:34', '2020-07-26 20:29:43', '0', '0.00', '0');
+INSERT INTO `users` VALUES ('8', 'Wqj', 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKRwphBdIgWmL1hCiarc7xibwXn9ETFL9zLN6fgmwtHylI5JEKJLwF85st2ZNP8yvjZbgkVrUUsrqJg/132', '18616395555', '男', '2020-07-18', '19', 'obkkt5Md0VVewDF7pXjbys9pvz00', 'eyJpdiI6Im9TZUFnZk5MVFRoWUc2TWFiak1CTEE9PSIsInZhbHVlIjoiZHo4RjN0ZWlYRHhkbVAzV3FcL3BuVE5YY2VFXC8yK29KZjlvaWlFR05RdTlTeWNjK2pramVJa2doQ1RERHc2eHl6IiwibWFjIjoiNGY1NTQ2MDhlNjBhYjU2NmZiZWQ3NWI0MTNiZDdiNzYxODI0NjBjNjFjNWY2YzBlNjkwNjc5OWY0ZDhiZDhkZiJ9', '2020-07-15 21:41:38', '2020-07-26 21:08:33', '0', '0.00', '0');
 INSERT INTO `users` VALUES ('9', 'calla', 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ12FW9gSXJfxsicSPIK9gRzj6apLaefb6e4afr1xNkdWKDIjtVxo6j4D64q7ZbrCqbrX2sGy5tmZQ/132', '', '', '', null, 'obkkt5FXouyYLvqXO63Pby_40Ha8', 'eyJpdiI6InNOdkh6MFliaTVsVGxBYllMR1wvWlRRPT0iLCJ2YWx1ZSI6IlFtOE1Ea1NsYWVXbHpDUkNLRXVSZUhZZDhqZXprbUFRc2lOdFN1cEZNTjVMQ05CMlE0eVlBY3FncDZHcGFRNkEiLCJtYWMiOiIzMDk0OGY3OTJiNGVkYzIxN2U5OGQyMzE1OGU5YjM3YjQwODQ0YWE5YTg5Zjg2NDJlZGQ5MzA5YmRjMGE3NDQ0In0=', '2020-07-18 12:17:40', '2020-07-18 23:16:12', '0', '0.00', '0');
 INSERT INTO `users` VALUES ('11', 'snow雪', 'https://wx.qlogo.cn/mmopen/vi_32/357r4VUYVBSRHwviaIo1xFicRKTxTzE6XGEds5LQJNFtVmgTLhZXiawXnUh1WJvfoPh6wyuI88aicrafvseOawRAiaw/132', '', '', '', '20', 'obkkt5M-nEszHFpzye-6S7Y_V-Qc', 'eyJpdiI6ImZuSnRSbW5ZMW9qV1BYNyt6c3ZwbkE9PSIsInZhbHVlIjoid2lYQnJNYlVLcDN5d05xTGlcL0dwZWZGenJYZTNES0F4TFRnVjJEeUZaM2w4ditQOVlSckNYbDQwRmMrdHdXSm4iLCJtYWMiOiJlNjhkYzNmODBlM2E4MDRiYjk4NTE4YmM1ZTRhYmU4YzRiY2MzZTlmMzM1YmFkMzAxMDcyYzUxYzg3N2E5MmJmIn0=', '2020-07-18 17:44:03', '2020-07-20 22:42:25', '1', '0.00', '0');
 
