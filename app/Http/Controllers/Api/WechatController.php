@@ -61,6 +61,13 @@ class WechatController extends Controller
         $token = auth('api')->refresh();
         return $this->respondWithToken($token);
     }
+    //获取用户信息
+    public function user(Request $request)
+    {
+        dd($this->user);
+        $user = auth('api')->user();
+        return $this->success($user);
+    }
 
     public function cache()
     {

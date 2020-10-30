@@ -69,7 +69,7 @@ class OrderController extends Controller
         if ($result['return_code'] === 'SUCCESS') {
             // 二次签名的参数必须与下面相同
             $params = [
-                'appId' => 'wx2f09f4c587931bac',
+                'appId' => config('wechat.payment.default.app_id'),
                 'timeStamp' => (string)time(),
                 'nonceStr' => $result['nonce_str'],
                 'package' => 'prepay_id=' . $result['prepay_id'],
